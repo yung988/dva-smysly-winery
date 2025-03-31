@@ -106,7 +106,12 @@ export default function Home() {
               </p>
             </div>
             <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden">
-              <Image src="/images/about/about hlavni.JPG" alt="Hrozny" fill className="object-cover grayscale" />
+              <Image 
+                src="/images/about/about hlavni.JPG" 
+                alt="Hrozny" 
+                fill 
+                className="object-contain md:object-cover grayscale" 
+              />
             </div>
           </div>
         </div>
@@ -245,7 +250,7 @@ export default function Home() {
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-medium">Ryzlink rýnský</h3>
-                <p className="text-sm text-gray-500 mt-1">Suché, 0,75l, ročník 2023</p>
+                <p className="text-sm text-gray-500 mt-1">Suché, 0,75l, ročník 2024</p>
               </div>
             </div>
             
@@ -255,7 +260,7 @@ export default function Home() {
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-medium">Sauvignon</h3>
-                <p className="text-sm text-gray-500 mt-1">Polosuché, 0,75l, ročník 2023</p>
+                <p className="text-sm text-gray-500 mt-1">Suché, 0,75l, ročník 2024</p>
               </div>
             </div>
             
@@ -265,7 +270,7 @@ export default function Home() {
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-medium">Veltlínské zelené</h3>
-                <p className="text-sm text-gray-500 mt-1">Suché, 0,75l, ročník 2023</p>
+                <p className="text-sm text-gray-500 mt-1">Suché, 0,75l, ročník 2024</p>
               </div>
             </div>
             
@@ -274,8 +279,8 @@ export default function Home() {
                 <Image src="/images/rose.jpeg" alt="Frankovka Rosé" fill className="object-cover grayscale" />
               </div>
               <div className="p-4 text-center">
-                <h3 className="font-medium">Frankovka Rosé</h3>
-                <p className="text-sm text-gray-500 mt-1">Polosuché, 0,75l, ročník 2023</p>
+                <h3 className="font-medium">Svatovavřinecké Rosé</h3>
+                <p className="text-sm text-gray-500 mt-1">Polosuché, 0,75l, ročník 2024</p>
               </div>
             </div>
             
@@ -284,10 +289,19 @@ export default function Home() {
                 <Image src="/images/cuvee.jpeg" alt="Cuvée" fill className="object-cover grayscale" />
               </div>
               <div className="p-4 text-center">
-                <h3 className="font-medium">Cuvée</h3>
-                <p className="text-sm text-gray-500 mt-1">Suché, 0,75l, ročník 2023</p>
+                <h3 className="font-medium">Svatovavřinecké</h3>
+                <p className="text-sm text-gray-500 mt-1">Suché, 0,75l, ročník 2024</p>
               </div>
             </div>
+            <div className="bg-white rounded-lg overflow-hidden shadow-sm">
+              <div className="relative h-[200px]">
+                <Image src="/images/cuvee.jpeg" alt="Cuvée" fill className="object-cover grayscale" />
+              </div>
+              <div className="p-4 text-center">
+                <h3 className="font-medium">Tramín červený</h3>
+                <p className="text-sm text-gray-500 mt-1">Polosladké, 0,75l, ročník 2024</p>
+              </div>
+            </div>    
           </div>
 
           <div className="text-center">
