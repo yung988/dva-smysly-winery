@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mail, Phone, MapPin, Instagram, ShoppingBag, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import ContactForm from "@/components/contact/ContactForm"
 
 export default function Home() {
   return (
@@ -391,55 +392,12 @@ export default function Home() {
 
             <div className="bg-gray-100 p-8 rounded-lg">
               <h3 className="text-xl font-medium mb-4">Napište nám</h3>
-              <form className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium">
-                      Jméno
-                    </label>
-                    <input
-                      id="name"
-                      className="w-full px-3 py-2 border border-gray-200 rounded-md"
-                      placeholder="Vaše jméno"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium">
-                      Email
-                    </label>
-                    <input
-                      id="email"
-                      type="email"
-                      className="w-full px-3 py-2 border border-gray-200 rounded-md"
-                      placeholder="vas@email.cz"
-                    />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-medium">
-                    Předmět
-                  </label>
-                  <input
-                    id="subject"
-                    className="w-full px-3 py-2 border border-gray-200 rounded-md"
-                    placeholder="Předmět zprávy"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium">
-                    Zpráva
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    className="w-full px-3 py-2 border border-gray-200 rounded-md"
-                    placeholder="Vaše zpráva..."
-                  />
-                </div>
-                <Button type="submit" className="w-full bg-black hover:bg-gray-800 text-white">
-                  Odeslat zprávu
-                </Button>
-              </form>
+              <div className="space-y-2 mb-4">
+                <p className="text-sm text-muted-foreground">
+                  Vyplňte formulář a my se vám co nejdříve ozveme. Pole označená * jsou povinná.
+                </p>
+              </div>
+              <ContactForm />
             </div>
           </div>
         </div>
