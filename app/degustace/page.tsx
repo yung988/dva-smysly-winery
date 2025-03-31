@@ -42,7 +42,7 @@ export default function DegustacePage() {
                   <h3 className="text-2xl font-bold">Řízená degustace</h3>
                   <div className="flex items-center space-x-2">
                     <div className="font-medium">Cena:</div>
-                    <div>550 Kč za osobu</div>
+                    <div>350 Kč za osobu</div>
                   </div>
                   <div className="space-y-4">
                     <p>
