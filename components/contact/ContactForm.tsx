@@ -1,4 +1,6 @@
-import { useState, type FormEvent } from 'react';
+"use client"
+
+import { use, useState, type FormEvent } from 'react';
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 import emailjs from '@emailjs/browser';
