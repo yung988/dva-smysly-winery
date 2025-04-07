@@ -1,7 +1,9 @@
+'use client';
+
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Mail, Phone, MapPin, Instagram, ShoppingBag, ArrowRight, Facebook } from "lucide-react"
+import { Mail, Phone, MapPin, Instagram, ShoppingBag, ArrowRight, Facebook, Loader2 } from "lucide-react"
 import Link from "next/link"
 import ContactForm from "@/components/contact/ContactForm"
 import {
@@ -11,6 +13,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Label } from "@/components/ui/label"
+import { useState } from 'react'
 
 const vina = [
   {
@@ -52,6 +58,60 @@ const vina = [
 ]
 
 export default function Home() {
+  // State for the contact form
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
+  const [submitMessage, setSubmitMessage] = useState('');
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    // Clear status message when user starts typing again
+    if (submitStatus) {
+        setSubmitStatus(null);
+        setSubmitMessage('');
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    setSubmitMessage('');
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setSubmitMessage('Děkujeme! Vaše zpráva byla úspěšně odeslána.');
+        setFormData({ name: '', email: '', message: '' }); // Clear form
+      } else {
+        setSubmitStatus('error');
+        setSubmitMessage(result.error || 'Chyba při odesílání zprávy. Zkuste to prosím znovu.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+      setSubmitMessage('Došlo k neočekávané chybě. Zkuste to prosím později.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -308,10 +368,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact Section - Updated with form logic */}
       <section id="kontakt" className="py-16 md:py-24 bg-white">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12">
+            {/* Contact Info Column */}
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-[#1a472a]">Kontakt</h2>
               <p className="text-muted-foreground">Pro více informací o našich službách nás neváhejte kontaktovat.</p>
@@ -383,83 +444,91 @@ export default function Home() {
                     <Facebook className="h-5 w-5" />
                     <span className="sr-only">Facebook</span>
                   </a>
-                  <a 
-                    href="/vina" 
-                    className="bg-gray-100 hover:bg-gray-200 p-3 rounded-full transition-colors"
-                    aria-label="Nabídka vín Dva Smysly"
-                  >
-                    <ShoppingBag className="h-5 w-5" />
-                    <span className="sr-only">Nabídka vín</span>
-                  </a>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gray-100 p-8 rounded-lg">
-              <h3 className="text-xl font-medium mb-4">Napište nám</h3>
-              <div className="space-y-2 mb-4">
-                <p className="text-sm text-muted-foreground">
-                  Vyplňte formulář a my se vám co nejdříve ozveme. Pole označená * jsou povinná.
-                </p>
-              </div>
-              <ContactForm />
+            {/* Form Column - Updated */}
+            <div className="space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1a472a]">Napište nám</h2>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="grid grid-cols-1 gap-4">
+                  <div>
+                    <Label htmlFor="name" className="text-[#1a472a]">Jméno</Label>
+                    <Input 
+                      type="text" 
+                      id="name" 
+                      name="name" 
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required 
+                      className="mt-1 border-gray-300 focus:border-[#1a472a] focus:ring-[#1a472a]"
+                      placeholder="Vaše jméno"
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="email" className="text-[#1a472a]">Email</Label>
+                    <Input 
+                      type="email" 
+                      id="email" 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required 
+                      className="mt-1 border-gray-300 focus:border-[#1a472a] focus:ring-[#1a472a]"
+                      placeholder="vas@email.cz"
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="message" className="text-[#1a472a]">Zpráva</Label>
+                    <Textarea 
+                      id="message" 
+                      name="message" 
+                      rows={5}
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required 
+                      className="mt-1 border-gray-300 focus:border-[#1a472a] focus:ring-[#1a472a]"
+                      placeholder="Vaše zpráva, dotaz nebo poptávka..."
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                </div>
+                
+                {/* Submit Status Messages */}
+                {submitStatus === 'success' && (
+                  <p className="text-green-600 bg-green-100 border border-green-300 rounded-md p-3 text-sm">{submitMessage}</p>
+                )}
+                {submitStatus === 'error' && (
+                  <p className="text-red-600 bg-red-100 border border-red-300 rounded-md p-3 text-sm">{submitMessage}</p>
+                )}
+
+                <Button 
+                  type="submit" 
+                  className="w-full bg-[#1a472a] hover:bg-[#2a573a] text-white"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Odesílám...
+                    </>
+                  ) : (
+                    'Odeslat zprávu'
+                  )}
+                </Button>
+              </form>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 border-t">
-        <div className="container">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-2">
-              <Image src="/logo/dvasmysly.svg" alt="Dva Smysly" width={100} height={40} className="h-auto" />
-            </div>
-            <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Vinařství Dva Smysly. Všechna práva vyhrazena.
-            </p>
-            <nav className="flex items-center gap-6">
-              <a href="#about" className="text-sm text-muted-foreground hover:text-[#1a472a] transition-colors">
-                O nás
-              </a>
-              <a href="#degustace" className="text-sm text-muted-foreground hover:text-[#1a472a] transition-colors">
-                Degustace
-              </a>
-              <a href="#kontakt" className="text-sm text-muted-foreground hover:text-[#1a472a] transition-colors">
-                Kontakt
-              </a>
-            </nav>
-            <div className="flex gap-4">
-              <a
-                href="https://www.instagram.com/vinarstvi_dvasmysly/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-[#1a472a] transition-colors"
-                aria-label="Instagram Dva Smysly"
-              >
-                <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
-              </a>
-              <a
-                href="https://www.facebook.com/profile.php?id=61560188686793"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-[#1a472a] transition-colors"
-                aria-label="Facebook Dva Smysly"
-              >
-                <Facebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
-              </a>
-              <a 
-                href="/vina" 
-                className="text-muted-foreground hover:text-[#1a472a] transition-colors"
-                aria-label="Nabídka vín Dva Smysly"
-               >
-                <ShoppingBag className="h-5 w-5" />
-                <span className="sr-only">Nabídka vín</span>
-              </a>
-            </div>
-          </div>
+      <footer className="bg-gray-800 text-white py-8">
+        <div className="container text-center text-sm">
+          &copy; {new Date().getFullYear()} Vinařství Dva Smysly. Všechna práva vyhrazena.
         </div>
       </footer>
     </div>
