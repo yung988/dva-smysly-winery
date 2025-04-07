@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <header className="sticky top-0 z-50 w-full border-b bg-[#1a472a]/90 backdrop-blur-sm">
+      <header className="sticky top-0 z-50 w-full bg-[#1a472a]/90 backdrop-blur-sm">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Image src="/logo.png" alt="Dva Smysly" width={120} height={40} className="h-auto" />
