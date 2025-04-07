@@ -58,12 +58,12 @@ export default function VinaPage() {
         </div>
         <div className="relative container h-full flex flex-col justify-center">
           <div className="max-w-3xl space-y-4 bg-white/80 backdrop-blur-sm p-8 rounded-lg">
-            <h1 className="text-4xl md:text-5xl font-bold text-black">Nabídka vín</h1>
-            <p className="text-lg text-black">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#1a472a]">Nabídka vín</h1>
+            <p className="text-lg text-[#1a472a]">
               Naše portfolio zahrnuje pečlivě zpracovaná vína, která odrážejí terroir Znojemska. Věnujeme se bílým i
               červeným odrůdám.
             </p>
-            <Button asChild variant="outline" className="bg-transparent text-black border-black hover:bg-black hover:text-white">
+            <Button asChild variant="outline" className="bg-transparent text-[#1a472a] border-[#1a472a] hover:bg-[#1a472a] hover:text-white">
               <Link href="/">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Zpět na hlavní stránku
@@ -84,14 +84,14 @@ export default function VinaPage() {
                     src={vino.image} 
                     alt={vino.name} 
                     fill 
-                    className="object-contain transition-all duration-300 grayscale group-hover:grayscale-0 rounded-lg" 
+                    className="object-contain transition-all duration-300 grayscale group-hover:grayscale-0" 
                   />
                 </div>
                 <div className="space-y-6">
-                  <h2 className="text-3xl font-bold">{vino.name}</h2>
+                  <h2 className="text-3xl font-bold text-[#1a472a]">{vino.name}</h2>
                   <p className="text-xl text-muted-foreground">{vino.description}</p>
                   <p className="text-lg">{vino.detail}</p>
-                  <Button asChild className="bg-black hover:bg-gray-800 text-white">
+                  <Button asChild className="bg-[#1a472a] hover:bg-[#2a573a] text-white">
                     <Link href={`/vina/${vino.id}`}>Více informací</Link>
                   </Button>
                 </div>
@@ -105,15 +105,15 @@ export default function VinaPage() {
       <section className="py-16 bg-gray-50">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="text-2xl md:text-3xl font-bold">Máte zájem o naše vína?</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1a472a]">Máte zájem o naše vína?</h2>
             <p className="text-lg text-muted-foreground">
               Kontaktujte nás pro více informací o dostupnosti jednotlivých vín nebo pro rezervaci degustace.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="bg-black hover:bg-gray-800 text-white">
+              <Button asChild size="lg" className="bg-[#1a472a] hover:bg-[#2a573a] text-white">
                 <Link href="/#kontakt">Kontaktovat</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-black text-black hover:bg-black hover:text-white">
+              <Button asChild variant="outline" size="lg" className="border-[#1a472a] text-[#1a472a] hover:bg-[#1a472a] hover:text-white">
                 <Link href="/degustace">Prohlédnout degustace</Link>
               </Button>
             </div>

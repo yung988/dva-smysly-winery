@@ -10,16 +10,16 @@ export default function DegustacePage() {
       {/* Hlavička stránky */}
       <section className="relative h-[50vh] overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/vineyard-bw.jpeg" alt="Vinice" fill className="object-cover grayscale" priority />
+          <Image src="/tasting.jpeg" alt="Degustace" fill className="object-cover rounded-lg" priority />
         </div>
         <div className="relative container h-full flex flex-col justify-center">
-          <div className="max-w-3xl space-y-4 bg-black/30 backdrop-blur-sm p-8 rounded-lg">
-            <h1 className="text-4xl md:text-5xl font-bold text-white">Degustace vín</h1>
-            <p className="text-lg text-white">
-              Poznejte svět vína prostřednictvím našich degustací. Každá degustace je pečlivě sestavena a zaměřena na to
-              nejlepší z naší Znojemské vinařské podoblasti.
+          <div className="max-w-3xl space-y-4 bg-white/80 backdrop-blur-sm p-8 rounded-lg">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#1a472a]">Degustace</h1>
+            <p className="text-lg text-[#1a472a]">
+              Poznejte naše vína osobně během řízené degustace. Dozvíte se o našem přístupu k vinařství a ochutnáte to
+              nejlepší z naší produkce.
             </p>
-            <Button asChild variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-black">
+            <Button asChild variant="outline" className="bg-transparent text-[#1a472a] border-[#1a472a] hover:bg-[#1a472a] hover:text-white">
               <Link href="/">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Zpět na hlavní stránku
@@ -155,19 +155,19 @@ export default function DegustacePage() {
       </section>
       
       {/* CTA sekce */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-16 bg-gray-50">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="text-2xl md:text-3xl font-bold">Máte zájem o degustaci?</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1a472a]">Máte zájem o degustaci?</h2>
             <p className="text-lg text-muted-foreground">
-              Kontaktujte nás pro rezervaci termínu nebo s jakýmikoli dotazy ohledně našich degustačních programů.
+              Kontaktujte nás pro více informací o termínech nebo pro rezervaci degustace.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="bg-black hover:bg-gray-800 text-white">
+              <Button asChild size="lg" className="bg-[#1a472a] hover:bg-[#2a573a] text-white">
                 <Link href="/#kontakt">Kontaktovat</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-black text-black hover:bg-black hover:text-white">
-                <Link href="/vina">Prohlédnout nabídku vín</Link>
+              <Button asChild variant="outline" size="lg" className="border-[#1a472a] text-[#1a472a] hover:bg-[#1a472a] hover:text-white">
+                <Link href="/vina">Prohlédnout vína</Link>
               </Button>
             </div>
           </div>
