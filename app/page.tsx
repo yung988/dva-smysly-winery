@@ -226,7 +226,7 @@ export default function Home() {
                 image: "/images/vina/Svatovařinecké rosé.JPG"
               },
               {
-                id: "svatovarineske",
+                id: "svatovarinecke",
                 name: "Svatovařinecké",
                 description: "Suché, 0,75l, ročník 2023",
                 image: "/images/vina/Svatovařinecké.jpg"
