@@ -252,7 +252,7 @@ export default function Home() {
             
             <Link href="/vina/veltlinske-zelene" className="bg-white rounded-lg overflow-hidden shadow-sm group">
               <div className="relative h-[300px]">
-                <Image src="/images/vina/Veltlínské zelené.jpg" alt="Veltlínské zelené" fill className="object-contain transition-all duration-300 rounded-lg" />
+                <Image src="/images/vina/Veltlínské zelené.JPG" alt="Veltlínské zelené" fill className="object-contain transition-all duration-300 rounded-lg" />
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-medium">Veltlínské zelené</h3>

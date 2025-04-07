@@ -83,10 +83,10 @@ const vina = [
     }
   },
   {
-    id: "svatovarineske",
+    id: "svatovarinecke",
     name: "Svatovařinecké",
     description: "Suché, 0,75l, ročník 2023",
-    image: "/images/vina/Svatovařinecké.jpg",
+    image: "/images/vina/Svatovařinecké.JPG",
     detail: "Středně intezivní garnátová barva. Vyznačuje se tóny švestek a povidel s decentním nádechem dubového dřeva.",
     longDescription: [
       "Svatovařinecké je tradiční moravská odrůda, která v našich podmínkách dosahuje vynikající kvality. Hrozny pro toto víno byly pečlivě vybírány a zpracovány s důrazem na zachování odrůdového charakteru.",
@@ -140,7 +140,7 @@ export default function DetailVinaPage({ params }: { params: { id: string } }) {
     <div className="min-h-screen bg-white">
       {/* Navigace */}
       <div className="container py-4">
-        <Button asChild variant="outline" className="bg-transparent text-black border-black hover:bg-black hover:text-white">
+        <Button asChild variant="outline" className="bg-transparent text-[#1a472a] border-[#1a472a] hover:bg-[#1a472a] hover:text-white">
           <Link href="/vina">
             <ArrowLeft className="mr-2 h-4 w-4" />
             Zpět na nabídku vín
@@ -154,7 +154,7 @@ export default function DetailVinaPage({ params }: { params: { id: string } }) {
           <div className="grid md:grid-cols-2 gap-12">
             {/* Levá část - fotka */}
             <div className="space-y-8">
-              <div className="relative h-[700px] rounded-lg overflow-hidden">
+              <div className="relative w-full h-[500px] bg-accent rounded-lg overflow-hidden">
                 <Image 
                   src={vino.image} 
                   alt={vino.name} 
@@ -175,7 +175,7 @@ export default function DetailVinaPage({ params }: { params: { id: string } }) {
               <div className="space-y-4">
                 <h2 className="text-2xl font-bold">O víně</h2>
                 {vino.longDescription.map((paragraph, idx) => (
-                  <p key={idx} className="text-lg text-muted-foreground">{paragraph}</p>
+                  <p key={`${vino.id}-desc-${idx}`} className="text-lg text-muted-foreground">{paragraph}</p>
                 ))}
               </div>
               
