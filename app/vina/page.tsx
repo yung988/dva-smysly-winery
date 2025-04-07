@@ -76,22 +76,22 @@ export default function VinaPage() {
       {/* Seznam vín */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container">
-          <div className="grid gap-12">
-            {vina.map((vino, index) => (
-              <div key={vino.id} className={`grid md:grid-cols-2 gap-10 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
-                <div className="relative h-[600px] rounded-lg overflow-hidden group">
+          <div className="grid md:grid-cols-3 gap-8">
+            {vina.map((vino) => (
+              <div key={vino.id} className="flex flex-col h-full border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div className="relative h-[400px] overflow-hidden">
                   <Image 
                     src={vino.image} 
                     alt={vino.name} 
                     fill 
-                    className="object-cover transition-all duration-300 rounded-lg" 
+                    className="object-cover transition-all duration-300" 
                   />
                 </div>
-                <div className="space-y-6">
-                  <h2 className="text-3xl font-bold text-[#1a472a]">{vino.name}</h2>
-                  <p className="text-xl text-muted-foreground">{vino.description}</p>
-                  <p className="text-lg">{vino.detail}</p>
-                  <Button asChild className="bg-[#1a472a] hover:bg-[#2a573a] text-white">
+                <div className="flex flex-col flex-grow p-6 space-y-4">
+                  <h2 className="text-2xl font-bold text-[#1a472a]">{vino.name}</h2>
+                  <p className="text-lg text-muted-foreground">{vino.description}</p>
+                  <p className="text-base flex-grow">{vino.detail}</p>
+                  <Button asChild className="bg-[#1a472a] hover:bg-[#2a573a] text-white w-full mt-auto">
                     <Link href={`/vina/${vino.id}`}>Více informací</Link>
                   </Button>
                 </div>
