@@ -1,35 +1,19 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 
-const LOCAL_STORAGE_KEY = 'ageVerified'
+// Define props type
+interface AgeVerificationModalProps {
+  onConfirm: () => void;
+}
 
-const AgeVerificationModal = () => {
-  const [isVisible, setIsVisible] = useState<boolean>(false)
+const AgeVerificationModal: React.FC<AgeVerificationModalProps> = ({ onConfirm }) => {
   const [isDeclined, setIsDeclined] = useState<boolean>(false)
-
-  useEffect(() => {
-    // Zkontrolujeme localStorage až na straně klienta
-    const alreadyVerified = localStorage.getItem(LOCAL_STORAGE_KEY)
-    if (!alreadyVerified) {
-      setIsVisible(true)
-    }
-  }, [])
-
-  const handleConfirm = () => {
-    localStorage.setItem(LOCAL_STORAGE_KEY, 'true')
-    setIsVisible(false)
-  }
 
   const handleDecline = () => {
     setIsDeclined(true)
-    // Alternativně: window.location.href = 'https://www.google.com';
-  }
-
-  if (!isVisible) {
-    return null
   }
 
   return (
@@ -58,7 +42,7 @@ const AgeVerificationModal = () => {
             </p>
             <div className="flex justify-center gap-4">
               <Button 
-                onClick={handleConfirm}
+                onClick={onConfirm}
                 className="bg-[#1a472a] hover:bg-[#2a573a] text-white"
                 size="lg"
               >
