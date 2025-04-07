@@ -62,6 +62,16 @@ export default function DegustacePage() {
                     <p>
                       Degustace je ideální pro milovníky vína všech úrovní znalostí - od začátečníků po znalce. Přizpůsobíme výklad tak, aby byl srozumitelný a zajímavý pro všechny účastníky.
                     </p>
+
+                    {/* Poznámka 1: Degustace zdarma */}
+                    <p className="text-sm text-muted-foreground mt-4">
+                      <strong>Tip:</strong> Při zakoupení minimálně 3 lahví vína na osobu je degustace <strong>zdarma</strong>.
+                    </p>
+
+                    {/* Poznámka 2: Posezení a raut */}
+                    <p className="text-sm text-muted-foreground mt-2">
+                      Po degustaci je možné posedět v naší degustační místnosti. Na přání rádi zajistíme občerstvení, raut či doprovodný program.
+                    </p>
                   </div>
                   
                   <div className="flex items-center gap-2">
