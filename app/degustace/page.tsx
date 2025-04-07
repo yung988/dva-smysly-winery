@@ -10,7 +10,7 @@ export default function DegustacePage() {
       {/* Hlavička stránky */}
       <section className="relative h-[50vh] overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/Sklep/sklep1.jpg" alt="Degustace" fill className="object-cover rounded-lg" priority />
+          <Image src="/grapes-green.jpg" alt="Degustace" fill className="object-cover rounded-lg" priority />
         </div>
         <div className="relative container h-full flex flex-col justify-center">
           <div className="max-w-3xl space-y-4 bg-white/80 backdrop-blur-sm p-8 rounded-lg">
