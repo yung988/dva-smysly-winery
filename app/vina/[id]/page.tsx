@@ -159,7 +159,7 @@ export default function DetailVinaPage({ params }: { params: { id: string } }) {
                   src={vino.image} 
                   alt={vino.name} 
                   fill 
-                  className="object-contain" 
+                  className="object-contain rounded-lg" 
                   priority 
                 />
               </div>
@@ -181,7 +181,7 @@ export default function DetailVinaPage({ params }: { params: { id: string } }) {
               
               <div>
                 <h3 className="text-xl font-bold mb-4">Parametry vína</h3>
-                <div className="bg-gray-100 p-6 rounded-lg">
+                <div className="bg-gray-50 p-6 rounded-lg">
                   <dl className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <dt className="font-medium">Vinařská oblast</dt>
@@ -221,7 +221,7 @@ export default function DetailVinaPage({ params }: { params: { id: string } }) {
       </section>
       
       {/* Další vína */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-16 bg-gray-50">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold mb-8">Další vína</h2>
@@ -232,7 +232,7 @@ export default function DetailVinaPage({ params }: { params: { id: string } }) {
                   src={nextVino.image} 
                   alt={nextVino.name} 
                   fill 
-                  className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0" 
+                  className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0 rounded-lg" 
                 />
               </div>
               <div className="space-y-4">

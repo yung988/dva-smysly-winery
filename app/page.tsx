@@ -55,25 +55,25 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[80vh] overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/vineyard-bw.jpeg" alt="Vinice" fill className="object-cover" priority />
+          <Image src="/vineyard-bw.jpeg" alt="Vinice" fill className="object-cover rounded-lg" priority />
         </div>
         <div className="relative container h-full flex flex-col justify-center items-start">
-          <div className="max-w-xl space-y-4 bg-black/30 backdrop-blur-sm p-8 rounded-lg">
+          <div className="max-w-xl space-y-4 bg-white/80 backdrop-blur-sm p-8 rounded-lg">
             <Image src="/logo.png" alt="Dva Smysly" width={200} height={80} className="h-auto" />
-            <h1 className="text-4xl md:text-5xl font-bold text-white">Vinařství Dva Smysly</h1>
-            <p className="text-lg text-white">
+            <h1 className="text-4xl md:text-5xl font-bold text-black">Vinařství Dva Smysly</h1>
+            <p className="text-lg text-black">
               „Ve vinařství Dva smysly věříme, že víno je jako poezie. Každá sklenka vypráví jedinečný příběh a probouzí
               naše smysly."
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button asChild size="lg" className="bg-black hover:bg-gray-800 text-white border-white">
+              <Button asChild size="lg" className="bg-black hover:bg-gray-800 text-white border-black">
                 <a href="#degustace">Rezervovat degustaci</a>
               </Button>
               <Button
                 variant="outline"
                 asChild
                 size="lg"
-                className="bg-white/20 text-white hover:bg-white hover:text-black border-white"
+                className="bg-transparent text-black hover:bg-black hover:text-white border-black"
               >
                 <a href="#about">Poznejte nás</a>
               </Button>
@@ -110,7 +110,7 @@ export default function Home() {
                 src="/images/about/about hlavni.JPG" 
                 alt="Hrozny" 
                 fill 
-                className="object-contain md:object-cover grayscale" 
+                className="object-contain md:object-cover rounded-lg" 
               />
             </div>
           </div>
@@ -246,7 +246,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-8 mb-8">
             <Link href="/vina/sauvignon" className="bg-white rounded-lg overflow-hidden shadow-sm group">
               <div className="relative h-[300px]">
-                <Image src="/images/vina/Sauvignon.JPG" alt="Sauvignon" fill className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0" />
+                <Image src="/images/vina/Sauvignon.JPG" alt="Sauvignon" fill className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0 rounded-lg" />
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-medium">Sauvignon</h3>
@@ -256,7 +256,7 @@ export default function Home() {
             
             <Link href="/vina/ryzlink-rynsky" className="bg-white rounded-lg overflow-hidden shadow-sm group">
               <div className="relative h-[300px]">
-                <Image src="/images/vina/Ryzlink rýnský.JPG" alt="Ryzlink rýnský" fill className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0" />
+                <Image src="/images/vina/Ryzlink rýnský.JPG" alt="Ryzlink rýnský" fill className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0 rounded-lg" />
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-medium">Ryzlink rýnský</h3>
@@ -266,7 +266,7 @@ export default function Home() {
             
             <Link href="/vina/tramin-cerveny" className="bg-white rounded-lg overflow-hidden shadow-sm group">
               <div className="relative h-[300px]">
-                <Image src="/images/vina/Tramín červený.JPG" alt="Tramín červený" fill className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0" />
+                <Image src="/images/vina/Tramín červený.JPG" alt="Tramín červený" fill className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0 rounded-lg" />
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-medium">Tramín červený</h3>
@@ -276,7 +276,7 @@ export default function Home() {
             
             <Link href="/vina/svatovarineske-rose" className="bg-white rounded-lg overflow-hidden shadow-sm group">
               <div className="relative h-[300px]">
-                <Image src="/images/vina/Svatovařinecké rosé.JPG" alt="Svatovařinecké rosé" fill className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0" />
+                <Image src="/images/vina/Svatovařinecké rosé.JPG" alt="Svatovařinecké rosé" fill className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0 rounded-lg" />
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-medium">Svatovařinecké rosé</h3>
@@ -286,7 +286,7 @@ export default function Home() {
             
             <Link href="/vina/svatovarineske" className="bg-white rounded-lg overflow-hidden shadow-sm group">
               <div className="relative h-[300px]">
-                <Image src="/images/vina/Svatovařinecké.jpg" alt="Svatovařinecké" fill className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0" />
+                <Image src="/images/vina/Svatovařinecké.jpg" alt="Svatovařinecké" fill className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0 rounded-lg" />
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-medium">Svatovařinecké</h3>
@@ -296,7 +296,7 @@ export default function Home() {
 
             <Link href="/vina/veltlinske-zelene" className="bg-white rounded-lg overflow-hidden shadow-sm group">
               <div className="relative h-[300px]">
-                <Image src="/images/vina/Veltlínské zelené.JPG" alt="Veltlínské zelené" fill className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0" />
+                <Image src="/images/vina/Veltlínské zelené.JPG" alt="Veltlínské zelené" fill className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0 rounded-lg" />
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-medium">Veltlínské zelené</h3>

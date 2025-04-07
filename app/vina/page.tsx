@@ -54,16 +54,16 @@ export default function VinaPage() {
       {/* Hlavička stránky */}
       <section className="relative h-[50vh] overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/grapes-bw.jpeg" alt="Vinice" fill className="object-cover grayscale" priority />
+          <Image src="/grapes-bw.jpeg" alt="Vinice" fill className="object-cover rounded-lg" priority />
         </div>
         <div className="relative container h-full flex flex-col justify-center">
-          <div className="max-w-3xl space-y-4 bg-black/30 backdrop-blur-sm p-8 rounded-lg">
-            <h1 className="text-4xl md:text-5xl font-bold text-white">Nabídka vín</h1>
-            <p className="text-lg text-white">
+          <div className="max-w-3xl space-y-4 bg-white/80 backdrop-blur-sm p-8 rounded-lg">
+            <h1 className="text-4xl md:text-5xl font-bold text-black">Nabídka vín</h1>
+            <p className="text-lg text-black">
               Naše portfolio zahrnuje pečlivě zpracovaná vína, která odrážejí terroir Znojemska. Věnujeme se bílým i
               červeným odrůdám.
             </p>
-            <Button asChild variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-black">
+            <Button asChild variant="outline" className="bg-transparent text-black border-black hover:bg-black hover:text-white">
               <Link href="/">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Zpět na hlavní stránku
@@ -84,7 +84,7 @@ export default function VinaPage() {
                     src={vino.image} 
                     alt={vino.name} 
                     fill 
-                    className="object-contain transition-all duration-300 grayscale group-hover:grayscale-0" 
+                    className="object-contain transition-all duration-300 grayscale group-hover:grayscale-0 rounded-lg" 
                   />
                 </div>
                 <div className="space-y-6">
@@ -102,7 +102,7 @@ export default function VinaPage() {
       </section>
 
       {/* CTA sekce */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-16 bg-gray-50">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h2 className="text-2xl md:text-3xl font-bold">Máte zájem o naše vína?</h2>
