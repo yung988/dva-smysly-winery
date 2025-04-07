@@ -282,8 +282,8 @@ export default function Home() {
             <CarouselNext className="absolute right-[-15px] md:right-[-50px] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-[#1a472a] border-[#1a472a]"/>
           </Carousel>
           
-          {/* Bottom info block - Kept as is for now */}
-          <div className="text-center bg-gray-100 p-8 rounded-xl border border-gray-200 max-w-2xl mx-auto">
+          {/* Bottom info block - removed max-w-2xl and mx-auto */}
+          <div className="text-center bg-gray-100 p-8 rounded-xl border border-gray-200">
             <p className="text-muted-foreground mb-6">
               Naše vína jsou tvořena s důrazem na kvalitu a autentičnost. Rádi vám pomůžeme s výběrem vína, které
               uspokojí vaše chuťové pohárky.
