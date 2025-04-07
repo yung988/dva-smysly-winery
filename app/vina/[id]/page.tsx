@@ -7,98 +7,117 @@ import { notFound } from "next/navigation"
 // Data o vínech
 const vina = [
   {
-    id: "ryzlink-rynsky",
-    name: "Ryzlink rýnský",
-    description: "Suché, 0,75l, ročník 2023",
-    image: "/images/tramin.jpeg",
-    detail: "Elegantní Ryzlink rýnský s typickou minerální strukturou a svěžími tóny zeleného jablka a citrusů.",
-    longDescription: [
-      "Náš Ryzlink rýnský je ztělesněním terroir Znojemské vinařské podoblasti. Hrozny byly ručně sbírány v optimální zralosti a zpracovány s maximální péčí a respektem k tradičním postupům.",
-      "Víno zaujme svou zlatavou barvou s lehkými zelenkavými odlesky. V nose objevíte intenzivní aroma zeleného jablka, citrusových plodů a jemné minerální tóny. Na patře oceníte svěží kyselinku, která je v dokonalé harmonii s ovocnou složkou a minerálním charakterem.",
-      "Tento Ryzlink rýnský je ideálním společníkem k rybím pokrmům, lehkým předkrmům nebo jako osvěžující aperitiv. Nejlépe vynikne při teplotě 8-10°C."
-    ],
-    info: {
-      oblast: "Znojemská vinařská podoblast",
-      alkohol: "12,5 % obj.",
-      zbytkovy_cukr: "2,5 g/l",
-      kyseliny: "6,8 g/l",
-      doporucena_teplota: "8-10 °C"
-    }
-  },
-  {
     id: "sauvignon",
     name: "Sauvignon",
-    description: "Polosuché, 0,75l, ročník 2023",
-    image: "/images/sauvignon.jpeg",
-    detail: "Aromatický Sauvignon s bohatými tóny černého rybízu, angreštu a bylin.",
+    description: "Suché, 0,75l, ročník 2024",
+    image: "/images/vina/Sauvignon.JPG",
+    detail: "Na vůni i chuti silný citrusový projev. Výrazný je červený grepfruit a pomelo. Výrazná a dlouhá dochuť.",
     longDescription: [
       "Sauvignon z našeho vinařství je výrazným reprezentantem této oblíbené odrůdy. Hrozny dozrávaly na nejlepších polohách, což jim dodalo nezaměnitelný charakter a intenzitu.",
-      "Víno se vyznačuje světle žlutou barvou se zelenkavými odlesky. V aromatickém profilu dominují tóny černého rybízu, angreštu, kopřivy a dalších bylin. Chuť je svěží, s příjemným poměrem zbytkového cukru a kyselin, které umocňují ovocný charakter vína.",
+      "Víno se vyznačuje světle žlutou barvou se zelenkavými odlesky. V aromatickém profilu dominují tóny citrusů, především červeného grepfruitu a pomela. Chuť je svěží, s výraznou a dlouhou dochutí.",
       "Tento Sauvignon skvěle doplní pokrmy z čerstvých bylin, kozí sýry nebo lehké saláty. Doporučujeme podávat při teplotě 9-11°C."
     ],
     info: {
       oblast: "Znojemská vinařská podoblast",
-      alkohol: "12 % obj.",
-      zbytkovy_cukr: "7 g/l",
+      alkohol: "11,5 % obj.",
+      zbytkovy_cukr: "8,9 g/l",
       kyseliny: "6,5 g/l",
       doporucena_teplota: "9-11 °C"
     }
   },
   {
-    id: "veltlinske-zelene",
-    name: "Veltlínské zelené",
-    description: "Suché, 0,75l, ročník 2023",
-    image: "/images/vecerka.jpeg",
-    detail: "Tradiční Veltlínské zelené s jemným pepřovým nádechem a osvěžující kyselinkou.",
+    id: "ryzlink-rynsky",
+    name: "Ryzlink rýnský",
+    description: "Suché, 0,75l, ročník 2024",
+    image: "/images/vina/Ryzlink rýnský.JPG",
+    detail: "Intezivní aroma čerstvé meruňky s limetkovou šťávou. Křupavá kyselina.",
     longDescription: [
-      "Veltlínské zelené je tradiční odrůdou znojemské oblasti a my jsme hrdí na to, že ji můžeme nabídnout v té nejlepší kvalitě. Naše vinice poskytují ideální podmínky pro pěstování této odrůdy.",
-      "Víno se prezentuje světle žlutou barvou. V aromatickém profilu najdete typické tóny zeleného jablka, bílého pepře a jemných mandlí. Chuť je svěží, suchá, s příjemnou kyselinkou a charakteristickým lehce kořenitým závěrem.",
-      "Veltlínské zelené je univerzálním vínem, které doprovodí širokou škálu pokrmů od tradičních českých jídel po asijskou kuchyni. Nejlépe chutná při teplotě 9-11°C."
+      "Ryzlink rýnský je ztělesněním terroir Znojemské vinařské podoblasti. Hrozny byly ručně sbírány v optimální zralosti a zpracovány s maximální péčí a respektem k tradičním postupům.",
+      "Víno zaujme svou zlatavou barvou s lehkými zelenkavými odlesky. V nose objevíte intenzivní aroma čerstvé meruňky s limetkovou šťávou. Na patře oceníte křupavou kyselinku, která je v dokonalé harmonii s ovocnou složkou.",
+      "Tento Ryzlink rýnský je ideálním společníkem k rybím pokrmům, lehkým předkrmům nebo jako osvěžující aperitiv. Nejlépe vynikne při teplotě 8-10°C."
     ],
     info: {
       oblast: "Znojemská vinařská podoblast",
-      alkohol: "12 % obj.",
-      zbytkovy_cukr: "1,8 g/l",
-      kyseliny: "6,2 g/l",
-      doporucena_teplota: "9-11 °C"
-    }
-  },
-  {
-    id: "frankovka-rose",
-    name: "Frankovka Rosé",
-    description: "Polosuché, 0,75l, ročník 2023",
-    image: "/images/rose.jpeg",
-    detail: "Svěží růžové víno s příjemnými ovocnými tóny lesních jahod a malin.",
-    longDescription: [
-      "Naše Frankovka Rosé představuje svěží a ovocnou stránku této tradiční odrůdy. Krátká macerace hroznů dodala vínu krásnou růžovou barvu a extrahovala jemné ovocné tóny.",
-      "Víno zaujme svou lososovou barvou a intenzivním aromatem červeného ovoce, především lesních jahod, malin a třešní. Chuť je šťavnatá, s příjemnou ovocnou sladkostí v harmonii s osvěžující kyselinkou.",
-      "Frankovka Rosé je ideálním společníkem pro letní posezení, lehké saláty, či jako aperitiv. Podávejte vychlazené na 8-10°C."
-    ],
-    info: {
-      oblast: "Znojemská vinařská podoblast",
-      alkohol: "11,5 % obj.",
-      zbytkovy_cukr: "9 g/l",
-      kyseliny: "6 g/l",
+      alkohol: "12,5 % obj.",
+      zbytkovy_cukr: "7,7 g/l",
+      kyseliny: "6,8 g/l",
       doporucena_teplota: "8-10 °C"
     }
   },
   {
-    id: "cuvee",
-    name: "Cuvée",
-    description: "Suché, 0,75l, ročník 2023",
-    image: "/images/cuvee.jpeg",
-    detail: "Harmonické cuvée vytvořené z pečlivě vybraných odrůd, které se navzájem doplňují a vytváří komplexní chuťový zážitek.",
+    id: "tramin-cerveny",
+    name: "Tramín červený",
+    description: "Polosladké, 0,75l, ročník 2024",
+    image: "/images/vina/Tramín červený.JPG",
+    detail: "Na vůni jemné aroma květu růže, na chutí příjemně kořenité. Celý aromatický profil výborně podporuje lehce vyšší zbytkový cukr.",
     longDescription: [
-      "Naše Cuvée je výsledkem pečlivého výběru a míchání těch nejlepších hroznů z naší produkce. Kombinace různých odrůd dodává vínu mimořádnou komplexnost a harmonii.",
-      "Víno má atraktivní zlatožlutou barvu. V aromatickém profilu objevíte tóny tropického ovoce, medu a jemných květinových odstínů. Chuť je plná, s dobrou strukturou a dlouhým, harmonickým závěrem.",
-      "Toto Cuvée je skvělým doprovodem k pokrmům z bílého masa, krémovým omáčkám či zrajícím sýrům. Doporučujeme podávat při teplotě 10-12°C."
+      "Tramín červený je odrůda známá svým výrazným aromatickým profilem a my jsme se snažili tento charakter v našem víně maximálně podtrhnout.",
+      "Víno se vyznačuje zlatožlutou barvou. V aromatickém profilu dominuje jemné aroma květu růže a kořenité tóny. Chuť je plná, s příjemnou kořenitostí, kterou skvěle doplňuje vyšší zbytkový cukr.",
+      "Toto víno je skvělým společníkem k pikantním asijským pokrmům, sýrům s modrou plísní nebo jako aperitiv. Podávejte při teplotě 10-12°C."
     ],
     info: {
       oblast: "Znojemská vinařská podoblast",
-      alkohol: "13 % obj.",
-      zbytkovy_cukr: "3 g/l",
-      kyseliny: "6,3 g/l",
+      alkohol: "12,0 % obj.",
+      zbytkovy_cukr: "18 g/l",
+      kyseliny: "6,0 g/l",
       doporucena_teplota: "10-12 °C"
+    }
+  },
+  {
+    id: "svatovarineske-rose",
+    name: "Svatovařinecké rosé",
+    description: "Polosuché, 0,75l, ročník 2024",
+    image: "/images/vina/Svatovařinecké rosé.JPG",
+    detail: "Lehké víno snižším obsahem alkoholu. Na vůni i chuti nalezneme třešnový kompot s lístkem máty.",
+    longDescription: [
+      "Naše Svatovařinecké rosé představuje svěží a ovocnou stránku této tradiční odrůdy. Krátká macerace hroznů dodala vínu krásnou růžovou barvu a extrahovala jemné ovocné tóny.",
+      "Víno zaujme svou lososovou barvou a intenzivním aromatem červeného ovoce, především třešní s nádechem máty. Chuť je šťavnatá, s příjemnou ovocnou sladkostí v harmonii s osvěžující kyselinkou.",
+      "Svatovařinecké rosé je ideálním společníkem pro letní posezení, lehké saláty, či jako aperitiv. Podávejte vychlazené na 8-10°C."
+    ],
+    info: {
+      oblast: "Znojemská vinařská podoblast",
+      alkohol: "10,5 % obj.",
+      zbytkovy_cukr: "12,2 g/l",
+      kyseliny: "6,0 g/l",
+      doporucena_teplota: "8-10 °C"
+    }
+  },
+  {
+    id: "svatovarineske",
+    name: "Svatovařinecké",
+    description: "Suché, 0,75l, ročník 2023",
+    image: "/images/vina/Svatovařinecké.jpg",
+    detail: "Středně intezivní garnátová barva. Vyznačuje se tóny švestek a povidel s decentním nádechem dubového dřeva.",
+    longDescription: [
+      "Svatovařinecké je tradiční moravská odrůda, která v našich podmínkách dosahuje vynikající kvality. Hrozny pro toto víno byly pečlivě vybírány a zpracovány s důrazem na zachování odrůdového charakteru.",
+      "Víno má středně intenzivní garnátovou barvu. V aromatickém profilu dominují tóny švestek a povidel, které jsou decentně doplněny nádechem dubového dřeva. Chuť je plná, s příjemnou tříslovinou a dlouhou dochutí.",
+      "Toto víno skvěle doprovodí pečená masa, zvěřinu nebo zralé sýry. Doporučujeme podávat při teplotě 16-18°C."
+    ],
+    info: {
+      oblast: "Znojemská vinařská podoblast",
+      alkohol: "12,0 % obj.",
+      zbytkovy_cukr: "1 g/l",
+      kyseliny: "5,2 g/l",
+      doporucena_teplota: "16-18 °C"
+    }
+  },
+  {
+    id: "veltlinske-zelene",
+    name: "Veltlínské zelené",
+    description: "Suché, 0,75l, ročník 2024",
+    image: "/images/vina/Veltlínské zelené.JPG",
+    detail: "Typický znojemský Veltlín. Začátek lehce bylinný doplněný minerálnímy tóny. Dochuť je dlouhá a dominuje zde bílý pepř.",
+    longDescription: [
+      "Veltlínské zelené je tradiční odrůdou znojemské oblasti a my jsme hrdí na to, že ji můžeme nabídnout v té nejlepší kvalitě. Naše vinice poskytují ideální podmínky pro pěstování této odrůdy.",
+      "Víno se prezentuje světle žlutou barvou. V aromatickém profilu najdete lehce bylinné tóny doplněné o minerální podtón. Chuť je svěží, suchá, s charakteristickou dlouhou dochutí, kde dominuje bílý pepř.",
+      "Veltlínské zelené je univerzálním vínem, které doprovodí širokou škálu pokrmů od tradičních českých jídel po asijskou kuchyni. Nejlépe chutná při teplotě 9-11°C."
+    ],
+    info: {
+      oblast: "Znojemská vinařská podoblast",
+      alkohol: "12,5 % obj.",
+      zbytkovy_cukr: "1,8 g/l",
+      kyseliny: "6,2 g/l",
+      doporucena_teplota: "9-11 °C"
     }
   }
 ]

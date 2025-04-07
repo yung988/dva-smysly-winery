@@ -6,39 +6,46 @@ import { ArrowLeft } from "lucide-react"
 export default function VinaPage() {
   const vina = [
     {
-      id: "ryzlink-rynsky",
-      name: "Ryzlink rýnský",
-      description: "Suché, 0,75l, ročník 2023",
-      image: "/images/tramin.jpeg",
-      detail: "Elegantní Ryzlink rýnský s typickou minerální strukturou a svěžími tóny zeleného jablka a citrusů."
-    },
-    {
       id: "sauvignon",
       name: "Sauvignon",
-      description: "Polosuché, 0,75l, ročník 2023",
-      image: "/images/sauvignon.jpeg",
-      detail: "Aromatický Sauvignon s bohatými tóny černého rybízu, angreštu a bylin."
+      description: "Suché, 0,75l, ročník 2024",
+      image: "/images/vina/Sauvignon.JPG",
+      detail: "Na vůni i chuti silný citrusový projev. Výrazný je červený grepfruit a pomelo. Výrazná a dlouhá dochuť."
+    },
+    {
+      id: "ryzlink-rynsky",
+      name: "Ryzlink rýnský",
+      description: "Suché, 0,75l, ročník 2024",
+      image: "/images/vina/Ryzlink rýnský.JPG",
+      detail: "Intezivní aroma čerstvé meruňky s limetkovou šťávou. Křupavá kyselina."
+    },
+    {
+      id: "tramin-cerveny",
+      name: "Tramín červený",
+      description: "Polosladké, 0,75l, ročník 2024",
+      image: "/images/vina/Tramín červený.JPG",
+      detail: "Na vůni jemné aroma květu růže, na chutí příjemně kořenité. Celý aromatický profil výborně podporuje lehce vyšší zbytkový cukr."
+    },
+    {
+      id: "svatovarineske-rose",
+      name: "Svatovařinecké rosé",
+      description: "Polosuché, 0,75l, ročník 2024",
+      image: "/images/vina/Svatovařinecké rosé.JPG",
+      detail: "Lehké víno snižším obsahem alkoholu. Na vůni i chuti nalezneme třešnový kompot s lístkem máty."
+    },
+    {
+      id: "svatovarineske",
+      name: "Svatovařinecké",
+      description: "Suché, 0,75l, ročník 2023",
+      image: "/images/vina/Svatovařinecké.jpg",
+      detail: "Středně intezivní garnátová barva. Vyznačuje se tóny švestek a povidel s decentním nádechem dubového dřeva."
     },
     {
       id: "veltlinske-zelene",
       name: "Veltlínské zelené",
-      description: "Suché, 0,75l, ročník 2023",
-      image: "/images/vecerka.jpeg",
-      detail: "Tradiční Veltlínské zelené s jemným pepřovým nádechem a osvěžující kyselinkou."
-    },
-    {
-      id: "frankovka-rose",
-      name: "Frankovka Rosé",
-      description: "Polosuché, 0,75l, ročník 2023",
-      image: "/images/rose.jpeg",
-      detail: "Svěží růžové víno s příjemnými ovocnými tóny lesních jahod a malin."
-    },
-    {
-      id: "cuvee",
-      name: "Cuvée",
-      description: "Suché, 0,75l, ročník 2023",
-      image: "/images/cuvee.jpeg",
-      detail: "Harmonické cuvée vytvořené z pečlivě vybraných odrůd, které se navzájem doplňují a vytváří komplexní chuťový zážitek."
+      description: "Suché, 0,75l, ročník 2024",
+      image: "/images/vina/Veltlínské zelené.JPG",
+      detail: "Typický znojemský Veltlín. Začátek lehce bylinný doplněný minerálnímy tóny. Dochuť je dlouhá a dominuje zde bílý pepř."
     }
   ]
 
