@@ -15,7 +15,7 @@ export default function Home() {
         </div>
         <div className="relative container h-full flex flex-col justify-center items-start">
           <div className="max-w-xl space-y-4 bg-white/80 backdrop-blur-sm p-8 rounded-lg">
-            <Image src="/logo.png" alt="Dva Smysly" width={200} height={80} className="h-auto" />
+            <Image src="/logo/DVA SMYSLY Vector.png" alt="Dva Smysly" width={200} height={80} className="h-auto" />
             <h1 className="text-4xl md:text-5xl font-bold text-[#1a472a]">Vinařství Dva Smysly</h1>
             <p className="text-lg text-[#1a472a]">
               „Ve vinařství Dva smysly věříme, že víno je jako poezie. Každá sklenka vypráví jedinečný příběh a probouzí
