@@ -90,7 +90,7 @@ const vina = [
     detail: "Středně intezivní garnátová barva. Vyznačuje se tóny švestek a povidel s decentním nádechem dubového dřeva.",
     longDescription: [
       "Svatovařinecké je tradiční moravská odrůda, která v našich podmínkách dosahuje vynikající kvality. Hrozny pro toto víno byly pečlivě vybírány a zpracovány s důrazem na zachování odrůdového charakteru.",
-      "Víno má středně intenzivní garnátovou barvu. V aromatickém profilu dominují tóny švestek a povidel, které jsou decentně doplněny nádechem dubového dřeva. Chuť je plná, s příjemnou tříslovinou a dlouhou dochutí.",
+      "Víno má středně intenzivní granátovou barvu. V aromatickém profilu dominují tóny švestek a povidel, které jsou decentně doplněny nádechem dubového dřeva. Chuť je plná, s příjemnou tříslovinou a dlouhou dochutí.",
       "Toto víno skvěle doprovodí pečená masa, zvěřinu nebo zralé sýry. Doporučujeme podávat při teplotě 16-18°C."
     ],
     info: {
