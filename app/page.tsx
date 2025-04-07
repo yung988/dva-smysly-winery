@@ -276,9 +276,9 @@ export default function Home() {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <blockquote className="text-2xl md:text-3xl text-white font-light italic">
-              "Ve víně je pravda, v našem víně je pravda o Znojemsku."
+              "Ve vinařství Dva smysly věříme, že víno je jako poezie. Každá sklenka vypráví jedinečný příběh a probouzí naše smysly."
             </blockquote>
-            <p className="text-white/80">- Dva Smysly Winery</p>
+            <p className="text-white/80">- Ondřej a Lukáš</p>
           </div>
         </div>
       </section>
