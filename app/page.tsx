@@ -189,11 +189,11 @@ export default function Home() {
       </section>
 
       {/* Vína Section */}
-      <section id="vina" className="py-16 md:py-24 bg-[#1a472a]">
+      <section id="vina" className="py-16 md:py-24 bg-white">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Naše vína</h2>
-            <p className="text-white/80">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1a472a]">Naše vína</h2>
+            <p className="text-muted-foreground">
               Naše portfolio zahrnuje pečlivě zpracovaná vína, která odrážejí terroir Znojemska. Věnujeme se bílým i
               červeným odrůdám.
             </p>
@@ -241,7 +241,7 @@ export default function Home() {
               <Link
                 key={vino.id}
                 href={`/vina/${vino.id}`}
-                className="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden hover:bg-white/20 transition-all duration-300 flex flex-col h-full transform hover:-translate-y-1 border border-white/20 group"
+                className="bg-gray-50 rounded-lg overflow-hidden hover:bg-gray-100 transition-all duration-300 flex flex-col h-full transform hover:-translate-y-1 border border-gray-200 group"
               >
                 <div className="relative h-[180px] sm:h-[200px] p-2">
                   <Image
@@ -252,19 +252,19 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-3 sm:p-4 text-center flex-grow flex flex-col justify-center">
-                  <h3 className="font-medium text-base sm:text-lg text-white">{vino.name}</h3>
-                  <p className="text-xs sm:text-sm text-white/70 mt-1">{vino.description}</p>
+                  <h3 className="font-medium text-base sm:text-lg text-[#1a472a]">{vino.name}</h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground mt-1">{vino.description}</p>
                 </div>
               </Link>
             ))}
           </div>
 
-          <div className="text-center bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 max-w-2xl mx-auto">
-            <p className="text-white/80 mb-6">
+          <div className="text-center bg-gray-100 p-8 rounded-xl border border-gray-200 max-w-2xl mx-auto">
+            <p className="text-muted-foreground mb-6">
               Naše vína jsou tvořena s důrazem na kvalitu a autentičnost. Rádi vám pomůžeme s výběrem vína, které
               uspokojí vaše chuťové pohárky.
             </p>
-            <Button asChild className="bg-white hover:bg-white/80 text-[#1a472a] font-medium rounded-full px-6">
+            <Button asChild className="bg-[#1a472a] hover:bg-[#2a573a] text-white font-medium rounded-full px-6">
               <Link href="/vina">Nabídka vín</Link>
             </Button>
           </div>
