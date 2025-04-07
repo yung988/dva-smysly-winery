@@ -43,7 +43,7 @@ export default function VinaPage() {
     {
       id: "veltlinske-zelene",
       name: "Veltlínské zelené",
-      description: "Suché, 0,75l, ročník 2024",
+      description: "Suché, 0,75l, ročník 2023",
       image: "/images/vina/Veltlínské zelené.JPG",
       detail: "Typický znojemský Veltlín. Začátek lehce bylinný doplněný minerálnímy tóny. Dochuť je dlouhá a dominuje zde bílý pepř."
     }

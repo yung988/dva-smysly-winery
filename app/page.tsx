@@ -18,7 +18,7 @@ export default function Home() {
             <Image src="/logo/dvasmysly.svg" alt="Dva Smysly" width={200} height={80} className="h-auto invert" />
             <h1 className="text-4xl md:text-5xl font-bold text-[#1a472a]">Vinařství Dva Smysly</h1>
             <p className="text-lg text-[#1a472a]">
-              „Ve vinařství Dva smysly věříme, že víno je jako poezie. Každá sklenka vypráví jedinečný příběh a probouzí
+              "Ve vinařství Dva smysly věříme, že víno je jako poezie. Každá sklenka vypráví jedinečný příběh a probouzí
               naše smysly."
             </p>
             <div className="flex flex-wrap gap-4 pt-4">

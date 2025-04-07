@@ -86,7 +86,7 @@ const vina = [
     id: "svatovarinecke",
     name: "Svatovařinecké",
     description: "Suché, 0,75l, ročník 2023",
-    image: "/images/vina/Svatovařinecké.JPG",
+    image: "/images/vina/Svatovařinecké.jpg",
     detail: "Středně intezivní garnátová barva. Vyznačuje se tóny švestek a povidel s decentním nádechem dubového dřeva.",
     longDescription: [
       "Svatovařinecké je tradiční moravská odrůda, která v našich podmínkách dosahuje vynikající kvality. Hrozny pro toto víno byly pečlivě vybírány a zpracovány s důrazem na zachování odrůdového charakteru.",
