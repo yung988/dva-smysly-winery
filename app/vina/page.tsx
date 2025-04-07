@@ -54,7 +54,7 @@ export default function VinaPage() {
       {/* Hlavička stránky */}
       <section className="relative h-[50vh] overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/grapes-bw.jpeg" alt="Vinice" fill className="object-cover rounded-lg" priority />
+          <Image src="/leaves.jpeg" alt="Vinice" fill className="object-cover rounded-lg" priority />
         </div>
         <div className="relative container h-full flex flex-col justify-center">
           <div className="max-w-3xl space-y-4 bg-white/80 backdrop-blur-sm p-8 rounded-lg">

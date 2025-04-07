@@ -55,7 +55,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[80vh] overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/vineyard-bw.jpeg" alt="Vinice" fill className="object-cover rounded-lg" priority />
+          <Image src="/vineyard.jpeg" alt="Vinice" fill className="object-cover rounded-lg" priority />
         </div>
         <div className="relative container h-full flex flex-col justify-center items-start">
           <div className="max-w-xl space-y-4 bg-white/80 backdrop-blur-sm p-8 rounded-lg">
@@ -107,10 +107,10 @@ export default function Home() {
             </div>
             <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden">
               <Image 
-                src="/images/about/about hlavni.JPG" 
+                src="/grapes-green.jpeg" 
                 alt="Hrozny" 
                 fill 
-                className="object-contain md:object-cover rounded-lg" 
+                className="object-cover rounded-lg" 
               />
             </div>
           </div>
