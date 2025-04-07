@@ -53,9 +53,8 @@ export default function DegustacePage() {
                     </p>
                     <h4 className="font-bold text-lg">Co degustace zahrnuje:</h4>
                     <ul className="list-disc pl-5 space-y-2">
-                      <li>7 vzorků pečlivě vybraných vín z naší produkce</li>
+                      <li>6 vzorků pečlivě vybraných vín z naší produkce</li>
                       <li>Odborný výklad o vinařství, vinicích a výrobě vína</li>
-                      <li>Občerstvení ve formě vody, pečiva a sýrů</li>
                       <li>Možnost zakoupení degustovaných vín přímo na místě</li>
                       <li>Prohlídka vinného sklepa</li>
                     </ul>
