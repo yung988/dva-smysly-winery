@@ -23,7 +23,7 @@ export default function RootLayout({
           <div className="container flex h-16 items-center justify-between">
             <div className="flex items-center gap-2">
               <Link href="/">
-                <Image src="/dvasmysly.svg" alt="Dva Smysly" width={120} height={40} className="h-auto" />
+                <Image src="/dvasmysly.svg" alt="Dva Smysly" width={120} height={40} className="h-auto filter invert" />
               </Link>
             </div>
             <nav className="hidden md:flex items-center gap-6">

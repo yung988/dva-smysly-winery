@@ -15,7 +15,7 @@ export default function Home() {
         </div>
         <div className="relative container h-full flex flex-col justify-center items-start">
           <div className="max-w-xl space-y-4 bg-white/80 backdrop-blur-sm p-8 rounded-lg">
-            <Image src="/logo/DVA SMYSLY Vector.png" alt="Dva Smysly" width={200} height={80} className="h-auto" />
+            <Image src="/logo/dvasmysly.svg" alt="Dva Smysly" width={200} height={80} className="h-auto invert" />
             <h1 className="text-4xl md:text-5xl font-bold text-[#1a472a]">Vinařství Dva Smysly</h1>
             <p className="text-lg text-[#1a472a]">
               „Ve vinařství Dva smysly věříme, že víno je jako poezie. Každá sklenka vypráví jedinečný příběh a probouzí
@@ -199,7 +199,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-12">
             {[
               {
                 id: "sauvignon",
@@ -241,19 +241,19 @@ export default function Home() {
               <Link 
                 key={vino.id}
                 href={`/vina/${vino.id}`} 
-                className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 flex flex-col h-full transform hover:-translate-y-1"
+                className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full transform hover:-translate-y-1"
               >
-                <div className="relative h-[280px] p-4">
+                <div className="relative h-[350px] bg-gray-50 p-6">
                   <Image 
                     src={vino.image} 
                     alt={vino.name} 
                     fill 
-                    className="object-contain p-2 rounded-xl" 
+                    className="object-contain p-2" 
                   />
                 </div>
-                <div className="p-6 text-center bg-white border-t border-gray-100 flex-grow flex flex-col justify-center">
-                  <h3 className="font-medium text-lg text-[#1a472a]">{vino.name}</h3>
-                  <p className="text-sm text-gray-500 mt-2">{vino.description}</p>
+                <div className="p-6 text-center flex-grow flex flex-col justify-between">
+                  <h3 className="font-semibold text-xl text-[#1a472a] mb-2">{vino.name}</h3>
+                  <p className="text-sm text-gray-600">{vino.description}</p>
                 </div>
               </Link>
             ))}
@@ -373,7 +373,7 @@ export default function Home() {
         <div className="container">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
-              <Image src="/logo/DVA SMYSLY Vector.png" alt="Dva Smysly" width={100} height={40} className="h-auto" />
+              <Image src="/logo/dvasmysly.svg" alt="Dva Smysly" width={100} height={40} className="h-auto" />
             </div>
             <p className="text-sm text-muted-foreground">
               © {new Date().getFullYear()} Vinařství Dva Smysly. Všechna práva vyhrazena.
