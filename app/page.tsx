@@ -8,50 +8,6 @@ import ContactForm from "@/components/contact/ContactForm"
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <header className="sticky top-0 z-50 w-full bg-[#1a472a]/90 backdrop-blur-sm">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Image src="/logo.png" alt="Dva Smysly" width={120} height={40} className="h-auto" />
-          </div>
-          <nav className="hidden md:flex items-center gap-6">
-            <a href="#about" className="text-sm font-medium text-white hover:text-gray-300 transition-colors">
-              O nás
-            </a>
-            <a href="#degustace" className="text-sm font-medium text-white hover:text-gray-300 transition-colors">
-              Degustace
-            </a>
-            <a href="#sklep" className="text-sm font-medium text-white hover:text-gray-300 transition-colors">
-              Sklep
-            </a>
-            <a href="#vina" className="text-sm font-medium text-white hover:text-gray-300 transition-colors">
-              Vína
-            </a>
-            <a href="#kontakt" className="text-sm font-medium text-white hover:text-gray-300 transition-colors">
-              Kontakt
-            </a>
-          </nav>
-          <div className="flex items-center gap-4">
-            <a
-              href="/vina"
-              className="hidden md:flex items-center gap-2 text-sm font-medium text-white hover:text-gray-300 transition-colors"
-            >
-              <ShoppingBag className="h-4 w-4" />
-              Nabídka vín
-            </a>
-            <a
-              href="https://www.instagram.com/vinarstvi_dvasmysly/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-gray-300 transition-colors"
-            >
-              <Instagram className="h-5 w-5" />
-              <span className="sr-only">Instagram</span>
-            </a>
-          </div>
-        </div>
-      </header>
-
       {/* Hero Section */}
       <section className="relative h-[80vh] overflow-hidden">
         <div className="absolute inset-0">
