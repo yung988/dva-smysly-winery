@@ -318,17 +318,13 @@ export default function Home() {
       </section>
 
       {/* Quote Section */}
-      <section className="py-16 md:py-24 bg-[#1a472a] text-white">
+      <section className="py-16 bg-[#1a472a]">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <blockquote className="text-2xl md:text-3xl font-medium italic">
-              „Ve vinařství Dva smysly věříme, že víno je jako poezie. Každá sklenka vypráví jedinečný příběh a probouzí
-              naše smysly."
+          <div className="max-w-3xl mx-auto text-center space-y-6">
+            <blockquote className="text-2xl md:text-3xl text-white font-light italic">
+              "Ve víně je pravda, v našem víně je pravda o Znojemsku."
             </blockquote>
-            <div className="mt-6">
-              <p className="font-medium">Ondřej a Lukáš</p>
-              <p className="text-gray-300">Vinařství Dva Smysly</p>
-            </div>
+            <p className="text-white/80">- Dva Smysly Winery</p>
           </div>
         </div>
       </section>
@@ -348,14 +344,14 @@ export default function Home() {
                     <p className="font-medium">Email</p>
                     <a
                       href="mailto:ondrakarady1@seznam.cz"
-                      className="text-muted-foreground hover:text-black transition-colors"
+                      className="text-muted-foreground hover:text-[#1a472a] transition-colors"
                     >
                       ondrakarady1@seznam.cz
                     </a>
                     <br />
                     <a
                       href="mailto:lukasmudrych@seznam.cz"
-                      className="text-muted-foreground hover:text-black transition-colors"
+                      className="text-muted-foreground hover:text-[#1a472a] transition-colors"
                     >
                       lukasmudrych@seznam.cz
                     </a>
@@ -366,11 +362,11 @@ export default function Home() {
                   <Phone className="h-5 w-5 mt-1 text-[#1a472a]" />
                   <div>
                     <p className="font-medium">Telefon</p>
-                    <a href="tel:+420720611514" className="text-muted-foreground hover:text-black transition-colors">
+                    <a href="tel:+420720611514" className="text-muted-foreground hover:text-[#1a472a] transition-colors">
                       +420 720 611 514
                     </a>
                     <br />
-                    <a href="tel:+420602600140" className="text-muted-foreground hover:text-black transition-colors">
+                    <a href="tel:+420602600140" className="text-muted-foreground hover:text-[#1a472a] transition-colors">
                       +420 602 600 140
                     </a>
                   </div>
