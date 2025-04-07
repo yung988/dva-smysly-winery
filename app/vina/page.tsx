@@ -84,7 +84,7 @@ export default function VinaPage() {
                     src={vino.image} 
                     alt={vino.name} 
                     fill 
-                    className="object-contain transition-all duration-300 grayscale group-hover:grayscale-0" 
+                    className="object-contain transition-all duration-300 rounded-lg" 
                   />
                 </div>
                 <div className="space-y-6">
