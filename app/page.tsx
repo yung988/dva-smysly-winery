@@ -132,7 +132,7 @@ export default function Home() {
             <Card className="bg-white border-gray-200">
               <CardHeader>
                 <CardTitle>Řízená degustace</CardTitle>
-                <CardDescription>550 Kč za osobu</CardDescription>
+                <CardDescription>350 Kč za osobu</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
