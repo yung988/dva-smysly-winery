@@ -237,7 +237,7 @@ export default function Home() {
       {/* Vína Section - Changed to Carousel */}
       <section id="vina" className="py-16 md:py-24 bg-white">
         <div className="container">
-          <div className="mb-12 max-w-3xl mx-auto">
+          <div className="mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1a472a]">Naše vína</h2>
             <p className="text-lg text-[#1a472a]">
               Naše portfolio zahrnuje pečlivě zpracovaná vína, která odrážejí terroir Znojemska. Věnujeme se bílým i

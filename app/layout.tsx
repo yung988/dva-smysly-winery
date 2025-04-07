@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { Instagram, ShoppingBag } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Dva Smysly Winery',
+  title: 'Vinařství Dva Smysly',
   description: 'Vinařství ze Znojemské vinařské podoblasti',
 }
 
