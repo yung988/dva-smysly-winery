@@ -283,9 +283,9 @@ export default function Home() {
             </div>
           </Carousel>
           
-          {/* Bottom info block */}
-          <div className="text-center bg-gray-100 p-8 rounded-xl border border-gray-200">
-            <p className="text-muted-foreground mb-6">
+          {/* Bottom info block - removed background, border, rounded */}
+          <div className="text-center mt-16">
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Naše vína jsou tvořena s důrazem na kvalitu a autentičnost. Rádi vám pomůžeme s výběrem vína, které
               uspokojí vaše chuťové pohárky.
             </p>
