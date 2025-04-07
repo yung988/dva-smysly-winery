@@ -245,44 +245,45 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Carousel implementation */}
+          {/* Carousel implementation - improved styling */}
           <Carousel 
             opts={{ 
-              align: "start",
+              align: "center",
               loop: true,
+              slidesToScroll: 1,
              }} 
              className="w-full mb-12"
           >
-            <CarouselContent className="-ml-4">
+            <CarouselContent className="-ml-2 md:-ml-4">
               {vina.map((vino) => (
-                <CarouselItem key={vino.id} className="pl-4 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
-                  <div className="p-1 h-full">
-                    <Link
-                      href={`/vina/${vino.id}`}
-                      className="bg-gray-50 rounded-lg overflow-hidden hover:bg-gray-100 transition-all duration-300 flex flex-col h-full border border-gray-200 group"
-                    >
-                      <div className="relative h-[250px] sm:h-[300px] p-2"> {/* Increased height for carousel */}
-                        <Image
-                          src={vino.image}
-                          alt={vino.name}
-                          fill
-                          className="object-contain p-1 group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                      <div className="p-4 text-center flex-grow flex flex-col justify-center"> {/* Adjusted padding */}
-                        <h3 className="font-medium text-lg text-[#1a472a]">{vino.name}</h3> {/* Kept text size */}
-                        <p className="text-sm text-muted-foreground mt-1">{vino.description}</p> {/* Kept text size */}
-                      </div>
-                    </Link>
-                  </div>
+                <CarouselItem key={vino.id} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <Link
+                    href={`/vina/${vino.id}`}
+                    className="block h-full bg-white shadow-sm hover:shadow-md transition-all duration-300 rounded-xl overflow-hidden border border-gray-100 group"
+                  >
+                    <div className="relative h-[320px] bg-[#f8f8f8]">
+                      <Image
+                        src={vino.image}
+                        alt={vino.name}
+                        fill
+                        className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="p-4 text-center">
+                      <h3 className="font-medium text-xl text-[#1a472a] mb-1">{vino.name}</h3>
+                      <p className="text-muted-foreground">{vino.description}</p>
+                    </div>
+                  </Link>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-[-15px] md:left-[-50px] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-[#1a472a] border-[#1a472a]" />
-            <CarouselNext className="absolute right-[-15px] md:right-[-50px] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-[#1a472a] border-[#1a472a]"/>
+            <div className="flex justify-center mt-6">
+              <CarouselPrevious className="relative static mx-2 bg-white hover:bg-gray-50 text-[#1a472a] border-[#1a472a]" />
+              <CarouselNext className="relative static mx-2 bg-white hover:bg-gray-50 text-[#1a472a] border-[#1a472a]" />
+            </div>
           </Carousel>
           
-          {/* Bottom info block - removed max-w-2xl and mx-auto */}
+          {/* Bottom info block */}
           <div className="text-center bg-gray-100 p-8 rounded-xl border border-gray-200">
             <p className="text-muted-foreground mb-6">
               Naše vína jsou tvořena s důrazem na kvalitu a autentičnost. Rádi vám pomůžeme s výběrem vína, které
