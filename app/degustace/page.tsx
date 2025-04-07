@@ -10,7 +10,7 @@ export default function DegustacePage() {
       {/* Hlavička stránky */}
       <section className="relative h-[50vh] overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/tasting.jpeg" alt="Degustace" fill className="object-cover rounded-lg" priority />
+          <Image src="/images/Sklep/sklep1.jpg" alt="Degustace" fill className="object-cover rounded-lg" priority />
         </div>
         <div className="relative container h-full flex flex-col justify-center">
           <div className="max-w-3xl space-y-4 bg-white/80 backdrop-blur-sm p-8 rounded-lg">
@@ -110,7 +110,7 @@ export default function DegustacePage() {
                     </p>
                   </div>
                   
-                  <Button asChild className="bg-black hover:bg-gray-800 text-white mt-4">
+                  <Button asChild className="bg-[#1a472a] hover:bg-[#2a573a] text-white mt-4">
                     <Link href="/#kontakt">Požádat o nabídku</Link>
                   </Button>
                 </div>
@@ -145,7 +145,7 @@ export default function DegustacePage() {
                     </p>
                   </div>
                   
-                  <Button asChild className="bg-black hover:bg-gray-800 text-white mt-4">
+                  <Button asChild className="bg-[#1a472a] hover:bg-[#2a573a] text-white mt-4">
                     <Link href="/#kontakt">Požádat o nabídku</Link>
                   </Button>
                 </div>
@@ -183,19 +183,19 @@ export default function DegustacePage() {
         <div className="container">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
-              <Image src="/logo.png" alt="Dva Smysly" width={100} height={40} className="h-auto" />
+              <Image src="/logo/DVA SMYSLY Vector.png" alt="Dva Smysly" width={100} height={40} className="h-auto" />
             </div>
             <p className="text-sm text-muted-foreground">
               © {new Date().getFullYear()} Vinařství Dva Smysly. Všechna práva vyhrazena.
             </p>
             <nav className="flex items-center gap-6">
-              <Link href="/#about" className="text-sm text-muted-foreground hover:text-black transition-colors">
+              <Link href="/#about" className="text-sm text-muted-foreground hover:text-[#1a472a] transition-colors">
                 O nás
               </Link>
-              <Link href="/#vina" className="text-sm text-muted-foreground hover:text-black transition-colors">
+              <Link href="/#vina" className="text-sm text-muted-foreground hover:text-[#1a472a] transition-colors">
                 Vína
               </Link>
-              <Link href="/#kontakt" className="text-sm text-muted-foreground hover:text-black transition-colors">
+              <Link href="/#kontakt" className="text-sm text-muted-foreground hover:text-[#1a472a] transition-colors">
                 Kontakt
               </Link>
             </nav>

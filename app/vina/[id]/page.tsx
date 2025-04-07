@@ -154,7 +154,7 @@ export default function DetailVinaPage({ params }: { params: { id: string } }) {
           <div className="grid md:grid-cols-2 gap-12">
             {/* Levá část - fotka */}
             <div className="space-y-8">
-              <div className="relative w-full h-[600px] bg-accent rounded-lg overflow-hidden">
+              <div className="relative w-full h-[600px] bg-transparent rounded-lg overflow-hidden">
                 <Image 
                   src={vino.image} 
                   alt={vino.name} 

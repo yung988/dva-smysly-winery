@@ -200,7 +200,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-8 mb-8">
-            <Link href="/vina/sauvignon" className="bg-white rounded-lg overflow-hidden shadow-sm group">
+            <Link href="/vina/sauvignon" className="rounded-lg overflow-hidden shadow-sm group">
               <div className="relative h-[300px]">
                 <Image src="/images/vina/Sauvignon.JPG" alt="Sauvignon" fill className="object-contain transition-all duration-300 rounded-lg" />
               </div>
@@ -210,7 +210,7 @@ export default function Home() {
               </div>
             </Link>
             
-            <Link href="/vina/ryzlink-rynsky" className="bg-white rounded-lg overflow-hidden shadow-sm group">
+            <Link href="/vina/ryzlink-rynsky" className="rounded-lg overflow-hidden shadow-sm group">
               <div className="relative h-[300px]">
                 <Image src="/images/vina/Ryzlink rýnský.JPG" alt="Ryzlink rýnský" fill className="object-contain transition-all duration-300 rounded-lg" />
               </div>
@@ -220,7 +220,7 @@ export default function Home() {
               </div>
             </Link>
             
-            <Link href="/vina/tramin-cerveny" className="bg-white rounded-lg overflow-hidden shadow-sm group">
+            <Link href="/vina/tramin-cerveny" className="rounded-lg overflow-hidden shadow-sm group">
               <div className="relative h-[300px]">
                 <Image src="/images/vina/Tramín červený.JPG" alt="Tramín červený" fill className="object-contain transition-all duration-300 rounded-lg" />
               </div>
@@ -230,7 +230,7 @@ export default function Home() {
               </div>
             </Link>
             
-            <Link href="/vina/svatovarineske-rose" className="bg-white rounded-lg overflow-hidden shadow-sm group">
+            <Link href="/vina/svatovarineske-rose" className="rounded-lg overflow-hidden shadow-sm group">
               <div className="relative h-[300px]">
                 <Image src="/images/vina/Svatovařinecké rosé.JPG" alt="Svatovařinecké rosé" fill className="object-contain transition-all duration-300 rounded-lg" />
               </div>
@@ -240,7 +240,7 @@ export default function Home() {
               </div>
             </Link>
             
-            <Link href="/vina/svatovarineske" className="bg-white rounded-lg overflow-hidden shadow-sm group">
+            <Link href="/vina/svatovarineske" className="rounded-lg overflow-hidden shadow-sm group">
               <div className="relative h-[300px]">
                 <Image src="/images/vina/Svatovařinecké.jpg" alt="Svatovařinecké" fill className="object-contain transition-all duration-300 rounded-lg" />
               </div>
@@ -250,7 +250,7 @@ export default function Home() {
               </div>
             </Link>
             
-            <Link href="/vina/veltlinske-zelene" className="bg-white rounded-lg overflow-hidden shadow-sm group">
+            <Link href="/vina/veltlinske-zelene" className="rounded-lg overflow-hidden shadow-sm group">
               <div className="relative h-[300px]">
                 <Image src="/images/vina/Veltlínské zelené.JPG" alt="Veltlínské zelené" fill className="object-contain transition-all duration-300 rounded-lg" />
               </div>
