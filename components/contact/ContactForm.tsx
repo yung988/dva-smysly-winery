@@ -149,10 +149,10 @@ export default function ContactForm() {
           required
         />
       </div>
-      <div className="flex justify-end mt-4">
+      <div className="w-full mt-4">
         <Button 
           type="submit" 
-          className="bg-[#1a472a] hover:bg-[#2a573a] text-white"
+          className="w-full bg-[#1a472a] hover:bg-[#2a573a] text-white"
           disabled={isSubmitting}
         >
           {isSubmitting ? "Odesílám..." : "Odeslat zprávu"}
