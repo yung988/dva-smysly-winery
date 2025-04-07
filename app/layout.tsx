@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={cn("min-h-screen bg-background font-sans antialiased")}>
         {/* Globální navigace */}
         <header className="sticky top-0 z-50 w-full bg-[#1a472a]/90 backdrop-blur-sm">
-          <div className="container flex h-16 items-center justify-between">
+          <div className="container flex h-20 items-center justify-between">
             <div className="flex items-center gap-2">
               <Link href="/">
                 <Image src="/logo/dvasmysly.svg" alt="Dva Smysly" width={120} height={40} className="h-auto filter invert brightness-0" />
