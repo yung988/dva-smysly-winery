@@ -91,8 +91,8 @@ export default function VinaPage() {
                   <h2 className="text-3xl font-bold text-[#1a472a]">{vino.name}</h2>
                   <p className="text-xl text-muted-foreground">{vino.description}</p>
                   <p className="text-lg">{vino.detail}</p>
-                  <Button variant="outline" asChild className="w-full border-[#1a472a] text-[#1a472a] hover:bg-[#1a472a] hover:text-white">
-                    <Link href="/degustace">Více informací <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                  <Button asChild className="bg-[#1a472a] hover:bg-[#2a573a] text-white">
+                    <Link href={`/vina/${vino.id}`}>Více informací</Link>
                   </Button>
                 </div>
               </div>
@@ -126,19 +126,19 @@ export default function VinaPage() {
         <div className="container">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
-              <Image src="/logo.png" alt="Dva Smysly" width={100} height={40} className="h-auto" />
+              <Image src="/logo/DVA SMYSLY Vector.png" alt="Dva Smysly" width={100} height={40} className="h-auto" />
             </div>
             <p className="text-sm text-muted-foreground">
               © {new Date().getFullYear()} Vinařství Dva Smysly. Všechna práva vyhrazena.
             </p>
             <nav className="flex items-center gap-6">
-              <Link href="/#about" className="text-sm text-muted-foreground hover:text-black transition-colors">
+              <Link href="/#about" className="text-sm text-muted-foreground hover:text-[#1a472a] transition-colors">
                 O nás
               </Link>
-              <Link href="/degustace" className="text-sm text-muted-foreground hover:text-black transition-colors">
+              <Link href="/degustace" className="text-sm text-muted-foreground hover:text-[#1a472a] transition-colors">
                 Degustace
               </Link>
-              <Link href="/#kontakt" className="text-sm text-muted-foreground hover:text-black transition-colors">
+              <Link href="/#kontakt" className="text-sm text-muted-foreground hover:text-[#1a472a] transition-colors">
                 Kontakt
               </Link>
             </nav>

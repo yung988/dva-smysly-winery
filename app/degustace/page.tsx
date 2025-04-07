@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowRight, ArrowLeft } from "lucide-react"
+import { ArrowRight, ArrowLeft, Wine, Euro } from "lucide-react"
 
 export default function DegustacePage() {
   return (
@@ -65,6 +65,10 @@ export default function DegustacePage() {
                     </p>
                   </div>
                   
+                  <div className="flex items-center gap-2">
+                    <Wine className="h-5 w-5 text-[#1a472a]" />
+                    <span>350 Kč</span>
+                  </div>
                   <Button asChild className="bg-[#1a472a] hover:bg-[#2a573a] text-white">
                     <Link href="/#kontakt">Rezervovat</Link>
                   </Button>

@@ -97,7 +97,7 @@ export default function Home() {
                 </p>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" asChild className="w-full border-black text-black hover:bg-black hover:text-white">
+                <Button variant="outline" asChild className="w-full border-[#1a472a] text-[#1a472a] hover:bg-[#1a472a] hover:text-white">
                   <Link href="/degustace">Více informací <ArrowRight className="ml-2 h-4 w-4" /></Link>
                 </Button>
               </CardFooter>
@@ -115,7 +115,7 @@ export default function Home() {
                 </p>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" asChild className="w-full border-black text-black hover:bg-black hover:text-white">
+                <Button variant="outline" asChild className="w-full border-[#1a472a] text-[#1a472a] hover:bg-[#1a472a] hover:text-white">
                   <Link href="/degustace">Více informací <ArrowRight className="ml-2 h-4 w-4" /></Link>
                 </Button>
               </CardFooter>
@@ -133,7 +133,7 @@ export default function Home() {
                 </p>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" asChild className="w-full border-black text-black hover:bg-black hover:text-white">
+                <Button variant="outline" asChild className="w-full border-[#1a472a] text-[#1a472a] hover:bg-[#1a472a] hover:text-white">
                   <Link href="/degustace">Více informací <ArrowRight className="ml-2 h-4 w-4" /></Link>
                 </Button>
               </CardFooter>
@@ -202,7 +202,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-8 mb-8">
             <Link href="/vina/sauvignon" className="bg-white rounded-lg overflow-hidden shadow-sm group">
               <div className="relative h-[300px]">
-                <Image src="/images/vina/Sauvignon.JPG" alt="Sauvignon" fill className="object-cover transition-all duration-300 rounded-lg" />
+                <Image src="/images/vina/Sauvignon.JPG" alt="Sauvignon" fill className="object-contain transition-all duration-300 rounded-lg" />
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-medium">Sauvignon</h3>
@@ -212,7 +212,7 @@ export default function Home() {
             
             <Link href="/vina/ryzlink-rynsky" className="bg-white rounded-lg overflow-hidden shadow-sm group">
               <div className="relative h-[300px]">
-                <Image src="/images/vina/Ryzlink rýnský.JPG" alt="Ryzlink rýnský" fill className="object-cover transition-all duration-300 rounded-lg" />
+                <Image src="/images/vina/Ryzlink rýnský.JPG" alt="Ryzlink rýnský" fill className="object-contain transition-all duration-300 rounded-lg" />
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-medium">Ryzlink rýnský</h3>
@@ -222,7 +222,7 @@ export default function Home() {
             
             <Link href="/vina/tramin-cerveny" className="bg-white rounded-lg overflow-hidden shadow-sm group">
               <div className="relative h-[300px]">
-                <Image src="/images/vina/Tramín červený.JPG" alt="Tramín červený" fill className="object-cover transition-all duration-300 rounded-lg" />
+                <Image src="/images/vina/Tramín červený.JPG" alt="Tramín červený" fill className="object-contain transition-all duration-300 rounded-lg" />
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-medium">Tramín červený</h3>
@@ -232,7 +232,7 @@ export default function Home() {
             
             <Link href="/vina/svatovarineske-rose" className="bg-white rounded-lg overflow-hidden shadow-sm group">
               <div className="relative h-[300px]">
-                <Image src="/images/vina/Svatovařinecké rosé.JPG" alt="Svatovařinecké rosé" fill className="object-cover transition-all duration-300 rounded-lg" />
+                <Image src="/images/vina/Svatovařinecké rosé.JPG" alt="Svatovařinecké rosé" fill className="object-contain transition-all duration-300 rounded-lg" />
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-medium">Svatovařinecké rosé</h3>
@@ -242,7 +242,7 @@ export default function Home() {
             
             <Link href="/vina/svatovarineske" className="bg-white rounded-lg overflow-hidden shadow-sm group">
               <div className="relative h-[300px]">
-                <Image src="/images/vina/Svatovařinecké.jpg" alt="Svatovařinecké" fill className="object-cover transition-all duration-300 rounded-lg" />
+                <Image src="/images/vina/Svatovařinecké.jpg" alt="Svatovařinecké" fill className="object-contain transition-all duration-300 rounded-lg" />
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-medium">Svatovařinecké</h3>
@@ -252,7 +252,7 @@ export default function Home() {
             
             <Link href="/vina/veltlinske-zelene" className="bg-white rounded-lg overflow-hidden shadow-sm group">
               <div className="relative h-[300px]">
-                <Image src="/images/vina/Veltlínské zelené.jpg" alt="Veltlínské zelené" fill className="object-cover transition-all duration-300 rounded-lg" />
+                <Image src="/images/vina/Veltlínské zelené.jpg" alt="Veltlínské zelené" fill className="object-contain transition-all duration-300 rounded-lg" />
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-medium">Veltlínské zelené</h3>
@@ -266,7 +266,7 @@ export default function Home() {
               Naše vína jsou tvořena s důrazem na kvalitu a autentičnost. Rádi vám pomůžeme s výběrem vína, které
               uspokojí vaše chuťové pohárky.
             </p>
-            <Button asChild className="bg-black hover:bg-gray-800 text-white">
+            <Button asChild className="bg-[#1a472a] hover:bg-[#2a573a] text-white">
               <Link href="/vina">Nabídka vín</Link>
             </Button>
           </div>
@@ -375,19 +375,19 @@ export default function Home() {
         <div className="container">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
-              <Image src="/logo.png" alt="Dva Smysly" width={100} height={40} className="h-auto" />
+              <Image src="/logo/DVA SMYSLY Vector.png" alt="Dva Smysly" width={100} height={40} className="h-auto" />
             </div>
             <p className="text-sm text-muted-foreground">
               © {new Date().getFullYear()} Vinařství Dva Smysly. Všechna práva vyhrazena.
             </p>
             <nav className="flex items-center gap-6">
-              <a href="#about" className="text-sm text-muted-foreground hover:text-black transition-colors">
+              <a href="#about" className="text-sm text-muted-foreground hover:text-[#1a472a] transition-colors">
                 O nás
               </a>
-              <a href="#degustace" className="text-sm text-muted-foreground hover:text-black transition-colors">
+              <a href="#degustace" className="text-sm text-muted-foreground hover:text-[#1a472a] transition-colors">
                 Degustace
               </a>
-              <a href="#kontakt" className="text-sm text-muted-foreground hover:text-black transition-colors">
+              <a href="#kontakt" className="text-sm text-muted-foreground hover:text-[#1a472a] transition-colors">
                 Kontakt
               </a>
             </nav>
