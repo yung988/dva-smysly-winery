@@ -4,6 +4,52 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Mail, Phone, MapPin, Instagram, ShoppingBag, ArrowRight, Facebook } from "lucide-react"
 import Link from "next/link"
 import ContactForm from "@/components/contact/ContactForm"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+
+const vina = [
+  {
+    id: "sauvignon",
+    name: "Sauvignon",
+    description: "Suché, 0,75l, ročník 2024",
+    image: "/images/vina/Sauvignon.JPG"
+  },
+  {
+    id: "ryzlink-rynsky",
+    name: "Ryzlink rýnský",
+    description: "Suché, 0,75l, ročník 2024",
+    image: "/images/vina/Ryzlink rýnský.JPG"
+  },
+  {
+    id: "tramin-cerveny",
+    name: "Tramín červený",
+    description: "Polosladké, 0,75l, ročník 2024",
+    image: "/images/vina/Tramín červený.JPG"
+  },
+  {
+    id: "svatovarineske-rose",
+    name: "Svatovařinecké rosé",
+    description: "Polosuché, 0,75l, ročník 2024",
+    image: "/images/vina/Svatovařinecké rosé.JPG"
+  },
+  {
+    id: "svatovarinecke",
+    name: "Svatovařinecké",
+    description: "Suché, 0,75l, ročník 2023",
+    image: "/images/vina/Svatovařinecké.jpg"
+  },
+  {
+    id: "veltlinske-zelene",
+    name: "Veltlínské zelené",
+    description: "Suché, 0,75l, ročník 2023",
+    image: "/images/vina/Veltlínské zelené.JPG"
+  }
+]
 
 export default function Home() {
   return (
@@ -188,7 +234,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Vína Section */}
+      {/* Vína Section - Changed to Carousel */}
       <section id="vina" className="py-16 md:py-24 bg-white">
         <div className="container">
           <div className="mb-12 max-w-3xl mx-auto">
@@ -199,66 +245,44 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 mb-12">
-            {[
-              {
-                id: "sauvignon",
-                name: "Sauvignon",
-                description: "Suché, 0,75l, ročník 2024",
-                image: "/images/vina/Sauvignon.JPG"
-              },
-              {
-                id: "ryzlink-rynsky",
-                name: "Ryzlink rýnský",
-                description: "Suché, 0,75l, ročník 2024",
-                image: "/images/vina/Ryzlink rýnský.JPG"
-              },
-              {
-                id: "tramin-cerveny",
-                name: "Tramín červený",
-                description: "Polosladké, 0,75l, ročník 2024",
-                image: "/images/vina/Tramín červený.JPG"
-              },
-              {
-                id: "svatovarineske-rose",
-                name: "Svatovařinecké rosé",
-                description: "Polosuché, 0,75l, ročník 2024",
-                image: "/images/vina/Svatovařinecké rosé.JPG"
-              },
-              {
-                id: "svatovarinecke",
-                name: "Svatovařinecké",
-                description: "Suché, 0,75l, ročník 2023",
-                image: "/images/vina/Svatovařinecké.jpg"
-              },
-              {
-                id: "veltlinske-zelene",
-                name: "Veltlínské zelené",
-                description: "Suché, 0,75l, ročník 2023",
-                image: "/images/vina/Veltlínské zelené.JPG"
-              }
-            ].map((vino) => (
-              <Link
-                key={vino.id}
-                href={`/vina/${vino.id}`}
-                className="bg-gray-50 rounded-lg overflow-hidden hover:bg-gray-100 transition-all duration-300 flex flex-col h-full transform hover:-translate-y-1 border border-gray-200 group"
-              >
-                <div className="relative h-[180px] sm:h-[200px] p-2">
-                  <Image
-                    src={vino.image}
-                    alt={vino.name}
-                    fill
-                    className="object-contain p-1 group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-3 sm:p-4 text-center flex-grow flex flex-col justify-center">
-                  <h3 className="font-medium text-base sm:text-lg text-[#1a472a]">{vino.name}</h3>
-                  <p className="text-xs sm:text-sm text-muted-foreground mt-1">{vino.description}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-
+          {/* Carousel implementation */}
+          <Carousel 
+            opts={{ 
+              align: "start",
+              loop: true,
+             }} 
+             className="w-full mb-12"
+          >
+            <CarouselContent className="-ml-4">
+              {vina.map((vino) => (
+                <CarouselItem key={vino.id} className="pl-4 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                  <div className="p-1 h-full">
+                    <Link
+                      href={`/vina/${vino.id}`}
+                      className="bg-gray-50 rounded-lg overflow-hidden hover:bg-gray-100 transition-all duration-300 flex flex-col h-full border border-gray-200 group"
+                    >
+                      <div className="relative h-[250px] sm:h-[300px] p-2"> {/* Increased height for carousel */}
+                        <Image
+                          src={vino.image}
+                          alt={vino.name}
+                          fill
+                          className="object-contain p-1 group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                      <div className="p-4 text-center flex-grow flex flex-col justify-center"> {/* Adjusted padding */}
+                        <h3 className="font-medium text-lg text-[#1a472a]">{vino.name}</h3> {/* Kept text size */}
+                        <p className="text-sm text-muted-foreground mt-1">{vino.description}</p> {/* Kept text size */}
+                      </div>
+                    </Link>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="absolute left-[-15px] md:left-[-50px] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-[#1a472a] border-[#1a472a]" />
+            <CarouselNext className="absolute right-[-15px] md:right-[-50px] top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-[#1a472a] border-[#1a472a]"/>
+          </Carousel>
+          
+          {/* Bottom info block - Kept as is for now */}
           <div className="text-center bg-gray-100 p-8 rounded-xl border border-gray-200 max-w-2xl mx-auto">
             <p className="text-muted-foreground mb-6">
               Naše vína jsou tvořena s důrazem na kvalitu a autentičnost. Rádi vám pomůžeme s výběrem vína, které
