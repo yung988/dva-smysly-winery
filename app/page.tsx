@@ -199,7 +199,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 mb-12">
             {[
               {
                 id: "sauvignon",
@@ -238,22 +238,22 @@ export default function Home() {
                 image: "/images/vina/Veltlínské zelené.JPG"
               }
             ].map((vino) => (
-              <Link 
+              <Link
                 key={vino.id}
-                href={`/vina/${vino.id}`} 
-                className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-white/20 transition-all duration-300 flex flex-col h-full transform hover:-translate-y-1 border border-white/20"
+                href={`/vina/${vino.id}`}
+                className="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden hover:bg-white/20 transition-all duration-300 flex flex-col h-full transform hover:-translate-y-1 border border-white/20 group"
               >
-                <div className="relative h-[280px] p-4">
-                  <Image 
-                    src={vino.image} 
-                    alt={vino.name} 
-                    fill 
-                    className="object-contain p-2" 
+                <div className="relative h-[180px] sm:h-[200px] p-2">
+                  <Image
+                    src={vino.image}
+                    alt={vino.name}
+                    fill
+                    className="object-contain p-1 group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-6 text-center flex-grow flex flex-col justify-center">
-                  <h3 className="font-medium text-xl text-white">{vino.name}</h3>
-                  <p className="text-sm text-white/70 mt-2">{vino.description}</p>
+                <div className="p-3 sm:p-4 text-center flex-grow flex flex-col justify-center">
+                  <h3 className="font-medium text-base sm:text-lg text-white">{vino.name}</h3>
+                  <p className="text-xs sm:text-sm text-white/70 mt-1">{vino.description}</p>
                 </div>
               </Link>
             ))}
