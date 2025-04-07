@@ -135,7 +135,7 @@ export default function RootLayout({
               </div>
             </header>
 
-            <main className="min-h-screen flex flex-col items-center">
+            <main className="min-h-screen flex flex-col">
               {children}
             </main>
           </>
