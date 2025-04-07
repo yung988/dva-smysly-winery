@@ -266,7 +266,7 @@ export default function Home() {
                         src={vino.image}
                         alt={vino.name}
                         fill
-                        className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
                     <div className="p-4 text-center">
