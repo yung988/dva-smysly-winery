@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Mail, Phone, MapPin, Instagram, ShoppingBag, ArrowRight } from "lucide-react"
+import { Mail, Phone, MapPin, Instagram, ShoppingBag, ArrowRight, Facebook } from "lucide-react"
 import Link from "next/link"
 import ContactForm from "@/components/contact/ContactForm"
 
@@ -58,7 +58,7 @@ export default function Home() {
               </p>
               <p className="text-muted-foreground">
                 Věříme, že víno není jen nápoj, ale příběh – plný vášně, tradice a lásky k přírodě. Každá sklenka je
-                malým světem, který vás vtáhne a probudí vaše smysly.
+                malým světem, který vás vtáhne, a probudí vaše smysly.
               </p>
             </div>
             <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden">
@@ -143,7 +143,7 @@ export default function Home() {
           <div className="mt-12 text-center">
             <p className="text-muted-foreground mb-6">
               Všechny degustace probíhají v našem vinném sklepě v Suchohrdlech u Znojma. Součástí každé degustace je
-              profesionální výklad, představení našich vín a možnost ochutnat vína přímo ze sudu.
+              profesionální výklad, představení našich vín, a možnost ochutnat vína přímo ze sudu.
             </p>
             <Button asChild size="lg" className="bg-[#1a472a] hover:bg-[#2a573a] text-white">
               <Link href="#kontakt">Rezervovat degustaci</Link>
@@ -163,7 +163,7 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold">Máme sklep a můžete ho vidět!</h2>
               <p className="text-muted-foreground">
                 Navštivte náš vinný sklep, kde můžete zažít autentickou atmosféru vinařského řemesla. V našem sklepě
-                udržujeme ideální podmínky pro zrání vín a jejich správné skladování.
+                udržujeme ideální podmínky pro skladování vín a jejich potřebného zrání.
               </p>
               <p className="text-muted-foreground">
                 Přijďte se podívat na místo, kde vznikají naše vína. Během prohlídky vám ukážeme tradiční postupy výroby
@@ -343,11 +343,26 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-gray-100 hover:bg-gray-200 p-3 rounded-full transition-colors"
+                    aria-label="Instagram Dva Smysly"
                   >
                     <Instagram className="h-5 w-5" />
                     <span className="sr-only">Instagram</span>
                   </a>
-                  <a href="/vina" className="bg-gray-100 hover:bg-gray-200 p-3 rounded-full transition-colors">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61560188686793"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gray-100 hover:bg-gray-200 p-3 rounded-full transition-colors"
+                    aria-label="Facebook Dva Smysly"
+                  >
+                    <Facebook className="h-5 w-5" />
+                    <span className="sr-only">Facebook</span>
+                  </a>
+                  <a 
+                    href="/vina" 
+                    className="bg-gray-100 hover:bg-gray-200 p-3 rounded-full transition-colors"
+                    aria-label="Nabídka vín Dva Smysly"
+                  >
                     <ShoppingBag className="h-5 w-5" />
                     <span className="sr-only">Nabídka vín</span>
                   </a>
@@ -389,6 +404,36 @@ export default function Home() {
                 Kontakt
               </a>
             </nav>
+            <div className="flex gap-4">
+              <a
+                href="https://www.instagram.com/vinarstvi_dvasmysly/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-[#1a472a] transition-colors"
+                aria-label="Instagram Dva Smysly"
+              >
+                <Instagram className="h-5 w-5" />
+                <span className="sr-only">Instagram</span>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61560188686793"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-[#1a472a] transition-colors"
+                aria-label="Facebook Dva Smysly"
+              >
+                <Facebook className="h-5 w-5" />
+                <span className="sr-only">Facebook</span>
+              </a>
+              <a 
+                href="/vina" 
+                className="text-muted-foreground hover:text-[#1a472a] transition-colors"
+                aria-label="Nabídka vín Dva Smysly"
+               >
+                <ShoppingBag className="h-5 w-5" />
+                <span className="sr-only">Nabídka vín</span>
+              </a>
+            </div>
           </div>
         </div>
       </footer>

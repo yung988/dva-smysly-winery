@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowRight, ArrowLeft, Wine, Euro } from "lucide-react"
+import { ArrowRight, ArrowLeft, Wine, Euro, Instagram, Facebook, ShoppingBag } from "lucide-react"
 
 export default function DegustacePage() {
   return (
@@ -208,6 +208,36 @@ export default function DegustacePage() {
                 Kontakt
               </Link>
             </nav>
+            <div className="flex gap-4">
+              <a
+                href="https://www.instagram.com/vinarstvi_dvasmysly/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-[#1a472a] transition-colors"
+                aria-label="Instagram Dva Smysly"
+              >
+                <Instagram className="h-5 w-5" />
+                <span className="sr-only">Instagram</span>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61560188686793"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-[#1a472a] transition-colors"
+                aria-label="Facebook Dva Smysly"
+              >
+                <Facebook className="h-5 w-5" />
+                <span className="sr-only">Facebook</span>
+              </a>
+              <a 
+                href="/vina" 
+                className="text-muted-foreground hover:text-[#1a472a] transition-colors"
+                aria-label="Nabídka vín Dva Smysly"
+               >
+                <ShoppingBag className="h-5 w-5" />
+                <span className="sr-only">Nabídka vín</span>
+              </a>
+            </div>
           </div>
         </div>
       </footer>
