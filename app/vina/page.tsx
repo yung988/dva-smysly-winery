@@ -27,15 +27,15 @@ export default function VinaPage() {
       detail: "Na vůni jemné aroma květu růže, na chutí příjemně kořenité. Celý aromatický profil výborně podporuje lehce vyšší zbytkový cukr."
     },
     {
-      id: "svatovarineske-rose",
-      name: "Svatovařinecké rosé",
+      id: "svatovavrinecke-rose",
+      name: "Svatovavřinecké rosé",
       description: "Polosuché, 0,75l, ročník 2024",
       image: "/images/vina/Svatovařinecké rosé.JPG",
       detail: "Lehké víno snižším obsahem alkoholu. Na vůni i chuti nalezneme třešnový kompot s lístkem máty."
     },
     {
-      id: "svatovarineske",
-      name: "Svatovařinecké",
+      id: "svatovavrinecke",
+      name: "Svatovavřinecké",
       description: "Suché, 0,75l, ročník 2023",
       image: "/images/vina/Svatovařinecké.jpg",
       detail: "Středně intezivní garnátová barva. Vyznačuje se tóny švestek a povidel s decentním nádechem dubového dřeva."

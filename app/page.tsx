@@ -199,74 +199,72 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-8 mb-8">
-            <Link href="/vina/sauvignon" className="rounded-lg overflow-hidden shadow-sm group">
-              <div className="relative h-[300px]">
-                <Image src="/images/vina/Sauvignon.JPG" alt="Sauvignon" fill className="object-contain transition-all duration-300 rounded-lg" />
-              </div>
-              <div className="p-4 text-center">
-                <h3 className="font-medium">Sauvignon</h3>
-                <p className="text-sm text-gray-500 mt-1">Suché, 0,75l, ročník 2024</p>
-              </div>
-            </Link>
-            
-            <Link href="/vina/ryzlink-rynsky" className="rounded-lg overflow-hidden shadow-sm group">
-              <div className="relative h-[300px]">
-                <Image src="/images/vina/Ryzlink rýnský.JPG" alt="Ryzlink rýnský" fill className="object-contain transition-all duration-300 rounded-lg" />
-              </div>
-              <div className="p-4 text-center">
-                <h3 className="font-medium">Ryzlink rýnský</h3>
-                <p className="text-sm text-gray-500 mt-1">Suché, 0,75l, ročník 2024</p>
-              </div>
-            </Link>
-            
-            <Link href="/vina/tramin-cerveny" className="rounded-lg overflow-hidden shadow-sm group">
-              <div className="relative h-[300px]">
-                <Image src="/images/vina/Tramín červený.JPG" alt="Tramín červený" fill className="object-contain transition-all duration-300 rounded-lg" />
-              </div>
-              <div className="p-4 text-center">
-                <h3 className="font-medium">Tramín červený</h3>
-                <p className="text-sm text-gray-500 mt-1">Polosladké, 0,75l, ročník 2024</p>
-              </div>
-            </Link>
-            
-            <Link href="/vina/svatovarineske-rose" className="rounded-lg overflow-hidden shadow-sm group">
-              <div className="relative h-[300px]">
-                <Image src="/images/vina/Svatovařinecké rosé.JPG" alt="Svatovařinecké rosé" fill className="object-contain transition-all duration-300 rounded-lg" />
-              </div>
-              <div className="p-4 text-center">
-                <h3 className="font-medium">Svatovařinecké rosé</h3>
-                <p className="text-sm text-gray-500 mt-1">Polosuché, 0,75l, ročník 2024</p>
-              </div>
-            </Link>
-            
-            <Link href="/vina/svatovarineske" className="rounded-lg overflow-hidden shadow-sm group">
-              <div className="relative h-[300px]">
-                <Image src="/images/vina/Svatovařinecké.jpg" alt="Svatovařinecké" fill className="object-contain transition-all duration-300 rounded-lg" />
-              </div>
-              <div className="p-4 text-center">
-                <h3 className="font-medium">Svatovařinecké</h3>
-                <p className="text-sm text-gray-500 mt-1">Suché, 0,75l, ročník 2023</p>
-              </div>
-            </Link>
-            
-            <Link href="/vina/veltlinske-zelene" className="rounded-lg overflow-hidden shadow-sm group">
-              <div className="relative h-[300px]">
-                <Image src="/images/vina/Veltlínské zelené.JPG" alt="Veltlínské zelené" fill className="object-contain transition-all duration-300 rounded-lg" />
-              </div>
-              <div className="p-4 text-center">
-                <h3 className="font-medium">Veltlínské zelené</h3>
-                <p className="text-sm text-gray-500 mt-1">Suché, 0,75l, ročník 2023</p>
-              </div>
-            </Link>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+            {[
+              {
+                id: "sauvignon",
+                name: "Sauvignon",
+                description: "Suché, 0,75l, ročník 2024",
+                image: "/images/vina/Sauvignon.JPG"
+              },
+              {
+                id: "ryzlink-rynsky",
+                name: "Ryzlink rýnský",
+                description: "Suché, 0,75l, ročník 2024",
+                image: "/images/vina/Ryzlink rýnský.JPG"
+              },
+              {
+                id: "tramin-cerveny",
+                name: "Tramín červený",
+                description: "Polosladké, 0,75l, ročník 2024",
+                image: "/images/vina/Tramín červený.JPG"
+              },
+              {
+                id: "svatovarineske-rose",
+                name: "Svatovařinecké rosé",
+                description: "Polosuché, 0,75l, ročník 2024",
+                image: "/images/vina/Svatovařinecké rosé.JPG"
+              },
+              {
+                id: "svatovarineske",
+                name: "Svatovařinecké",
+                description: "Suché, 0,75l, ročník 2023",
+                image: "/images/vina/Svatovařinecké.jpg"
+              },
+              {
+                id: "veltlinske-zelene",
+                name: "Veltlínské zelené",
+                description: "Suché, 0,75l, ročník 2023",
+                image: "/images/vina/Veltlínské zelené.JPG"
+              }
+            ].map((vino) => (
+              <Link 
+                key={vino.id}
+                href={`/vina/${vino.id}`} 
+                className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 flex flex-col h-full transform hover:-translate-y-1"
+              >
+                <div className="relative h-[280px] p-4">
+                  <Image 
+                    src={vino.image} 
+                    alt={vino.name} 
+                    fill 
+                    className="object-contain p-2 rounded-xl" 
+                  />
+                </div>
+                <div className="p-6 text-center bg-white border-t border-gray-100 flex-grow flex flex-col justify-center">
+                  <h3 className="font-medium text-lg text-[#1a472a]">{vino.name}</h3>
+                  <p className="text-sm text-gray-500 mt-2">{vino.description}</p>
+                </div>
+              </Link>
+            ))}
           </div>
 
-          <div className="text-center">
+          <div className="text-center bg-white p-8 rounded-xl shadow-sm max-w-2xl mx-auto">
             <p className="text-muted-foreground mb-6">
               Naše vína jsou tvořena s důrazem na kvalitu a autentičnost. Rádi vám pomůžeme s výběrem vína, které
               uspokojí vaše chuťové pohárky.
             </p>
-            <Button asChild className="bg-[#1a472a] hover:bg-[#2a573a] text-white">
+            <Button asChild className="bg-[#1a472a] hover:bg-[#2a573a] text-white rounded-full px-6">
               <Link href="/vina">Nabídka vín</Link>
             </Button>
           </div>
