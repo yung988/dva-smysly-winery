@@ -47,7 +47,7 @@ export default function Home() {
               <p className="text-lg text-muted-foreground">Zdravíme tě, vínomilče!</p>
               <p className="text-muted-foreground">
                 Tak dlouho jsme spolu s vínem kroužili, až jsme se rozhodli dát tomu všemu smysl – v našem případě
-                dokonce Dva smysly. Naše cesta k vínu je nejen o vášni, ale i o snaze přenést naše nadšení na vás, naše
+                dokonce Dva Smysly. Naše cesta k vínu je nejen o vášni, ale i o snaze přenést naše nadšení na vás, naše
                 zákazníky.
               </p>
               <p className="font-medium">Ondra a Lukáš, těší nás!</p>

@@ -18,7 +18,7 @@ const vina = [
       "Tento Sauvignon skvěle doplní pokrmy z čerstvých bylin, kozí sýry nebo lehké saláty. Doporučujeme podávat při teplotě 9-11°C."
     ],
     info: {
-      oblast: "Znojemská vinařská podoblast",
+      oblast: "Znojemská",
       alkohol: "11,5 % obj.",
       zbytkovy_cukr: "8,9 g/l",
       kyseliny: "6,5 g/l",
@@ -37,7 +37,7 @@ const vina = [
       "Tento Ryzlink rýnský je ideálním společníkem k rybím pokrmům, lehkým předkrmům nebo jako osvěžující aperitiv. Nejlépe vynikne při teplotě 8-10°C."
     ],
     info: {
-      oblast: "Znojemská vinařská podoblast",
+      oblast: "Znojemská",
       alkohol: "12,5 % obj.",
       zbytkovy_cukr: "7,7 g/l",
       kyseliny: "6,8 g/l",
@@ -56,7 +56,7 @@ const vina = [
       "Toto víno je skvělým společníkem k pikantním asijským pokrmům, sýrům s modrou plísní nebo jako aperitiv. Podávejte při teplotě 10-12°C."
     ],
     info: {
-      oblast: "Znojemská vinařská podoblast",
+      oblast: "Znojemská",
       alkohol: "12,0 % obj.",
       zbytkovy_cukr: "18 g/l",
       kyseliny: "6,0 g/l",
@@ -75,7 +75,7 @@ const vina = [
       "Svatovařinecké rosé je ideálním společníkem pro letní posezení, lehké saláty, či jako aperitiv. Podávejte vychlazené na 8-10°C."
     ],
     info: {
-      oblast: "Znojemská vinařská podoblast",
+      oblast: "Znojemská",
       alkohol: "10,5 % obj.",
       zbytkovy_cukr: "12,2 g/l",
       kyseliny: "6,0 g/l",
@@ -94,7 +94,7 @@ const vina = [
       "Toto víno skvěle doprovodí pečená masa, zvěřinu nebo zralé sýry. Doporučujeme podávat při teplotě 16-18°C."
     ],
     info: {
-      oblast: "Znojemská vinařská podoblast",
+      oblast: "Znojemská",
       alkohol: "12,0 % obj.",
       zbytkovy_cukr: "1 g/l",
       kyseliny: "5,2 g/l",
@@ -113,7 +113,7 @@ const vina = [
       "Veltlínské zelené je univerzálním vínem, které doprovodí širokou škálu pokrmů od tradičních českých jídel po asijskou kuchyni. Nejlépe chutná při teplotě 9-11°C."
     ],
     info: {
-      oblast: "Znojemská vinařská podoblast",
+      oblast: "Znojemská",
       alkohol: "12,5 % obj.",
       zbytkovy_cukr: "1,8 g/l",
       kyseliny: "6,2 g/l",
