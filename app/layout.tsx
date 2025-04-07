@@ -1,13 +1,23 @@
-import type { Metadata } from 'next'
-import './globals.css'
-import { cn } from '@/lib/utils'
-import Link from 'next/link'
-import Image from 'next/image'
-import { Instagram, ShoppingBag, Facebook } from 'lucide-react'
+'use client'
+
+import { cn } from "@/lib/utils"
+import "./globals.css"
+import { Inter as FontSans } from "next/font/google"
+import Link from "next/link"
+import Image from "next/image"
+import { Instagram, ShoppingBag, Facebook } from "lucide-react"
+import AgeVerificationModal from "@/components/AgeVerificationModal" // Import the modal
+import { Metadata } from "next"
+
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
 
 export const metadata: Metadata = {
-  title: 'Vinařství Dva Smysly',
-  description: 'Vinařství ze Znojemské vinařské podoblasti',
+  title: "Vinařství Dva Smysly",
+  description: "Vinařství Dva Smysly - Rodinné vinařství ze Znojemska. Ochutnejte naše vína.",
+  // Add other metadata as needed
 }
 
 export default function RootLayout({
@@ -16,17 +26,30 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="cs">
-      <body className={cn("min-h-screen bg-background font-sans antialiased")}>
-        {/* Globální navigace */}
+    <html lang="cs" suppressHydrationWarning>
+      <head />
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}
+      >
+        {/* Globální navigace (původní kód hlavičky) */}
         <header className="sticky top-0 z-50 w-full bg-[#1a472a]/90 backdrop-blur-sm">
           <div className="container flex h-20 items-center justify-between">
             <div className="flex items-center gap-2">
               <Link href="/">
-                <Image src="/logo/dvasmysly.svg" alt="Dva Smysly" width={120} height={40} className="h-auto filter invert brightness-0" />
+                <Image 
+                  src="/logo/dvasmysly.svg" 
+                  alt="Dva Smysly" 
+                  width={120} 
+                  height={40} 
+                  className="h-auto filter invert brightness-0" 
+                />
               </Link>
             </div>
             <nav className="hidden md:flex items-center gap-6">
+              {/* Původní navigační odkazy */}
               <Link href="/#about" className="text-sm font-medium text-white hover:text-gray-300 transition-colors">
                 O nás
               </Link>
@@ -44,7 +67,8 @@ export default function RootLayout({
               </Link>
             </nav>
             <div className="flex items-center gap-4">
-              <Link
+               {/* Původní ikony v hlavičce */}
+               <Link
                 href="/vina"
                 className="hidden md:flex items-center gap-2 text-sm font-medium text-white hover:text-gray-300 transition-colors"
               >
@@ -72,8 +96,13 @@ export default function RootLayout({
             </div>
           </div>
         </header>
+
+        <main className="min-h-screen flex flex-col items-center">
+          {children}
+        </main>
         
-        {children}
+        {/* Add the modal component here */}
+        <AgeVerificationModal />
       </body>
     </html>
   )
