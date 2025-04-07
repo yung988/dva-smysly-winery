@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Mail, Phone, MapPin, Instagram, ShoppingBag, ArrowRight, Quote } from "lucide-react"
+import { Mail, Phone, MapPin, Instagram, ShoppingBag, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import ContactForm from "@/components/contact/ContactForm"
 
@@ -53,23 +53,29 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative h-screen overflow-hidden">
+      <section className="relative h-[80vh] overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/grapes-green.jpeg" alt="Vinice" fill className="object-cover" priority />
+          <Image src="/leaves.jpeg" alt="Vinice" fill className="object-cover" priority />
         </div>
-        <div className="relative container h-full flex flex-col justify-center">
-          <div className="max-w-3xl space-y-4 bg-white/80 backdrop-blur-sm p-8 rounded-lg">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#1a472a]">Dva Smysly Winery</h1>
+        <div className="relative container h-full flex flex-col justify-center items-start">
+          <div className="max-w-xl space-y-4 bg-white/80 backdrop-blur-sm p-8 rounded-lg">
+            <Image src="/logo.png" alt="Dva Smysly" width={200} height={80} className="h-auto" />
+            <h1 className="text-4xl md:text-5xl font-bold text-[#1a472a]">Vinařství Dva Smysly</h1>
             <p className="text-lg text-[#1a472a]">
-              Vítejte ve světě našeho vinařství, kde se snoubí tradice s moderním přístupem. Naše vína jsou výsledkem
-              pečlivé práce a respektu k terroir Znojemské vinařské podoblasti.
+              „Ve vinařství Dva smysly věříme, že víno je jako poezie. Každá sklenka vypráví jedinečný příběh a probouzí
+              naše smysly."
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button asChild className="bg-[#1a472a] hover:bg-[#2a573a] text-white">
-                <Link href="/vina">Prohlédnout vína</Link>
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Button asChild size="lg" className="bg-[#1a472a] hover:bg-[#2a573a] text-white border-[#1a472a]">
+                <a href="#degustace">Rezervovat degustaci</a>
               </Button>
-              <Button asChild variant="outline" className="border-[#1a472a] text-[#1a472a] hover:bg-[#1a472a] hover:text-white">
-                <Link href="/degustace">Rezervovat degustaci</Link>
+              <Button
+                variant="outline"
+                asChild
+                size="lg"
+                className="bg-transparent text-[#1a472a] hover:bg-[#1a472a] hover:text-white border-[#1a472a]"
+              >
+                <a href="#about">Poznejte nás</a>
               </Button>
             </div>
           </div>
@@ -79,23 +85,33 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="py-16 md:py-24 bg-white">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div className="relative h-[600px] rounded-lg overflow-hidden">
-              <Image src="/images/about/about hlavni.JPG" alt="O nás" fill className="object-cover" />
-            </div>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-[#1a472a]">O nás</h2>
-              <p className="text-lg text-muted-foreground">
-                Jsme mladé vinařství ze Znojemské vinařské podoblasti, které vzniklo v roce 2020. Naším cílem je produkovat
-                kvalitní vína, která budou reprezentovat terroir této oblasti.
+              <h2 className="text-3xl md:text-4xl font-bold">O nás</h2>
+              <p className="text-lg text-muted-foreground">Zdravíme tě, vínomilče!</p>
+              <p className="text-muted-foreground">
+                Tak dlouho jsme spolu s vínem kroužili, až jsme se rozhodli dát tomu všemu smysl – v našem případě
+                dokonce Dva smysly. Naše cesta k vínu je nejen o vášni, ale i o snaze přenést naše nadšení na vás, naše
+                zákazníky.
               </p>
-              <p className="text-lg text-muted-foreground">
-                Název Dva Smysly symbolizuje spojení dvou základních smyslů při vnímání vína - čichu a chuti. Zároveň
-                odkazuje na dva přátele, kteří stojí za vznikem tohoto projektu.
+              <p className="font-medium">Ondra a Lukáš, těší nás!</p>
+              <p className="text-muted-foreground">
+                Jsme dva a dává nám to smysl. Dva kluci, co žijí vínem, a rozhodli se jej tvořit společně. Od sklizně
+                hroznů na našich vinicích až po zrození vína v našem sklepě je vše o jedné věci – sdílet smysluplný
+                zážitek s vámi.
               </p>
-              <Button asChild className="bg-[#1a472a] hover:bg-[#2a573a] text-white">
-                <Link href="/vina">Prohlédnout vína</Link>
-              </Button>
+              <p className="text-muted-foreground">
+                Věříme, že víno není jen nápoj, ale příběh – plný vášně, tradice a lásky k přírodě. Každá sklenka je
+                malým světem, který vás vtáhne a probudí vaše smysly.
+              </p>
+            </div>
+            <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden">
+              <Image 
+                src="/images/about/about hlavni.JPG" 
+                alt="Hrozny" 
+                fill 
+                className="object-contain md:object-cover rounded-lg" 
+              />
             </div>
           </div>
         </div>
@@ -302,54 +318,101 @@ export default function Home() {
       </section>
 
       {/* Quote Section */}
-      <section className="py-16 bg-[#1a472a]">
+      <section className="py-16 md:py-24 bg-[#1a472a] text-white">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <Quote className="h-12 w-12 text-white mx-auto" />
-            <blockquote className="text-2xl md:text-3xl text-white font-light italic">
-              "Ve víně je pravda, v našem víně je pravda o Znojemsku."
+          <div className="max-w-3xl mx-auto text-center">
+            <blockquote className="text-2xl md:text-3xl font-medium italic">
+              „Ve vinařství Dva smysly věříme, že víno je jako poezie. Každá sklenka vypráví jedinečný příběh a probouzí
+              naše smysly."
             </blockquote>
-            <p className="text-white/80">- Dva Smysly Winery</p>
+            <div className="mt-6">
+              <p className="font-medium">Ondřej a Lukáš</p>
+              <p className="text-gray-300">Vinařství Dva Smysly</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="kontakt" className="py-16 md:py-24">
+      <section id="kontakt" className="py-16 md:py-24 bg-white">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-10">
+          <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-[#1a472a]">Kontakt</h2>
-              <p className="text-lg text-muted-foreground">
-                Máte zájem o naše vína nebo degustaci? Neváhejte nás kontaktovat. Rádi zodpovíme všechny vaše dotazy.
-              </p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1a472a]">Kontakt</h2>
+              <p className="text-muted-foreground">Pro více informací o našich službách nás neváhejte kontaktovat.</p>
+
               <div className="space-y-4">
-                <div className="flex items-center gap-2">
-                  <MapPin className="h-5 w-5 text-[#1a472a]" />
-                  <span>Znojemská vinařská podoblast</span>
+                <div className="flex items-start gap-4">
+                  <Mail className="h-5 w-5 mt-1 text-[#1a472a]" />
+                  <div>
+                    <p className="font-medium">Email</p>
+                    <a
+                      href="mailto:ondrakarady1@seznam.cz"
+                      className="text-muted-foreground hover:text-black transition-colors"
+                    >
+                      ondrakarady1@seznam.cz
+                    </a>
+                    <br />
+                    <a
+                      href="mailto:lukasmudrych@seznam.cz"
+                      className="text-muted-foreground hover:text-black transition-colors"
+                    >
+                      lukasmudrych@seznam.cz
+                    </a>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Mail className="h-5 w-5 text-[#1a472a]" />
-                  <a href="mailto:info@dvasmysly.cz" className="hover:underline">
-                    info@dvasmysly.cz
+
+                <div className="flex items-start gap-4">
+                  <Phone className="h-5 w-5 mt-1 text-[#1a472a]" />
+                  <div>
+                    <p className="font-medium">Telefon</p>
+                    <a href="tel:+420720611514" className="text-muted-foreground hover:text-black transition-colors">
+                      +420 720 611 514
+                    </a>
+                    <br />
+                    <a href="tel:+420602600140" className="text-muted-foreground hover:text-black transition-colors">
+                      +420 602 600 140
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <MapPin className="h-5 w-5 mt-1 text-[#1a472a]" />
+                  <div>
+                    <p className="font-medium">Lokalita</p>
+                    <p className="text-muted-foreground">Suchohrdly u Znojma</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-4">
+                <h3 className="text-lg font-medium mb-2">Sledujte nás</h3>
+                <div className="flex gap-4">
+                  <a
+                    href="https://www.instagram.com/vinarstvi_dvasmysly/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gray-100 hover:bg-gray-200 p-3 rounded-full transition-colors"
+                  >
+                    <Instagram className="h-5 w-5" />
+                    <span className="sr-only">Instagram</span>
                   </a>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Phone className="h-5 w-5 text-[#1a472a]" />
-                  <a href="tel:+420777888999" className="hover:underline">
-                    +420 777 888 999
-                  </a>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Instagram className="h-5 w-5 text-[#1a472a]" />
-                  <a href="https://instagram.com/dvasmysly" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                    @dvasmysly
+                  <a href="/vina" className="bg-gray-100 hover:bg-gray-200 p-3 rounded-full transition-colors">
+                    <ShoppingBag className="h-5 w-5" />
+                    <span className="sr-only">Nabídka vín</span>
                   </a>
                 </div>
               </div>
             </div>
-            <div className="relative h-[400px] rounded-lg overflow-hidden">
-              <Image src="/map.jpeg" alt="Mapa" fill className="object-cover" />
+
+            <div className="bg-gray-100 p-8 rounded-lg">
+              <h3 className="text-xl font-medium mb-4">Napište nám</h3>
+              <div className="space-y-2 mb-4">
+                <p className="text-sm text-muted-foreground">
+                  Vyplňte formulář a my se vám co nejdříve ozveme. Pole označená * jsou povinná.
+                </p>
+              </div>
+              <ContactForm />
             </div>
           </div>
         </div>
