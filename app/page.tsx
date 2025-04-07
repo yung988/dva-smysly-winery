@@ -278,8 +278,8 @@ export default function Home() {
               ))}
             </CarouselContent>
             <div className="flex justify-center mt-6">
-              <CarouselPrevious className="relative static mx-2 bg-white hover:bg-gray-50 text-[#1a472a] border-[#1a472a]" />
-              <CarouselNext className="relative static mx-2 bg-white hover:bg-gray-50 text-[#1a472a] border-[#1a472a]" />
+              <CarouselPrevious className="static mx-2 bg-white hover:bg-gray-50 text-[#1a472a] border-[#1a472a]" />
+              <CarouselNext className="static mx-2 bg-white hover:bg-gray-50 text-[#1a472a] border-[#1a472a]" />
             </div>
           </Carousel>
           
