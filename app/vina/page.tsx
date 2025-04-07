@@ -79,12 +79,12 @@ export default function VinaPage() {
           <div className="grid gap-12">
             {vina.map((vino, index) => (
               <div key={vino.id} className={`grid md:grid-cols-2 gap-10 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
-                <div className="relative h-[400px] rounded-lg overflow-hidden">
+                <div className="relative h-[600px] rounded-lg overflow-hidden group">
                   <Image 
                     src={vino.image} 
                     alt={vino.name} 
                     fill 
-                    className="object-cover grayscale" 
+                    className="object-contain transition-all duration-300 grayscale group-hover:grayscale-0" 
                   />
                 </div>
                 <div className="space-y-6">

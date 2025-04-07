@@ -138,45 +138,49 @@ export default function DetailVinaPage({ params }: { params: { id: string } }) {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hlavička stránky */}
-      <section className="relative h-[60vh] overflow-hidden">
-        <div className="absolute inset-0">
-          <Image 
-            src={vino.image} 
-            alt={vino.name} 
-            fill 
-            className="object-cover grayscale" 
-            priority 
-          />
-        </div>
-        <div className="relative container h-full flex flex-col justify-end pb-16">
-          <div className="max-w-3xl space-y-4 bg-black/30 backdrop-blur-sm p-8 rounded-lg">
-            <Button asChild variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-black mb-4">
-              <Link href="/vina">
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Zpět na nabídku vín
-              </Link>
-            </Button>
-            <h1 className="text-4xl md:text-5xl font-bold text-white">{vino.name}</h1>
-            <p className="text-xl text-white">{vino.description}</p>
-          </div>
-        </div>
-      </section>
+      {/* Navigace */}
+      <div className="container py-4">
+        <Button asChild variant="outline" className="bg-transparent text-black border-black hover:bg-black hover:text-white">
+          <Link href="/vina">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Zpět na nabídku vín
+          </Link>
+        </Button>
+      </div>
 
       {/* Detail vína */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-8 md:py-16">
         <div className="container">
-          <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Levá část - fotka */}
             <div className="space-y-8">
+              <div className="relative h-[700px] rounded-lg overflow-hidden">
+                <Image 
+                  src={vino.image} 
+                  alt={vino.name} 
+                  fill 
+                  className="object-contain" 
+                  priority 
+                />
+              </div>
+            </div>
+
+            {/* Pravá část - informace */}
+            <div className="space-y-8">
+              <div>
+                <h1 className="text-4xl md:text-5xl font-bold mb-4">{vino.name}</h1>
+                <p className="text-xl text-muted-foreground">{vino.description}</p>
+              </div>
+
               <div className="space-y-4">
-                <h2 className="text-3xl font-bold">O víně</h2>
+                <h2 className="text-2xl font-bold">O víně</h2>
                 {vino.longDescription.map((paragraph, idx) => (
                   <p key={idx} className="text-lg text-muted-foreground">{paragraph}</p>
                 ))}
               </div>
               
-              <div className="mt-12">
-                <h3 className="text-2xl font-bold mb-4">Parametry vína</h3>
+              <div>
+                <h3 className="text-xl font-bold mb-4">Parametry vína</h3>
                 <div className="bg-gray-100 p-6 rounded-lg">
                   <dl className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
@@ -203,7 +207,7 @@ export default function DetailVinaPage({ params }: { params: { id: string } }) {
                 </div>
               </div>
               
-              <div className="mt-8 flex justify-center gap-4">
+              <div className="flex gap-4">
                 <Button asChild className="bg-black hover:bg-gray-800 text-white">
                   <Link href="/#kontakt">Kontaktovat pro nákup</Link>
                 </Button>
@@ -223,12 +227,12 @@ export default function DetailVinaPage({ params }: { params: { id: string } }) {
             <h2 className="text-2xl md:text-3xl font-bold mb-8">Další vína</h2>
             
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="relative h-[300px] rounded-lg overflow-hidden">
+              <div className="relative h-[400px] rounded-lg overflow-hidden group">
                 <Image 
                   src={nextVino.image} 
                   alt={nextVino.name} 
                   fill 
-                  className="object-cover grayscale" 
+                  className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0" 
                 />
               </div>
               <div className="space-y-4">

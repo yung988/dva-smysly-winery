@@ -244,65 +244,65 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-8 mb-8">
-            <div className="bg-white rounded-lg overflow-hidden shadow-sm">
-              <div className="relative h-[200px]">
-                <Image src="/images/vina/Sauvignon.JPG" alt="Sauvignon" fill className="object-cover grayscale" />
+            <Link href="/vina/sauvignon" className="bg-white rounded-lg overflow-hidden shadow-sm group">
+              <div className="relative h-[300px]">
+                <Image src="/images/vina/Sauvignon.JPG" alt="Sauvignon" fill className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0" />
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-medium">Sauvignon</h3>
                 <p className="text-sm text-gray-500 mt-1">Suché, 0,75l, ročník 2024</p>
               </div>
-            </div>
+            </Link>
             
-            <div className="bg-white rounded-lg overflow-hidden shadow-sm">
-              <div className="relative h-[200px]">
-                <Image src="/images/vina/Ryzlink rýnský.JPG" alt="Ryzlink rýnský" fill className="object-cover grayscale" />
+            <Link href="/vina/ryzlink-rynsky" className="bg-white rounded-lg overflow-hidden shadow-sm group">
+              <div className="relative h-[300px]">
+                <Image src="/images/vina/Ryzlink rýnský.JPG" alt="Ryzlink rýnský" fill className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0" />
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-medium">Ryzlink rýnský</h3>
                 <p className="text-sm text-gray-500 mt-1">Suché, 0,75l, ročník 2024</p>
               </div>
-            </div>
+            </Link>
             
-            <div className="bg-white rounded-lg overflow-hidden shadow-sm">
-              <div className="relative h-[200px]">
-                <Image src="/images/vina/Tramín červený.JPG" alt="Tramín červený" fill className="object-cover grayscale" />
+            <Link href="/vina/tramin-cerveny" className="bg-white rounded-lg overflow-hidden shadow-sm group">
+              <div className="relative h-[300px]">
+                <Image src="/images/vina/Tramín červený.JPG" alt="Tramín červený" fill className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0" />
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-medium">Tramín červený</h3>
                 <p className="text-sm text-gray-500 mt-1">Polosladké, 0,75l, ročník 2024</p>
               </div>
-            </div>
+            </Link>
             
-            <div className="bg-white rounded-lg overflow-hidden shadow-sm">
-              <div className="relative h-[200px]">
-                <Image src="/images/vina/Svatovařinecké rosé.JPG" alt="Svatovařinecké rosé" fill className="object-cover grayscale" />
+            <Link href="/vina/svatovarineske-rose" className="bg-white rounded-lg overflow-hidden shadow-sm group">
+              <div className="relative h-[300px]">
+                <Image src="/images/vina/Svatovařinecké rosé.JPG" alt="Svatovařinecké rosé" fill className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0" />
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-medium">Svatovařinecké rosé</h3>
                 <p className="text-sm text-gray-500 mt-1">Polosuché, 0,75l, ročník 2024</p>
               </div>
-            </div>
+            </Link>
             
-            <div className="bg-white rounded-lg overflow-hidden shadow-sm">
-              <div className="relative h-[200px]">
-                <Image src="/images/vina/Svatovařinecké.jpg" alt="Svatovařinecké" fill className="object-cover grayscale" />
+            <Link href="/vina/svatovarineske" className="bg-white rounded-lg overflow-hidden shadow-sm group">
+              <div className="relative h-[300px]">
+                <Image src="/images/vina/Svatovařinecké.jpg" alt="Svatovařinecké" fill className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0" />
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-medium">Svatovařinecké</h3>
                 <p className="text-sm text-gray-500 mt-1">Suché, 0,75l, ročník 2023</p>
               </div>
-            </div>
+            </Link>
 
-            <div className="bg-white rounded-lg overflow-hidden shadow-sm">
-              <div className="relative h-[200px]">
-                <Image src="/images/vina/Veltlínské zelené.JPG" alt="Veltlínské zelené" fill className="object-cover grayscale" />
+            <Link href="/vina/veltlinske-zelene" className="bg-white rounded-lg overflow-hidden shadow-sm group">
+              <div className="relative h-[300px]">
+                <Image src="/images/vina/Veltlínské zelené.JPG" alt="Veltlínské zelené" fill className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0" />
               </div>
               <div className="p-4 text-center">
                 <h3 className="font-medium">Veltlínské zelené</h3>
                 <p className="text-sm text-gray-500 mt-1">Suché, 0,75l, ročník 2024</p>
               </div>
-            </div>
+            </Link>
           </div>
 
           <div className="text-center">
