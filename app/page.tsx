@@ -57,7 +57,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[80vh] overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/vineyard.jpeg" alt="Vinice" fill className="object-cover" priority />
+          <Image src="/vineyard2.JPG" alt="Vinice" fill className="object-cover" priority />
         </div>
         <div className="relative container h-full flex flex-col justify-center items-start">
           <div className="max-w-xl space-y-4 bg-white/80 backdrop-blur-sm p-8 rounded-lg">
