@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft, ArrowRight } from "lucide-react"
 
 export default function VinaPage() {
   const vina = [
@@ -84,15 +84,15 @@ export default function VinaPage() {
                     src={vino.image} 
                     alt={vino.name} 
                     fill 
-                    className="object-contain transition-all duration-300 rounded-lg" 
+                    className="object-cover transition-all duration-300 rounded-lg" 
                   />
                 </div>
                 <div className="space-y-6">
                   <h2 className="text-3xl font-bold text-[#1a472a]">{vino.name}</h2>
                   <p className="text-xl text-muted-foreground">{vino.description}</p>
                   <p className="text-lg">{vino.detail}</p>
-                  <Button asChild className="bg-[#1a472a] hover:bg-[#2a573a] text-white">
-                    <Link href={`/vina/${vino.id}`}>Více informací</Link>
+                  <Button variant="outline" asChild className="w-full border-[#1a472a] text-[#1a472a] hover:bg-[#1a472a] hover:text-white">
+                    <Link href="/degustace">Více informací <ArrowRight className="ml-2 h-4 w-4" /></Link>
                   </Button>
                 </div>
               </div>

@@ -65,19 +65,19 @@ export default function DegustacePage() {
                     </p>
                   </div>
                   
-                  <Button asChild className="bg-black hover:bg-gray-800 text-white mt-4">
-                    <Link href="/#kontakt">Rezervovat termín</Link>
+                  <Button asChild className="bg-[#1a472a] hover:bg-[#2a573a] text-white">
+                    <Link href="/#kontakt">Rezervovat</Link>
                   </Button>
                 </div>
-                <div className="md:col-span-2 aspect-square relative rounded-lg overflow-hidden">
-                  <Image src="/images/Sklep/sklep1.jpg" alt="Řízená degustace" fill className="object-cover grayscale" />
+                <div className="md:col-span-2 relative h-[400px] rounded-lg overflow-hidden">
+                  <Image src="/images/Sklep/sklep1.jpg" alt="Řízená degustace" fill className="object-cover rounded-lg" />
                 </div>
               </div>
               
               {/* Firemní degustace */}
               <div className="grid md:grid-cols-5 gap-10 items-start">
-                <div className="order-2 md:order-1 md:col-span-2 aspect-square relative rounded-lg overflow-hidden">
-                  <Image src="/images/Sklep/sklep2.jpg" alt="Firemní degustace" fill className="object-cover grayscale" />
+                <div className="order-2 md:order-1 md:col-span-2 relative h-[400px] rounded-lg overflow-hidden">
+                  <Image src="/images/Sklep/sklep2.jpg" alt="Firemní degustace" fill className="object-cover rounded-lg" />
                 </div>
                 <div className="order-1 md:order-2 md:col-span-3 space-y-6">
                   <h3 className="text-2xl font-bold">Firemní degustace</h3>
@@ -145,8 +145,8 @@ export default function DegustacePage() {
                     <Link href="/#kontakt">Požádat o nabídku</Link>
                   </Button>
                 </div>
-                <div className="md:col-span-2 aspect-square relative rounded-lg overflow-hidden">
-                  <Image src="/images/Sklep/sklep3.jpg" alt="Firemní víno" fill className="object-cover grayscale" />
+                <div className="md:col-span-2 relative h-[400px] rounded-lg overflow-hidden">
+                  <Image src="/images/Sklep/sklep3.jpg" alt="Firemní víno" fill className="object-cover rounded-lg" />
                 </div>
               </div>
             </div>
