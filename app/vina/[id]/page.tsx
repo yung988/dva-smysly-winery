@@ -154,7 +154,7 @@ export default function DetailVinaPage({ params }: { params: { id: string } }) {
           <div className="grid md:grid-cols-2 gap-12">
             {/* Levá část - fotka */}
             <div className="space-y-8">
-              <div className="relative w-full h-[500px] bg-accent rounded-lg overflow-hidden">
+              <div className="relative w-full h-[600px] bg-accent rounded-lg overflow-hidden">
                 <Image 
                   src={vino.image} 
                   alt={vino.name} 
@@ -208,10 +208,10 @@ export default function DetailVinaPage({ params }: { params: { id: string } }) {
               </div>
               
               <div className="flex gap-4">
-                <Button asChild className="bg-black hover:bg-gray-800 text-white">
+                <Button asChild className="bg-[#1a472a] hover:bg-[#2a573a] text-white">
                   <Link href="/#kontakt">Kontaktovat pro nákup</Link>
                 </Button>
-                <Button asChild variant="outline" className="border-black text-black hover:bg-black hover:text-white">
+                <Button asChild variant="outline" className="border-[#1a472a] text-[#1a472a] hover:bg-[#1a472a] hover:text-white">
                   <Link href="/degustace">Prohlédnout degustace</Link>
                 </Button>
               </div>
@@ -232,14 +232,14 @@ export default function DetailVinaPage({ params }: { params: { id: string } }) {
                   src={nextVino.image} 
                   alt={nextVino.name} 
                   fill 
-                  className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0 rounded-lg" 
+                  className="object-contain transition-all duration-300 rounded-lg" 
                 />
               </div>
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold">{nextVino.name}</h3>
                 <p className="text-lg text-muted-foreground">{nextVino.description}</p>
                 <p>{nextVino.detail}</p>
-                <Button asChild className="bg-black hover:bg-gray-800 text-white">
+                <Button asChild className="bg-[#1a472a] hover:bg-[#2a573a] text-white">
                   <Link href={`/vina/${nextVino.id}`}>Zobrazit detail</Link>
                 </Button>
               </div>
@@ -253,19 +253,19 @@ export default function DetailVinaPage({ params }: { params: { id: string } }) {
         <div className="container">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
-              <Image src="/logo.png" alt="Dva Smysly" width={100} height={40} className="h-auto" />
+              <Image src="/logo/DVA SMYSLY Vector.png" alt="Dva Smysly" width={100} height={40} className="h-auto" />
             </div>
             <p className="text-sm text-muted-foreground">
               © {new Date().getFullYear()} Vinařství Dva Smysly. Všechna práva vyhrazena.
             </p>
             <nav className="flex items-center gap-6">
-              <Link href="/#about" className="text-sm text-muted-foreground hover:text-black transition-colors">
+              <Link href="/#about" className="text-sm text-muted-foreground hover:text-[#1a472a] transition-colors">
                 O nás
               </Link>
-              <Link href="/vina" className="text-sm text-muted-foreground hover:text-black transition-colors">
+              <Link href="/vina" className="text-sm text-muted-foreground hover:text-[#1a472a] transition-colors">
                 Vína
               </Link>
-              <Link href="/#kontakt" className="text-sm text-muted-foreground hover:text-black transition-colors">
+              <Link href="/#kontakt" className="text-sm text-muted-foreground hover:text-[#1a472a] transition-colors">
                 Kontakt
               </Link>
             </nav>
