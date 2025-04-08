@@ -117,15 +117,15 @@ export default function Home() {
         <div className="absolute inset-0">
           <Image src="/vineyard2.JPG" alt="Vinice" fill className="object-cover" priority />
         </div>
-        <div className="relative container h-full flex flex-col justify-center items-start text-left">
+        <div className="relative container h-full flex flex-col justify-center items-start md:items-center text-left">
           <div className="max-w-xl w-full space-y-4 bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-lg">
             <Image src="/logo/dvasmysly.svg" alt="Dva Smysly" width={180} height={72} className="h-auto" />
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1a472a] text-left">Vinařství Dva Smysly</h1>
-            <p className="text-base sm:text-lg text-[#1a472a] text-left">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1a472a] text-left md:text-center">Vinařství Dva Smysly</h1>
+            <p className="text-base sm:text-lg text-[#1a472a] text-left md:text-center">
               "Ve vinařství Dva smysly věříme, že víno je jako poezie. Každá sklenka vypráví jedinečný příběh a probouzí
               naše smysly."
             </p>
-            <div className="flex flex-col sm:flex-row justify-start gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row justify-start md:justify-center gap-4 pt-4">
               <Button asChild size="lg" className="w-full sm:w-auto bg-[#1a472a] hover:bg-[#2a573a] text-white border-[#1a472a]">
                 <a href="#degustace">Rezervovat degustaci</a>
               </Button>
@@ -142,10 +142,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section - Zarovnáno doleva na mobilech */}
+      {/* About Section - Zarovnáno doleva na mobilech, na střed na desktopu */}
       <section id="about" className="py-8 sm:py-12 md:py-20 bg-white">
         <div className="container px-4 sm:px-6">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-left mb-6 md:mb-8">O nás</h2>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-left md:text-center mb-6 md:mb-8">O nás</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Image column - Na mobilech nahoře */}
@@ -159,20 +159,20 @@ export default function Home() {
             </div>
             
             {/* Text column - Na mobilech dole */}
-            <div className="order-2 md:order-1 space-y-4 md:space-y-6 text-left">
-              <p className="text-base md:text-lg text-muted-foreground text-left">Zdravíme tě, vínomilče!</p>
-              <p className="text-sm md:text-base text-muted-foreground text-left">
+            <div className="order-2 md:order-1 space-y-4 md:space-y-6 text-left md:text-center">
+              <p className="text-base md:text-lg text-muted-foreground text-left md:text-center">Zdravíme tě, vínomilče!</p>
+              <p className="text-sm md:text-base text-muted-foreground text-left md:text-center">
                 Tak dlouho jsme spolu s vínem kroužili, až jsme se rozhodli dát tomu všemu smysl – v našem případě
                 dokonce Dva Smysly. Naše cesta k vínu je nejen o vášni, ale i o snaze přenést naše nadšení na vás, naše
                 zákazníky.
               </p>
-              <p className="font-medium text-sm md:text-base text-left">Ondra a Lukáš, těší nás!</p>
-              <p className="text-sm md:text-base text-muted-foreground text-left">
+              <p className="font-medium text-sm md:text-base text-left md:text-center">Ondra a Lukáš, těší nás!</p>
+              <p className="text-sm md:text-base text-muted-foreground text-left md:text-center">
                 Jsme dva a dává nám to smysl. Dva kluci, co žijí vínem, a rozhodli se jej tvořit společně. Od sklizně
                 hroznů na našich vinicích až po zrození vína v našem sklepě je vše o jedné věci – sdílet smysluplný
                 zážitek s vámi.
               </p>
-              <p className="text-sm md:text-base text-muted-foreground text-left">
+              <p className="text-sm md:text-base text-muted-foreground text-left md:text-center">
                 Věříme, že víno není jen nápoj, ale příběh – plný vášně, tradice a lásky k přírodě. Každá sklenka je
                 malým světem, který vás vtáhne, a probudí vaše smysly.
               </p>
@@ -181,12 +181,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Degustace Section - Zarovnáno doleva na mobilech */}
+      {/* Degustace Section - Zarovnáno doleva na mobilech, na střed na desktopu */}
       <section id="degustace" className="py-12 md:py-20 bg-gray-100">
         <div className="container">
-          <div className="text-left max-w-3xl mb-8 md:mb-12">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-left">Degustace</h2>
-            <p className="text-sm md:text-base text-muted-foreground text-left">
+          <div className="text-left md:text-center max-w-3xl mx-auto mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-left md:text-center">Degustace</h2>
+            <p className="text-sm md:text-base text-muted-foreground text-left md:text-center">
               Poznejte svět vína prostřednictvím našich degustací. Každá degustace je pečlivě sestavena a zaměřena na to
               nejlepší z naší Znojemské vinařské podoblasti.
             </p>
@@ -303,12 +303,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Vína Section - Zarovnáno doleva na mobilech */}
+      {/* Vína Section - Zarovnáno doleva na mobilech, na střed na desktopu */}
       <section id="vina" className="py-12 md:py-20 bg-white">
         <div className="container">
-          <div className="mb-8 md:mb-12 text-left">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-[#1a472a] text-left">Naše vína</h2>
-            <p className="text-base md:text-lg text-[#1a472a] text-left">
+          <div className="mb-8 md:mb-12 text-left md:text-center">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-[#1a472a] text-left md:text-center">Naše vína</h2>
+            <p className="text-base md:text-lg text-[#1a472a] text-left md:text-center">
               Naše portfolio zahrnuje pečlivě zpracovaná vína, která odrážejí terroir Znojemska. Věnujeme se bílým i
               červeným odrůdám.
             </p>
@@ -346,14 +346,14 @@ export default function Home() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="flex justify-start mt-4 md:mt-6">
+            <div className="flex justify-start md:justify-center mt-4 md:mt-6">
               <CarouselPrevious className="static mx-2 bg-white hover:bg-gray-50 text-[#1a472a] border-[#1a472a]" />
               <CarouselNext className="static mx-2 bg-white hover:bg-gray-50 text-[#1a472a] border-[#1a472a]" />
             </div>
           </Carousel>
           
-          <div className="text-left mt-8 md:mt-16">
-            <p className="text-sm md:text-base text-muted-foreground mb-4 md:mb-6 max-w-2xl">
+          <div className="text-left md:text-center mt-8 md:mt-16">
+            <p className="text-sm md:text-base text-muted-foreground mb-4 md:mb-6 max-w-2xl mx-auto">
               Naše vína jsou tvořena s důrazem na kvalitu a autentičnost. Rádi vám pomůžeme s výběrem vína, které
               uspokojí vaše chuťové pohárky.
             </p>
@@ -364,26 +364,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Quote Section - Zarovnáno doleva na mobilech */}
+      {/* Quote Section - Zarovnáno doleva na mobilech, na střed na desktopu */}
       <section className="py-12 md:py-16 bg-[#1a472a]">
         <div className="container">
-          <div className="max-w-3xl text-left space-y-4 md:space-y-6">
-            <blockquote className="text-xl sm:text-2xl md:text-3xl text-white font-light italic text-left">
+          <div className="max-w-3xl mx-auto text-left md:text-center space-y-4 md:space-y-6">
+            <blockquote className="text-xl sm:text-2xl md:text-3xl text-white font-light italic text-left md:text-center">
               "Ve vinařství Dva smysly věříme, že víno je jako poezie. Každá sklenka vypráví jedinečný příběh a probouzí naše smysly."
             </blockquote>
-            <p className="text-sm md:text-base text-white/80 text-left">- Ondřej a Lukáš</p>
+            <p className="text-sm md:text-base text-white/80 text-left md:text-center">- Ondřej a Lukáš</p>
           </div>
         </div>
       </section>
 
-      {/* Contact Section - Zarovnáno doleva na mobilech */}
+      {/* Contact Section - Zarovnáno doleva na mobilech, na střed na desktopu pro nadpisy */}
       <section id="kontakt" className="py-12 md:py-20 bg-white">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {/* Contact Info Column */}
             <div className="space-y-4 md:space-y-6">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1a472a] text-left">Kontakt</h2>
-              <p className="text-sm md:text-base text-muted-foreground text-left">Pro více informací o našich službách nás neváhejte kontaktovat.</p>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1a472a] text-left md:text-center">Kontakt</h2>
+              <p className="text-sm md:text-base text-muted-foreground text-left md:text-center">Pro více informací o našich službách nás neváhejte kontaktovat.</p>
 
               <div className="space-y-3 md:space-y-4">
                 <div className="flex items-start gap-3 md:gap-4">
@@ -428,8 +428,8 @@ export default function Home() {
               </div>
 
               <div className="pt-2 md:pt-4">
-                <h3 className="text-base md:text-lg font-medium mb-2 text-left">Sledujte nás</h3>
-                <div className="flex gap-3 md:gap-4">
+                <h3 className="text-base md:text-lg font-medium mb-2 text-left md:text-center">Sledujte nás</h3>
+                <div className="flex gap-3 md:gap-4 justify-start md:justify-center">
                   <a
                     href="https://www.instagram.com/vinarstvi_dvasmysly/"
                     target="_blank"
@@ -456,7 +456,7 @@ export default function Home() {
 
             {/* Form Column */}
             <div className="space-y-4 md:space-y-6">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1a472a] text-left">Napište nám</h2>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1a472a] text-left md:text-center">Napište nám</h2>
               <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
                 <div>
                   <Label htmlFor="name" className="text-sm md:text-base text-[#1a472a] text-left">Jméno</Label>
