@@ -1,0 +1,7 @@
+images.txt
+ryzlink_2024.jpg
+sauvignon_2024.jpg
+svatovavrinecke_2023.jpg
+svatovavrinecke_rose_2024.jpg
+tramin_2024.jpg
+veltlin_2024.jpg

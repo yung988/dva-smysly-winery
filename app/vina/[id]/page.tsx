@@ -10,7 +10,7 @@ const vina = [
     id: "sauvignon",
     name: "Sauvignon",
     description: "Suché, 0,75l, ročník 2024",
-    image: "/images/vina/Sauvignon.JPG",
+    image: "/images/vina/sauvignon_2024.png",
     detail: "Na vůni i chuti silný citrusový projev. Výrazný je červený grepfruit a pomelo. Výrazná a dlouhá dochuť.",
     longDescription: [
       "Sauvignon z našeho vinařství je výrazným reprezentantem této oblíbené odrůdy. Hrozny dozrávaly na nejlepších polohách, což jim dodalo nezaměnitelný charakter a intenzitu.",
@@ -29,7 +29,7 @@ const vina = [
     id: "ryzlink-rynsky",
     name: "Ryzlink rýnský",
     description: "Suché, 0,75l, ročník 2024",
-    image: "/images/vina/Ryzlink rýnský.JPG",
+    image: "/images/vina/ryzlink_2024.png",
     detail: "Intezivní aroma čerstvé meruňky s limetkovou šťávou. Křupavá kyselina.",
     longDescription: [
       "Ryzlink rýnský je ztělesněním terroir Znojemské vinařské podoblasti. Hrozny byly ručně sbírány v optimální zralosti a zpracovány s maximální péčí a respektem k tradičním postupům.",
@@ -48,7 +48,7 @@ const vina = [
     id: "tramin-cerveny",
     name: "Tramín červený",
     description: "Polosladké, 0,75l, ročník 2024",
-    image: "/images/vina/Tramín červený.JPG",
+    image: "/images/vina/tramin_2024.png",
     detail: "Na vůni jemné aroma květu růže, na chutí příjemně kořenité. Celý aromatický profil výborně podporuje lehce vyšší zbytkový cukr.",
     longDescription: [
       "Tramín červený je odrůda známá svým výrazným aromatickým profilem a my jsme se snažili tento charakter v našem víně maximálně podtrhnout.",
@@ -67,7 +67,7 @@ const vina = [
     id: "svatovarineske-rose",
     name: "Svatovařinecké rosé",
     description: "Polosuché, 0,75l, ročník 2024",
-    image: "/images/vina/Svatovařinecké rosé.JPG",
+    image: "/images/vina/svatovavrinecke_rose_2024.png",
     detail: "Lehké víno snižším obsahem alkoholu. Na vůni i chuti nalezneme třešnový kompot s lístkem máty.",
     longDescription: [
       "Naše Svatovařinecké rosé představuje svěží a ovocnou stránku této tradiční odrůdy. Krátká macerace hroznů dodala vínu krásnou růžovou barvu a extrahovala jemné ovocné tóny.",
@@ -86,7 +86,7 @@ const vina = [
     id: "svatovarinecke",
     name: "Svatovařinecké",
     description: "Suché, 0,75l, ročník 2023",
-    image: "/images/vina/Svatovařinecké.jpg",
+    image: "/images/vina/svatovavrinecke_2023.png",
     detail: "Středně intezivní garnátová barva. Vyznačuje se tóny švestek a povidel s decentním nádechem dubového dřeva.",
     longDescription: [
       "Svatovařinecké je tradiční moravská odrůda, která v našich podmínkách dosahuje vynikající kvality. Hrozny pro toto víno byly pečlivě vybírány a zpracovány s důrazem na zachování odrůdového charakteru.",
@@ -104,8 +104,8 @@ const vina = [
   {
     id: "veltlinske-zelene",
     name: "Veltlínské zelené",
-    description: "Suché, 0,75l, ročník 2024",
-    image: "/images/vina/Veltlínské zelené.JPG",
+    description: "Suché, 0,75l, ročník 2023",
+    image: "/images/vina/veltlin_2024.png",
     detail: "Typický znojemský Veltlín. Začátek lehce bylinný doplněný minerálnímy tóny. Dochuť je dlouhá a dominuje zde bílý pepř.",
     longDescription: [
       "Veltlínské zelené je tradiční odrůdou znojemské oblasti a my jsme hrdí na to, že ji můžeme nabídnout v té nejlepší kvalitě. Naše vinice poskytují ideální podmínky pro pěstování této odrůdy.",
@@ -137,24 +137,24 @@ export default function DetailVinaPage({ params }: { params: { id: string } }) {
   const nextVino = vina[nextIndex]
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white -mt-16 pt-16">
       {/* Navigace */}
-      <div className="container py-4">
-        <Button asChild variant="outline" className="bg-transparent text-[#1a472a] border-[#1a472a] hover:bg-[#1a472a] hover:text-white">
+      <div className="container py-3 md:py-4">
+        <Button asChild variant="outline" className="text-sm md:text-base bg-transparent text-[#1a472a] border-[#1a472a] hover:bg-[#1a472a] hover:text-white">
           <Link href="/vina">
-            <ArrowLeft className="mr-2 h-4 w-4" />
+            <ArrowLeft className="mr-2 h-3 w-3 md:h-4 md:w-4" />
             Zpět na nabídku vín
           </Link>
         </Button>
       </div>
 
       {/* Detail vína */}
-      <section className="py-8 md:py-16">
+      <section className="py-6 md:py-12 lg:py-16">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
             {/* Levá část - fotka */}
-            <div className="space-y-8">
-              <div className="relative w-full h-[600px] bg-transparent rounded-lg overflow-hidden">
+            <div className="space-y-6 md:space-y-8">
+              <div className="relative w-full h-[500px] md:h-[600px] lg:h-[750px] bg-transparent rounded-lg overflow-hidden">
                 <Image 
                   src={vino.image} 
                   alt={vino.name} 
@@ -166,52 +166,52 @@ export default function DetailVinaPage({ params }: { params: { id: string } }) {
             </div>
 
             {/* Pravá část - informace */}
-            <div className="space-y-8">
+            <div className="space-y-6 md:space-y-8">
               <div>
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">{vino.name}</h1>
-                <p className="text-xl text-muted-foreground">{vino.description}</p>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 text-left">{vino.name}</h1>
+                <p className="text-base md:text-xl text-muted-foreground text-left">{vino.description}</p>
               </div>
 
-              <div className="space-y-4">
-                <h2 className="text-2xl font-bold">O víně</h2>
+              <div className="space-y-2 md:space-y-4">
+                <h2 className="text-xl md:text-2xl font-bold text-left">O víně</h2>
                 {vino.longDescription.map((paragraph, idx) => (
-                  <p key={`${vino.id}-desc-${idx}`} className="text-lg text-muted-foreground">{paragraph}</p>
+                  <p key={`${vino.id}-desc-${idx}`} className="text-sm md:text-base lg:text-lg text-muted-foreground text-left">{paragraph}</p>
                 ))}
               </div>
               
               <div>
-                <h3 className="text-xl font-bold mb-4">Parametry vína</h3>
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <dl className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-4 text-left">Parametry vína</h3>
+                <div className="bg-gray-50 p-4 md:p-6 rounded-lg">
+                  <dl className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 text-sm md:text-base">
                     <div>
-                      <dt className="font-medium">Vinařská oblast</dt>
-                      <dd className="text-muted-foreground">{vino.info.oblast}</dd>
+                      <dt className="font-medium text-left">Vinařská oblast</dt>
+                      <dd className="text-muted-foreground text-left">{vino.info.oblast}</dd>
                     </div>
                     <div>
-                      <dt className="font-medium">Obsah alkoholu</dt>
-                      <dd className="text-muted-foreground">{vino.info.alkohol}</dd>
+                      <dt className="font-medium text-left">Obsah alkoholu</dt>
+                      <dd className="text-muted-foreground text-left">{vino.info.alkohol}</dd>
                     </div>
                     <div>
-                      <dt className="font-medium">Zbytkový cukr</dt>
-                      <dd className="text-muted-foreground">{vino.info.zbytkovy_cukr}</dd>
+                      <dt className="font-medium text-left">Zbytkový cukr</dt>
+                      <dd className="text-muted-foreground text-left">{vino.info.zbytkovy_cukr}</dd>
                     </div>
                     <div>
-                      <dt className="font-medium">Kyseliny</dt>
-                      <dd className="text-muted-foreground">{vino.info.kyseliny}</dd>
+                      <dt className="font-medium text-left">Kyseliny</dt>
+                      <dd className="text-muted-foreground text-left">{vino.info.kyseliny}</dd>
                     </div>
                     <div>
-                      <dt className="font-medium">Doporučená teplota</dt>
-                      <dd className="text-muted-foreground">{vino.info.doporucena_teplota}</dd>
+                      <dt className="font-medium text-left">Doporučená teplota</dt>
+                      <dd className="text-muted-foreground text-left">{vino.info.doporucena_teplota}</dd>
                     </div>
                   </dl>
                 </div>
               </div>
               
-              <div className="flex gap-4">
-                <Button asChild className="bg-[#1a472a] hover:bg-[#2a573a] text-white">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+                <Button asChild className="text-sm md:text-base bg-[#1a472a] hover:bg-[#2a573a] text-white">
                   <Link href="/#kontakt">Kontaktovat pro nákup</Link>
                 </Button>
-                <Button asChild variant="outline" className="border-[#1a472a] text-[#1a472a] hover:bg-[#1a472a] hover:text-white">
+                <Button asChild variant="outline" className="text-sm md:text-base border-[#1a472a] text-[#1a472a] hover:bg-[#1a472a] hover:text-white">
                   <Link href="/degustace">Prohlédnout degustace</Link>
                 </Button>
               </div>
@@ -221,13 +221,13 @@ export default function DetailVinaPage({ params }: { params: { id: string } }) {
       </section>
       
       {/* Další vína */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-8 md:py-12 lg:py-16 bg-gray-50">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8">Další vína</h2>
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 md:mb-8 text-left">Další vína</h2>
             
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="relative h-[400px] rounded-lg overflow-hidden group">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+              <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden group">
                 <Image 
                   src={nextVino.image} 
                   alt={nextVino.name} 
@@ -235,11 +235,11 @@ export default function DetailVinaPage({ params }: { params: { id: string } }) {
                   className="object-contain transition-all duration-300 rounded-lg" 
                 />
               </div>
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold">{nextVino.name}</h3>
-                <p className="text-lg text-muted-foreground">{nextVino.description}</p>
-                <p>{nextVino.detail}</p>
-                <Button asChild className="bg-[#1a472a] hover:bg-[#2a573a] text-white">
+              <div className="space-y-3 md:space-y-4 text-left">
+                <h3 className="text-xl md:text-2xl font-bold text-left">{nextVino.name}</h3>
+                <p className="text-base md:text-lg text-muted-foreground text-left">{nextVino.description}</p>
+                <p className="text-sm md:text-base text-left">{nextVino.detail}</p>
+                <Button asChild className="text-sm md:text-base bg-[#1a472a] hover:bg-[#2a573a] text-white">
                   <Link href={`/vina/${nextVino.id}`}>Zobrazit detail</Link>
                 </Button>
               </div>
@@ -248,30 +248,6 @@ export default function DetailVinaPage({ params }: { params: { id: string } }) {
         </div>
       </section>
       
-      {/* Footer */}
-      <footer className="py-8 border-t">
-        <div className="container">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-2">
-              <Image src="/logo/DVA SMYSLY Vector.png" alt="Dva Smysly" width={100} height={40} className="h-auto" />
-            </div>
-            <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Vinařství Dva Smysly. Všechna práva vyhrazena.
-            </p>
-            <nav className="flex items-center gap-6">
-              <Link href="/#about" className="text-sm text-muted-foreground hover:text-[#1a472a] transition-colors">
-                O nás
-              </Link>
-              <Link href="/vina" className="text-sm text-muted-foreground hover:text-[#1a472a] transition-colors">
-                Vína
-              </Link>
-              <Link href="/#kontakt" className="text-sm text-muted-foreground hover:text-[#1a472a] transition-colors">
-                Kontakt
-              </Link>
-            </nav>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 } 
