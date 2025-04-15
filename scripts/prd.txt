@@ -1,0 +1,43 @@
+# Produktový Požadavkový Dokument (PRD) - Finalizace a Optimalizace Vinařství Dva Smysly
+
+## 1. Úvod
+
+**Stav projektu:** Webová stránka pro Vinařství Dva Smysly je již implementována (frontend kód existuje). Obsah, struktura, design (včetně barev, ikon, fotek) jsou považovány za finální a správné dle původních požadavků a souboru `vinarstvi.md`.
+
+**Cíl projektu:** Provést finální kontrolu, opravu chyb, optimalizaci a zajištění perfektní responzivity existující webové stránky. Cílem **není** měnit obsah ani přidávat nové funkce, pouze doladit stávající implementaci.
+
+## 2. Požadavky na Finalizaci a Optimalizaci
+
+### 2.1 Oprava chyb (Bug Fixing)
+    - Identifikovat a opravit veškeré funkční chyby v existujícím kódu webové stránky.
+    - Zkontrolovat funkčnost všech interaktivních prvků (např. odkazy, tlačítka, formuláře, pokud existují).
+    - Ověřit správné načítání a zobrazení veškerého obsahu.
+
+### 2.2 Optimalizace výkonu
+    - Analyzovat rychlost načítání stránky.
+    - Optimalizovat velikost a načítání obrázků.
+    - Optimalizovat kód (CSS, JavaScript) pro rychlejší vykreslení.
+    - Zvážit základní SEO optimalizace (kontrola meta tagů, sémantiky HTML), pokud již nejsou implementovány.
+
+### 2.3 Ověření funkčnosti (Verification)
+    - Komplexně projít celou webovou stránku a ověřit, že všechny sekce a funkcionality odpovídají očekávání a původnímu zadání (`vinarstvi.md`).
+    - Provést testování napříč různými moderními prohlížeči (Chrome, Firefox, Safari, Edge).
+
+### 2.4 Responzivní design a mobilní optimalizace
+    - Důkladně otestovat zobrazení a funkčnost webu na různých velikostech obrazovek (desktop, tablet, mobil).
+    - Zajistit, že layout je plně responzivní a všechny prvky jsou dobře použitelné na dotykových zařízeních.
+    - Opravit jakékoliv problémy se zobrazením nebo funkčností na mobilních zařízeních.
+
+## 3. Technologie
+    - Předpokládaný stack (dle předchozí komunikace): React/Next.js, TailwindCSS, pnpm.
+
+## 4. Omezení
+    - Žádné změny v obsahu, struktuře nebo základním designu webu.
+    - Zaměření výhradně na opravy, optimalizaci a responzivitu existujícího kódu.
+
+## 5. Budoucí rozšíření (Mimo rozsah tohoto PRD)
+
+- Implementace e-shopu pro přímý prodej vín.
+- Rezervační systém pro degustace.
+- Pokročilejší CMS pro správu obsahu.
+- Vícejazyčná podpora. 
