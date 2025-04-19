@@ -1,0 +1,11 @@
+# Task ID: 11
+# Title: Implement Contact Section
+# Status: pending
+# Dependencies: 2
+# Priority: high
+# Description: Create the contact section with all necessary contact information.
+# Details:
+Develop the Contact section with email addresses (ondrakarady1@seznam.cz, lukasmudrych@seznam.cz), phone numbers (+420 720 611 514, +420 602 600 140), and location (Suchohrdly u Znojma). Include the text inviting visitors to contact for more information. Add a CTA button for 'Více informací' that could lead to a more detailed contact page or form in the future. Ensure email addresses and phone numbers are properly formatted as clickable links.
+
+# Test Strategy:
+Verify all contact information is correctly displayed. Test that email and phone links are clickable and properly formatted. Check responsive behavior on different screen sizes.

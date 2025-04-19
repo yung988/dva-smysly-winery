@@ -1,0 +1,11 @@
+# Task ID: 14
+# Title: Optimize Images and Assets
+# Status: pending
+# Dependencies: 1
+# Priority: medium
+# Description: Prepare and optimize all images and visual assets for the website.
+# Details:
+Collect and organize all required images for the website. Optimize images for web using appropriate formats (WebP where supported, with JPEG/PNG fallbacks). Implement responsive images using Next.js Image component with multiple sizes. Create a consistent naming convention for all assets. Set up lazy loading for images to improve initial page load performance.
+
+# Test Strategy:
+Verify image loading performance using tools like Lighthouse. Check that images display correctly at different screen sizes. Test fallback behavior for browsers that don't support modern image formats.

@@ -1,0 +1,11 @@
+# Task ID: 18
+# Title: Create Content Management Structure
+# Status: pending
+# Dependencies: 1, 8
+# Priority: low
+# Description: Implement a simple content management structure for future updates.
+# Details:
+Set up a simple content management structure using Markdown files or a headless CMS. Create templates for blog posts that can be easily updated. Implement a system for managing wine listings that could be updated in the future. Document the content update process for non-technical users. Consider implementing a simple admin interface if appropriate.
+
+# Test Strategy:
+Test the content update process by adding a new blog post or updating wine information. Verify that content changes are correctly reflected on the website. Document and validate the update workflow.

@@ -18,6 +18,7 @@ import {
   SheetTrigger,
   SheetClose
 } from "@/components/ui/sheet"
+import { Analytics } from '@vercel/analytics/next';
 // Metadata needs to be handled differently for client components, or moved to page level
 // For simplicity, we remove the static export for now.
 // import { Metadata } from "next"
@@ -260,6 +261,7 @@ export default function RootLayout({
                   </div>
                 </div>
               </div>
+              <Analytics />
             </footer>
           </>
         ) : (

@@ -1,0 +1,11 @@
+# Task ID: 15
+# Title: Implement Accessibility Features
+# Status: pending
+# Dependencies: 2, 4, 5, 6, 7, 8, 9, 10, 11, 12
+# Priority: medium
+# Description: Ensure the website meets basic accessibility standards (WCAG).
+# Details:
+Audit and implement accessibility improvements across all components. Ensure proper use of semantic HTML elements. Add appropriate ARIA attributes where needed. Implement keyboard navigation support. Ensure sufficient color contrast for text readability. Add screen reader-friendly descriptions for images and interactive elements. Test tab order for logical navigation flow.
+
+# Test Strategy:
+Use accessibility audit tools like Lighthouse or axe. Test keyboard navigation throughout the site. Verify screen reader compatibility using tools like NVDA or VoiceOver.

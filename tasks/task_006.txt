@@ -1,0 +1,11 @@
+# Task ID: 6
+# Title: SEO Optimization
+# Status: pending
+# Dependencies: 2
+# Priority: low
+# Description: Review and enhance basic SEO elements without changing content structure.
+# Details:
+Audit current meta tags (title, description, etc.) and ensure they're properly implemented. Check for proper heading hierarchy (h1, h2, etc.). Verify that all images have appropriate alt text. Ensure semantic HTML is used throughout the site. Check for proper canonical URLs. Verify that robots.txt and sitemap.xml are correctly configured if they exist. Implement structured data (Schema.org) where appropriate.
+
+# Test Strategy:
+Use SEO auditing tools like Lighthouse or SEMrush to validate improvements. Check that all pages have appropriate meta tags and semantic structure. Verify structured data using Google's Rich Results Test tool.

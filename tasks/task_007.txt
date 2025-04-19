@@ -1,0 +1,11 @@
+# Task ID: 7
+# Title: Cross-Browser Compatibility Testing
+# Status: pending
+# Dependencies: 2, 5
+# Priority: high
+# Description: Test the website across all major modern browsers to ensure consistent functionality and appearance.
+# Details:
+Test the website on Chrome, Firefox, Safari, and Edge (latest versions). Document any browser-specific issues or inconsistencies. Focus on both visual rendering and functional aspects. Pay special attention to CSS features that might have different implementations across browsers. Test any JavaScript functionality thoroughly across all browsers.
+
+# Test Strategy:
+Create a test matrix covering all major features across each browser. Document any inconsistencies with screenshots. Use BrowserStack or similar tools to access browsers not available locally. Verify that the user experience is consistent regardless of browser choice.
