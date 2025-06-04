@@ -64,15 +64,15 @@ const vina = [
     }
   },
   {
-    id: "svatovarineske-rose",
-    name: "Svatovařinecké rosé",
+    id: "svatovavrinecke-rose",
+    name: "Svatovavřinecké rosé",
     description: "Polosuché, 0,75l, ročník 2024",
     image: "/images/vina/svatovavrinecke_rose_2024.png",
     detail: "Lehké víno snižším obsahem alkoholu. Na vůni i chuti nalezneme třešnový kompot s lístkem máty.",
     longDescription: [
-      "Naše Svatovařinecké rosé představuje svěží a ovocnou stránku této tradiční odrůdy. Krátká macerace hroznů dodala vínu krásnou růžovou barvu a extrahovala jemné ovocné tóny.",
+      "Naše Svatovavřinecké rosé představuje svěží a ovocnou stránku této tradiční odrůdy. Krátká macerace hroznů dodala vínu krásnou růžovou barvu a extrahovala jemné ovocné tóny.",
       "Víno zaujme svou lososovou barvou a intenzivním aromatem červeného ovoce, především třešní s nádechem máty. Chuť je šťavnatá, s příjemnou ovocnou sladkostí v harmonii s osvěžující kyselinkou.",
-      "Svatovařinecké rosé je ideálním společníkem pro letní posezení, lehké saláty, či jako aperitiv. Podávejte vychlazené na 8-10°C."
+      "Svatovavřinecké rosé je ideálním společníkem pro letní posezení, lehké saláty, či jako aperitiv. Podávejte vychlazené na 8-10°C."
     ],
     info: {
       oblast: "Znojemská",
@@ -83,13 +83,13 @@ const vina = [
     }
   },
   {
-    id: "svatovarinecke",
-    name: "Svatovařinecké",
+    id: "svatovavrinecke",
+    name: "Svatovavřinecké",
     description: "Suché, 0,75l, ročník 2023",
     image: "/images/vina/svatovavrinecke_2023.png",
     detail: "Středně intezivní garnátová barva. Vyznačuje se tóny švestek a povidel s decentním nádechem dubového dřeva.",
     longDescription: [
-      "Svatovařinecké je tradiční moravská odrůda, která v našich podmínkách dosahuje vynikající kvality. Hrozny pro toto víno byly pečlivě vybírány a zpracovány s důrazem na zachování odrůdového charakteru.",
+      "Svatovavřinecké je tradiční moravská odrůda, která v našich podmínkách dosahuje vynikající kvality. Hrozny pro toto víno byly pečlivě vybírány a zpracovány s důrazem na zachování odrůdového charakteru.",
       "Víno má středně intenzivní granátovou barvu. V aromatickém profilu dominují tóny švestek a povidel, které jsou decentně doplněny nádechem dubového dřeva. Chuť je plná, s příjemnou tříslovinou a dlouhou dochutí.",
       "Toto víno skvěle doprovodí pečená masa, zvěřinu nebo zralé sýry. Doporučujeme podávat při teplotě 16-18°C."
     ],
@@ -104,7 +104,7 @@ const vina = [
   {
     id: "veltlinske-zelene",
     name: "Veltlínské zelené",
-    description: "Suché, 0,75l, ročník 2023",
+    description: "Suché, 0,75l, ročník 2024",
     image: "/images/vina/veltlin_2024.png",
     detail: "Typický znojemský Veltlín. Začátek lehce bylinný doplněný minerálnímy tóny. Dochuť je dlouhá a dominuje zde bílý pepř.",
     longDescription: [
@@ -117,24 +117,33 @@ const vina = [
       alkohol: "12,5 % obj.",
       zbytkovy_cukr: "1,8 g/l",
       kyseliny: "6,2 g/l",
+      locality: "Nový Šaldorf - Sedlešovice",
       doporucena_teplota: "9-11 °C"
     }
   }
 ]
 
-export default function DetailVinaPage({ params }: { params: { id: string } }) {
-  // Najdi víno podle ID
-  const vino = vina.find((v) => v.id === params.id)
-  
-  // Pokud víno neexistuje, vrať 404
+async function getVinoData(id: string) {
+  const vino = vina.find((v) => v.id === id);
   if (!vino) {
-    notFound()
+    return { vino: null, nextVino: null };
   }
+  const currentIndex = vina.findIndex((v) => v.id === id);
+  // Tento případ by neměl nastat, pokud je víno nalezeno a ID jsou konzistentní
+  if (currentIndex === -1) { 
+      return { vino: null, nextVino: null };
+  }
+  const nextIndex = (currentIndex + 1) % vina.length;
+  const nextVino = vina[nextIndex];
+  return { vino, nextVino };
+}
 
-  // Najdi další víno (cyklicky)
-  const currentIndex = vina.findIndex((v) => v.id === params.id)
-  const nextIndex = (currentIndex + 1) % vina.length
-  const nextVino = vina[nextIndex]
+export default async function DetailVinaPage({ params }: { params: { id: string } }) {
+  const { vino, nextVino } = await getVinoData(params.id);
+
+  if (!vino || !nextVino) { 
+    notFound();
+  }
 
   return (
     <div className="min-h-screen bg-white -mt-16 pt-16">
@@ -186,6 +195,10 @@ export default function DetailVinaPage({ params }: { params: { id: string } }) {
                     <div>
                       <dt className="font-medium text-left">Vinařská oblast</dt>
                       <dd className="text-muted-foreground text-left">{vino.info.oblast}</dd>
+                    </div>
+                    <div>
+                      <dt className="font-medium text-left">Lokalita</dt>
+                      <dd className="text-muted-foreground text-left">{vino.info.locality}</dd>
                     </div>
                     <div>
                       <dt className="font-medium text-left">Obsah alkoholu</dt>

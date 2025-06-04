@@ -45,10 +45,10 @@
     "contains": "oxid siřičitý"
   },
   {
-    "name": "Svatovařinecké rosé",
+    "name": "Svatovavřinecké Rosé",
     "year": 2024,
     "type": "polosuché",
-    "variety": "Svatovařinecké rosé",
+    "variety": "Svatovavřinecké rosé",
     "sugar": "12,2 g/l",
     "alcohol": "10,5%",
     "energy": "284 kJ / 68 kcal",
@@ -60,10 +60,10 @@
     "contains": "oxid siřičitý"
   },
   {
-    "name": "Svatovařinecké",
+    "name": "Svatovavřinecké",
     "year": 2023,
     "type": "suché",
-    "variety": "Svatovařinecké ",
+    "variety": "Svatovavřinecké ",
     "sugar": "1 g/l",
     "alcohol": "12,0%",
     "energy": "295 kJ / 71 kcal",
@@ -87,6 +87,7 @@
     "description": "Typický znojemský Veltlín. Začátek lehce bylinný doplněný minerálnímy tóny. Dochuť je dlouhá a dominuje zde bílý pepř.",
     "bottler": "Ing. Lukáš Mudrych, 669 02 Suchohrdly",
     "country": "Česká republika",
+    "locality": "Nový Šaldorf - Sedlešovice",
     "contains": "oxid siřičitý"
   }
 ]

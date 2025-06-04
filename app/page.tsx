@@ -37,21 +37,21 @@ const vina = [
     image: "/images/vina/tramin_2024.png"
   },
   {
-    id: "svatovarineske-rose",
-    name: "Svatovařinecké rosé",
+    id: "svatovavrinecke-rose",
+    name: "Svatovavřinecké rosé",
     description: "Polosuché, 0,75l, ročník 2024",
     image: "/images/vina/svatovavrinecke_rose_2024.png"
   },
   {
-    id: "svatovarinecke",
-    name: "Svatovařinecké",
+    id: "svatovavrinecke",
+    name: "Svatovavřinecké",
     description: "Suché, 0,75l, ročník 2023",
     image: "/images/vina/svatovavrinecke_2023.png"
   },
   {
     id: "veltlinske-zelene",
     name: "Veltlínské zelené",
-    description: "Suché, 0,75l, ročník 2023",
+    description: "Suché, 0,75l, ročník 2024",
     image: "/images/vina/veltlin_2024.png"
   }
 ]
@@ -117,11 +117,10 @@ export default function Home() {
         <div className="absolute inset-0">
           <Image src="/vineyard2.JPG" alt="Vinice" fill className="object-cover" priority />
         </div>
-        <div className="relative container h-full flex flex-col justify-center items-start md:items-center text-left">
+        <div className="relative container h-full flex flex-col justify-center items-start text-left">
           <div className="max-w-xl w-full space-y-4 bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-lg">
-            <Image src="/logo/dvasmysly.svg" alt="Dva Smysly" width={180} height={72} className="h-auto" />
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1a472a] text-left md:text-center">Vinařství Dva Smysly</h1>
-            <p className="text-base sm:text-lg text-[#1a472a] text-left md:text-center">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1a472a] text-left">Vinařství Dva Smysly</h1>
+            <p className="text-base sm:text-lg text-[#1a472a] text-left">
               "Ve vinařství Dva smysly věříme, že víno je jako poezie. Každá sklenka vypráví jedinečný příběh a probouzí
               naše smysly."
             </p>
@@ -352,15 +351,7 @@ export default function Home() {
             </div>
           </Carousel>
           
-          <div className="text-left md:text-center mt-8 md:mt-16">
-            <p className="text-sm md:text-base text-muted-foreground mb-4 md:mb-6 max-w-2xl mx-auto">
-              Naše vína jsou tvořena s důrazem na kvalitu a autentičnost. Rádi vám pomůžeme s výběrem vína, které
-              uspokojí vaše chuťové pohárky.
-            </p>
-            <Button asChild className="text-sm md:text-base bg-[#1a472a] hover:bg-[#2a573a] text-white font-medium rounded-full px-6">
-              <Link href="/vina">Nabídka vín</Link>
-            </Button>
-          </div>
+        
         </div>
       </section>
 
