@@ -65,7 +65,7 @@ const vina = [
   },
   {
     id: "svatovavrinecke-rose",
-    name: "Svatovavřinecké rosé",
+    name: "Svatovavřinecké Rosé",
     description: "Polosuché, 0,75l, ročník 2024",
     image: "/images/vina/svatovavrinecke_rose_2024.png",
     detail: "Lehké víno snižším obsahem alkoholu. Na vůni i chuti nalezneme třešnový kompot s lístkem máty.",
@@ -138,7 +138,8 @@ async function getVinoData(id: string) {
   return { vino, nextVino };
 }
 
-export default async function DetailVinaPage({ params }: { params: { id: string } }) {
+export default async function DetailVinaPage({ params: paramsPromise }: { params: { id: string } }) {
+  const params = await paramsPromise;
   const { vino, nextVino } = await getVinoData(params.id);
 
   if (!vino || !nextVino) { 
