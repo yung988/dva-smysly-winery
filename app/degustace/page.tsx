@@ -10,7 +10,7 @@ export default function DegustacePage() {
       {/* Hlavička stránky */}
       <section className="relative h-[50vh] overflow-hidden -mt-16 pt-16">
         <div className="absolute inset-0">
-          <Image src="images/degustace/degustace.png" alt="Degustace" fill className="object-cover" priority />
+          <Image src="images/degustace/degustace.png" alt="Degustace" fill className="object-cover" priority sizes="100vw" />
         </div>
         <div className="relative container h-full flex flex-col justify-center">
           <div className="max-w-3xl space-y-4 bg-white/80 backdrop-blur-sm p-8 rounded-lg">
@@ -82,14 +82,14 @@ export default function DegustacePage() {
                 </Button>
               </div>
               <div className="md:col-span-2 relative h-[400px] rounded-lg overflow-hidden">
-                <Image src="/images/Sklep/sklep1.jpg" alt="Řízená degustace" fill className="object-cover rounded-lg" />
+                <Image src="/images/Sklep/sklep1.jpg" alt="Řízená degustace" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 100vw, 40vw" />
               </div>
             </div>
             
             {/* Firemní degustace */}
             <div className="grid md:grid-cols-5 gap-10 items-start">
               <div className="order-2 md:order-1 md:col-span-2 relative h-[400px] rounded-lg overflow-hidden">
-                <Image src="/images/Sklep/sklep2.jpg" alt="Firemní degustace" fill className="object-cover rounded-lg" />
+                <Image src="/images/Sklep/sklep2.jpg" alt="Firemní degustace" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 100vw, 40vw" />
               </div>
               <div className="order-1 md:order-2 md:col-span-3 space-y-6">
                 <h3 className="text-2xl font-bold text-left">Firemní degustace</h3>
@@ -158,7 +158,7 @@ export default function DegustacePage() {
                 </Button>
               </div>
               <div className="md:col-span-2 relative h-[400px] rounded-lg overflow-hidden">
-                <Image src="/images/Sklep/sklep3.jpg" alt="Firemní víno" fill className="object-cover rounded-lg" />
+                <Image src="/images/Sklep/sklep3.jpg" alt="Firemní víno" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 100vw, 40vw" />
               </div>
             </div>
           </div>

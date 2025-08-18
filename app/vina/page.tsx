@@ -2,59 +2,17 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, ArrowRight } from "lucide-react"
+import vinaData from "@/data/vina.json"
 
 export default function VinaPage() {
-  const vina = [
-    {
-      id: "sauvignon",
-      name: "Sauvignon",
-      description: "Suché, 0,75l, ročník 2024",
-      image: "/images/vina/sauvignon_2024.png",
-      detail: "Na vůni i chuti silný citrusový projev. Výrazný je červený grepfruit a pomelo. Výrazná a dlouhá dochuť."
-    },
-    {
-      id: "ryzlink-rynsky",
-      name: "Ryzlink rýnský",
-      description: "Suché, 0,75l, ročník 2024",
-      image: "/images/vina/ryzlink_2024.png",
-      detail: "Intezivní aroma čerstvé meruňky s limetkovou šťávou. Křupavá kyselina."
-    },
-    {
-      id: "tramin-cerveny",
-      name: "Tramín červený",
-      description: "Polosladké, 0,75l, ročník 2024",
-      image: "/images/vina/tramin_2024.png",
-      detail: "Na vůni jemné aroma květu růže, na chutí příjemně kořenité. Celý aromatický profil výborně podporuje lehce vyšší zbytkový cukr."
-    },
-    {
-      id: "svatovavrinecke-rose",
-      name: "Svatovavřinecké rosé",
-      description: "Polosuché, 0,75l, ročník 2024",
-      image: "/images/vina/svatovavrinecke_rose_2024.png",
-      detail: "Lehké víno snižším obsahem alkoholu. Na vůni i chuti nalezneme třešnový kompot s lístkem máty."
-    },
-    {
-      id: "svatovavrinecke",
-      name: "Svatovavřinecké",
-      description: "Suché, 0,75l, ročník 2023",
-      image: "/images/vina/svatovavrinecke_2023.png",
-      detail: "Středně intezivní garnátová barva. Vyznačuje se tóny švestek a povidel s decentním nádechem dubového dřeva."
-    },
-    {
-      id: "veltlinske-zelene",
-      name: "Veltlínské zelené",
-      description: "Suché, 0,75l, ročník 2024",
-      image: "/images/vina/veltlin_2024.png",
-      detail: "Typický znojemský Veltlín. Začátek lehce bylinný doplněný minerálnímy tóny. Dochuť je dlouhá a dominuje zde bílý pepř."
-    }
-  ]
+  const vina = vinaData
 
   return (
     <div className="min-h-screen bg-white">
       {/* Hlavička stránky - upraveno pro odstranění bílého pruhu */}
       <section className="relative h-[50vh] overflow-hidden -mt-16 pt-16">
         <div className="absolute inset-0">
-          <Image src="/grapes-dark.jpeg" alt="Vinice" fill className="object-cover" priority />
+          <Image src="/grapes-dark.jpeg" alt="Vinice" fill className="object-cover" priority sizes="100vw" />
         </div>
         <div className="relative container h-full flex flex-col justify-center">
           <div className="max-w-3xl space-y-4 bg-white/80 backdrop-blur-sm p-8 rounded-lg">
@@ -84,7 +42,8 @@ export default function VinaPage() {
                     src={vino.image} 
                     alt={vino.name} 
                     fill 
-                    className="object-contain transition-all duration-300" 
+                    className="object-contain transition-all duration-300"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 25vw"
                   />
                 </div>
                 <div className="flex flex-col flex-grow p-6 space-y-4 text-left">

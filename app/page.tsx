@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mail, Phone, MapPin, Instagram, ShoppingBag, ArrowRight, Facebook, Loader2 } from "lucide-react"
 import Link from "next/link"
+import vina from "@/data/vina.json"
 import {
   Carousel,
   CarouselContent,
@@ -17,44 +18,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { useState } from 'react'
 
-const vina = [
-  {
-    id: "sauvignon",
-    name: "Sauvignon",
-    description: "Suché, 0,75l, ročník 2024",
-    image: "/images/vina/sauvignon_2024.png"
-  },
-  {
-    id: "ryzlink-rynsky",
-    name: "Ryzlink rýnský",
-    description: "Suché, 0,75l, ročník 2024",
-    image: "/images/vina/ryzlink_2024.png"
-  },
-  {
-    id: "tramin-cerveny",
-    name: "Tramín červený",
-    description: "Polosladké, 0,75l, ročník 2024",
-    image: "/images/vina/tramin_2024.png"
-  },
-  {
-    id: "svatovavrinecke-rose",
-    name: "Svatovavřinecké rosé",
-    description: "Polosuché, 0,75l, ročník 2024",
-    image: "/images/vina/svatovavrinecke_rose_2024.png"
-  },
-  {
-    id: "svatovavrinecke",
-    name: "Svatovavřinecké",
-    description: "Suché, 0,75l, ročník 2023",
-    image: "/images/vina/svatovavrinecke_2023.png"
-  },
-  {
-    id: "veltlinske-zelene",
-    name: "Veltlínské zelené",
-    description: "Suché, 0,75l, ročník 2024",
-    image: "/images/vina/veltlin_2024.png"
-  }
-]
+// Vína pro carousel bereme z centrálního JSON
 
 export default function Home() {
   // State for the contact form
@@ -115,7 +79,14 @@ export default function Home() {
       {/* Hero Section - Zarovnáno doleva na mobilech */}
       <section className="relative h-[70vh] md:h-[80vh] overflow-hidden -mt-16 pt-16">
         <div className="absolute inset-0">
-          <Image src="/vineyard2.JPG" alt="Vinice" fill className="object-cover" priority />
+          <Image
+            src="/vineyard2.JPG"
+            alt="Vinice"
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+          />
         </div>
         <div className="relative container h-full flex flex-col justify-center items-start text-left">
           <div className="max-w-xl w-full space-y-4 bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-lg">
@@ -153,7 +124,8 @@ export default function Home() {
                 src="/images/about/about hlavni.JPG" 
                 alt="Hrozny" 
                 fill 
-                className="object-contain rounded-lg" 
+                className="object-contain rounded-lg"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             
@@ -278,13 +250,13 @@ export default function Home() {
               {/* Mini gallery - Adjusted size */}
               <div className="grid grid-cols-3 gap-2 md:gap-4 pt-2 md:pt-4">
                 <div className="relative h-[100px] sm:h-[120px] md:h-[150px] rounded-lg overflow-hidden">
-                  <Image src="/images/Sklep/sklep1.jpg" alt="Vinný sklep detail 1" fill className="object-cover rounded-lg" />
+                  <Image src="/images/Sklep/sklep1.jpg" alt="Vinný sklep detail 1" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 33vw, 200px" />
                 </div>
                 <div className="relative h-[100px] sm:h-[120px] md:h-[150px] rounded-lg overflow-hidden">
-                  <Image src="/images/Sklep/sklep2.jpg" alt="Vinný sklep detail 2" fill className="object-cover rounded-lg" />
+                  <Image src="/images/Sklep/sklep2.jpg" alt="Vinný sklep detail 2" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 33vw, 200px" />
                 </div>
                 <div className="relative h-[100px] sm:h-[120px] md:h-[150px] rounded-lg overflow-hidden">
-                  <Image src="/images/Sklep/sklep3.jpg" alt="Vinný sklep detail 3" fill className="object-cover rounded-lg" />
+                  <Image src="/images/Sklep/sklep3.jpg" alt="Vinný sklep detail 3" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 33vw, 200px" />
                 </div>
               </div>
               <div className="text-left">
@@ -296,7 +268,7 @@ export default function Home() {
             
             {/* Image Column - Second on mobile, first on desktop */}
             <div className="order-2 md:order-1 relative h-[300px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden">
-              <Image src="/images/Sklep/sklep1.jpg" alt="Vinný sklep" fill className="object-cover rounded-lg" />
+              <Image src="/images/Sklep/sklep1.jpg" alt="Vinný sklep" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
           </div>
         </div>
@@ -335,6 +307,7 @@ export default function Home() {
                         alt={vino.name}
                         fill
                         className="object-contain transition-transform duration-300 group-hover:scale-105"
+                        sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 25vw"
                       />
                     </div>
                     <div className="p-3 md:p-4 text-left">
@@ -414,6 +387,7 @@ export default function Home() {
                   <div>
                     <p className="font-medium text-sm md:text-base">Lokalita</p>
                     <p className="text-xs md:text-sm text-muted-foreground">Suchohrdly u Znojma</p>
+                    <p className="text-xs md:text-sm text-muted-foreground">Nový Šaldorf - Sedlešovice</p>
                   </div>
                 </div>
               </div>
