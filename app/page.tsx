@@ -1,6 +1,7 @@
 'use client';
 
 import Image from "next/image"
+import heroImage from "@/public/vineyard2.JPG"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mail, Phone, MapPin, Instagram, ShoppingBag, ArrowRight, Facebook, Loader2 } from "lucide-react"
@@ -80,12 +81,13 @@ export default function Home() {
       <section className="relative h-[70vh] md:h-[80vh] overflow-hidden -mt-16 pt-16">
         <div className="absolute inset-0">
           <Image
-            src="/vineyard2.JPG"
+            src={heroImage}
             alt="Vinice"
             fill
             className="object-cover"
             priority
             sizes="100vw"
+            placeholder="blur"
           />
         </div>
         <div className="relative container h-full flex flex-col justify-center items-start text-left">
