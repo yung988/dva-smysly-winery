@@ -123,7 +123,7 @@ export default function Home() {
             {/* Image column - Na mobilech nahoře */}
             <div className="order-1 md:order-2 relative h-[300px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden mb-6 md:mb-0">
               <Image 
-                src="/images/about/about hlavni.JPG" 
+                src="/images/about/about-hlavni.webp" 
                 alt="Hrozny" 
                 fill 
                 className="object-contain rounded-lg"
@@ -251,14 +251,14 @@ export default function Home() {
               </p>
               {/* Mini gallery - Adjusted size */}
               <div className="grid grid-cols-3 gap-2 md:gap-4 pt-2 md:pt-4">
-                <div className="relative h-[100px] sm:h-[120px] md:h-[150px] rounded-lg overflow-hidden">
-                  <Image src="/images/Sklep/sklep1.jpg" alt="Vinný sklep detail 1" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 33vw, 200px" />
+              <div className="relative h-[100px] sm:h-[120px] md:h-[150px] rounded-lg overflow-hidden">
+                <Image src="/images/Sklep/sklep1.webp" alt="Vinný sklep detail 1" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 33vw, 200px" />
                 </div>
                 <div className="relative h-[100px] sm:h-[120px] md:h-[150px] rounded-lg overflow-hidden">
-                  <Image src="/images/Sklep/sklep2.jpg" alt="Vinný sklep detail 2" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 33vw, 200px" />
+                <Image src="/images/Sklep/sklep2.webp" alt="Vinný sklep detail 2" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 33vw, 200px" />
                 </div>
                 <div className="relative h-[100px] sm:h-[120px] md:h-[150px] rounded-lg overflow-hidden">
-                  <Image src="/images/Sklep/sklep3.jpg" alt="Vinný sklep detail 3" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 33vw, 200px" />
+                <Image src="/images/Sklep/sklep3.webp" alt="Vinný sklep detail 3" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 33vw, 200px" />
                 </div>
               </div>
               <div className="text-left">
@@ -270,7 +270,7 @@ export default function Home() {
             
             {/* Image Column - Second on mobile, first on desktop */}
             <div className="order-2 md:order-1 relative h-[300px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden">
-              <Image src="/images/Sklep/sklep1.jpg" alt="Vinný sklep" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 100vw, 50vw" />
+              <Image src="/images/Sklep/sklep1.webp" alt="Vinný sklep" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
           </div>
         </div>

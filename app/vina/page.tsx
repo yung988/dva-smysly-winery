@@ -12,7 +12,7 @@ export default function VinaPage() {
       {/* Hlavička stránky - upraveno pro odstranění bílého pruhu */}
       <section className="relative h-[50vh] overflow-hidden -mt-16 pt-16">
         <div className="absolute inset-0">
-          <Image src="/grapes-dark.jpeg" alt="Vinice" fill className="object-cover" priority sizes="100vw" />
+          <Image src="/grapes-dark.webp" alt="Vinice" fill className="object-cover" priority sizes="100vw" />
         </div>
         <div className="relative container h-full flex flex-col justify-center">
           <div className="max-w-3xl space-y-4 bg-white/80 backdrop-blur-sm p-8 rounded-lg">
@@ -39,7 +39,7 @@ export default function VinaPage() {
               <div key={vino.id} className="flex flex-col h-full border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                 <div className="relative h-[450px] md:h-[500px] bg-white overflow-hidden">
                   <Image 
-                    src={vino.image} 
+                    src={vino.image.replace(/\.png$/i, ".webp").replace(/\.jpg$/i, ".webp")} 
                     alt={vino.name} 
                     fill 
                     className="object-contain transition-all duration-300"

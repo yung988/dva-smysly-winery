@@ -50,7 +50,7 @@ export default async function DetailVinaPage({ params: paramsPromise }: { params
             <div className="space-y-6 md:space-y-8">
               <div className="relative w-full h-[500px] md:h-[600px] lg:h-[750px] bg-transparent rounded-lg overflow-hidden">
                 <Image 
-                  src={vino.image} 
+                  src={vino.image.replace(/\.png$/i, ".webp").replace(/\.jpg$/i, ".webp")} 
                   alt={vino.name} 
                   fill 
                   className="object-contain rounded-lg"
@@ -130,7 +130,7 @@ export default async function DetailVinaPage({ params: paramsPromise }: { params
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
               <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden group">
                 <Image 
-                  src={nextVino.image} 
+                  src={nextVino.image.replace(/\.png$/i, ".webp").replace(/\.jpg$/i, ".webp")} 
                   alt={nextVino.name} 
                   fill 
                   className="object-contain transition-all duration-300 rounded-lg"
