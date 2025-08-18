@@ -2,6 +2,8 @@ import { cn } from "@/lib/utils"
 import "./globals.css"
 import { Inter as FontSans } from "next/font/google"
 import ClientShell from "@/components/ClientShell"
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 // Metadata needs to be handled differently for client components, or moved to page level
 // For simplicity, we remove the static export for now.
@@ -35,6 +37,8 @@ export default function RootLayout({
         <ClientShell bodyClassName={cn("font-sans antialiased", fontSans.variable)}>
           {children}
         </ClientShell>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )

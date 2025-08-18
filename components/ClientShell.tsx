@@ -14,8 +14,7 @@ import {
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet"
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+ 
 import { cn } from "@/lib/utils"
 
 type ClientShellProps = {
@@ -217,8 +216,6 @@ export default function ClientShell({ children, bodyClassName }: ClientShellProp
                 </div>
               </div>
             </div>
-            <Analytics />
-            <SpeedInsights />
           </footer>
         </>
       ) : (
