@@ -30,16 +30,16 @@
     "contains": "oxid siřičitý"
   },
   {
-    "name": "Tramín červený",
-    "year": 2024,
+    "name": "Frizzante",
+    "year": 2025,
     "type": "polosladké",
-    "variety": "Tramín červený",
-    "sugar": "18 g/l",
-    "alcohol": "12,0%",
-    "energy": "326 kJ / 78 kcal",
+    "variety": "Frizzante",
+    "sugar": "16 g/l",
+    "alcohol": "12%",
+    "energy": "",
     "volume": "0,75 L",
-    "batch": "2405",
-    "description": "Na vůni jemné aroma květu růže, na chutí příjemně kořenité. Celý aromatický profil výborně podporuje lehce vyšší zbytkový cukr. ",
+    "batch": "",
+    "description": "Ovocné aroma citrusových plodů, na chuti podpořeno jemným perlením.",
     "bottler": "Ing. Lukáš Mudrych, 669 02 Suchohrdly",
     "country": "Česká republika",
     "contains": "oxid siřičitý"
@@ -88,6 +88,21 @@
     "bottler": "Ing. Lukáš Mudrych, 669 02 Suchohrdly",
     "country": "Česká republika",
     "locality": "Nový Šaldorf - Sedlešovice",
+    "contains": "oxid siřičitý"
+  },
+  {
+    "name": "Frizzante",
+    "year": 2025,
+    "type": "polosladké",
+    "variety": "Frizzante",
+    "sugar": "16 g/l",
+    "alcohol": "12%",
+    "energy": "",
+    "volume": "0,75 L",
+    "batch": "",
+    "description": "Ovocné aroma citrusových plodů, na chuti podpořeno jemným perlením.",
+    "bottler": "Ing. Lukáš Mudrych, 669 02 Suchohrdly",
+    "country": "Česká republika",
     "contains": "oxid siřičitý"
   }
 ]

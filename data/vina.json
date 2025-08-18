@@ -1,0 +1,122 @@
+[
+  {
+    "id": "sauvignon",
+    "name": "Sauvignon",
+    "description": "Suché, 0,75l, ročník 2024",
+    "image": "/images/vina/sauvignon_2024.png",
+    "detail": "Na vůni i chuti silný citrusový projev. Výrazný je červený grepfruit a pomelo. Výrazná a dlouhá dochuť.",
+    "longDescription": [
+      "Sauvignon z našeho vinařství je výrazným reprezentantem této oblíbené odrůdy. Hrozny dozrávaly na nejlepších polohách, což jim dodalo nezaměnitelný charakter a intenzitu.",
+      "Víno se vyznačuje světle žlutou barvou se zelenkavými odlesky. V aromatickém profilu dominují tóny citrusů, především červeného grepfruitu a pomela. Chuť je svěží, s výraznou a dlouhou dochutí.",
+      "Tento Sauvignon skvěle doplní pokrmy z čerstvých bylin, kozí sýry nebo lehké saláty. Doporučujeme podávat při teplotě 9-11°C."
+    ],
+    "info": {
+      "oblast": "Znojemská",
+      "alkohol": "11,5 % obj.",
+      "zbytkovy_cukr": "8,9 g/l",
+      "kyseliny": "6,5 g/l",
+      "doporucena_teplota": "9-11 °C",
+      "locality": "Suchohrdly u Znojma"
+    }
+  },
+  {
+    "id": "ryzlink-rynsky",
+    "name": "Ryzlink rýnský",
+    "description": "Suché, 0,75l, ročník 2024",
+    "image": "/images/vina/ryzlink_2024.png",
+    "detail": "Intezivní aroma čerstvé meruňky s limetkovou šťávou. Křupavá kyselina.",
+    "longDescription": [
+      "Ryzlink rýnský je ztělesněním terroir Znojemské vinařské podoblasti. Hrozny byly ručně sbírány v optimální zralosti a zpracovány s maximální péčí a respektem k tradičním postupům.",
+      "Víno zaujme svou zlatavou barvou s lehkými zelenkavými odlesky. V nose objevíte intenzivní aroma čerstvé meruňky s limetkovou šťávou. Na patře oceníte křupavou kyselinku, která je v dokonalé harmonii s ovocnou složkou.",
+      "Tento Ryzlink rýnský je ideálním společníkem k rybím pokrmům, lehkým předkrmům nebo jako osvěžující aperitiv. Nejlépe vynikne při teplotě 8-10°C."
+    ],
+    "info": {
+      "oblast": "Znojemská",
+      "alkohol": "12,5 % obj.",
+      "zbytkovy_cukr": "7,7 g/l",
+      "kyseliny": "6,8 g/l",
+      "doporucena_teplota": "8-10 °C",
+      "locality": "Suchohrdly u Znojma"
+    }
+  },
+  {
+    "id": "svatovavrinecke-rose",
+    "name": "Svatovavřinecké Rosé",
+    "description": "Polosuché, 0,75l, ročník 2024",
+    "image": "/images/vina/svatovavrinecke_rose_2024.png",
+    "detail": "Lehké víno snižším obsahem alkoholu. Na vůni i chuti nalezneme třešnový kompot s lístkem máty.",
+    "longDescription": [
+      "Naše Svatovavřinecké rosé představuje svěží a ovocnou stránku této tradiční odrůdy. Krátká macerace hroznů dodala vínu krásnou růžovou barvu a extrahovala jemné ovocné tóny.",
+      "Víno zaujme svou lososovou barvou a intenzivním aromatem červeného ovoce, především třešní s nádechem máty. Chuť je šťavnatá, s příjemnou ovocnou sladkostí v harmonii s osvěžující kyselinkou.",
+      "Svatovavřinecké rosé je ideálním společníkem pro letní posezení, lehké saláty, či jako aperitiv. Podávejte vychlazené na 8-10°C."
+    ],
+    "info": {
+      "oblast": "Znojemská",
+      "alkohol": "10,5 % obj.",
+      "zbytkovy_cukr": "12,2 g/l",
+      "kyseliny": "6,0 g/l",
+      "doporucena_teplota": "8-10 °C",
+      "locality": "Suchohrdly u Znojma"
+    }
+  },
+  {
+    "id": "svatovavrinecke",
+    "name": "Svatovavřinecké",
+    "description": "Suché, 0,75l, ročník 2023",
+    "image": "/images/vina/svatovavrinecke_2023.png",
+    "detail": "Středně intezivní garnátová barva. Vyznačuje se tóny švestek a povidel s decentním nádechem dubového dřeva.",
+    "longDescription": [
+      "Svatovavřinecké je tradiční moravská odrůda, která v našich podmínkách dosahuje vynikající kvality. Hrozny pro toto víno byly pečlivě vybírány a zpracovány s důrazem na zachování odrůdového charakteru.",
+      "Víno má středně intenzivní granátovou barvu. V aromatickém profilu dominují tóny švestek a povidel, které jsou decentně doplněny nádechem dubového dřeva. Chuť je plná, s příjemnou tříslovinou a dlouhou dochutí.",
+      "Toto víno skvěle doprovodí pečená masa, zvěřinu nebo zralé sýry. Doporučujeme podávat při teplotě 16-18°C."
+    ],
+    "info": {
+      "oblast": "Znojemská",
+      "alkohol": "12,0 % obj.",
+      "zbytkovy_cukr": "1 g/l",
+      "kyseliny": "5,2 g/l",
+      "doporucena_teplota": "16-18 °C",
+      "locality": "Suchohrdly u Znojma"
+    }
+  },
+  {
+    "id": "veltlinske-zelene",
+    "name": "Veltlínské zelené",
+    "description": "Suché, 0,75l, ročník 2024",
+    "image": "/images/vina/veltlin_2024.png",
+    "detail": "Typický znojemský Veltlín. Začátek lehce bylinný doplněný minerálnímy tóny. Dochuť je dlouhá a dominuje zde bílý pepř.",
+    "longDescription": [
+      "Veltlínské zelené je tradiční odrůdou znojemské oblasti a my jsme hrdí na to, že ji můžeme nabídnout v té nejlepší kvalitě. Naše vinice poskytují ideální podmínky pro pěstování této odrůdy.",
+      "Víno se prezentuje světle žlutou barvou. V aromatickém profilu najdete lehce bylinné tóny doplněné o minerální podtón. Chuť je svěží, suchá, s charakteristickou dlouhou dochutí, kde dominuje bílý pepř.",
+      "Veltlínské zelené je univerzálním vínem, které doprovodí širokou škálu pokrmů od tradičních českých jídel po asijskou kuchyni. Nejlépe chutná při teplotě 9-11°C."
+    ],
+    "info": {
+      "oblast": "Znojemská",
+      "alkohol": "12,5 % obj.",
+      "zbytkovy_cukr": "1,8 g/l",
+      "kyseliny": "6,2 g/l",
+      "locality": "Suchohrdly u Znojma",
+      "doporucena_teplota": "9-11 °C"
+    }
+  },
+  {
+    "id": "frizzante",
+    "name": "Frizzante",
+    "description": "Polosladké, 0,75l, ročník 2025",
+    "image": "/images/vina/frizzante_2024.png",
+    "detail": "Ovocné aroma citrusových plodů, na chuti podpořeno jemným perlením.",
+    "longDescription": [
+      "Frizzante je lehce perlivé víno s důrazem na svěžest a ovocnost.",
+      "Ve vůni dominují citrusové tóny, které se krásně promítají i do šťavnaté chuti. Jemné perlení podtrhuje svěží charakter vína a vybízí k dalšímu napití.",
+      "Ideální jako aperitiv nebo k lehkým pokrmům a letním posezením. Podávejte vychlazené na 7-9°C."
+    ],
+    "info": {
+      "oblast": "Znojemská",
+      "alkohol": "12 % obj.",
+      "zbytkovy_cukr": "16 g/l",
+      "kyseliny": "7 g/l",
+      "locality": "Šatov",
+      "doporucena_teplota": "7-9 °C"
+    }
+  }
+]

@@ -2,52 +2,10 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, ArrowRight } from "lucide-react"
+import vinaData from "@/data/vina.json"
 
 export default function VinaPage() {
-  const vina = [
-    {
-      id: "sauvignon",
-      name: "Sauvignon",
-      description: "Suché, 0,75l, ročník 2024",
-      image: "/images/vina/sauvignon_2024.png",
-      detail: "Na vůni i chuti silný citrusový projev. Výrazný je červený grepfruit a pomelo. Výrazná a dlouhá dochuť."
-    },
-    {
-      id: "ryzlink-rynsky",
-      name: "Ryzlink rýnský",
-      description: "Suché, 0,75l, ročník 2024",
-      image: "/images/vina/ryzlink_2024.png",
-      detail: "Intezivní aroma čerstvé meruňky s limetkovou šťávou. Křupavá kyselina."
-    },
-    {
-      id: "tramin-cerveny",
-      name: "Tramín červený",
-      description: "Polosladké, 0,75l, ročník 2024",
-      image: "/images/vina/tramin_2024.png",
-      detail: "Na vůni jemné aroma květu růže, na chutí příjemně kořenité. Celý aromatický profil výborně podporuje lehce vyšší zbytkový cukr."
-    },
-    {
-      id: "svatovavrinecke-rose",
-      name: "Svatovavřinecké rosé",
-      description: "Polosuché, 0,75l, ročník 2024",
-      image: "/images/vina/svatovavrinecke_rose_2024.png",
-      detail: "Lehké víno snižším obsahem alkoholu. Na vůni i chuti nalezneme třešnový kompot s lístkem máty."
-    },
-    {
-      id: "svatovavrinecke",
-      name: "Svatovavřinecké",
-      description: "Suché, 0,75l, ročník 2023",
-      image: "/images/vina/svatovavrinecke_2023.png",
-      detail: "Středně intezivní garnátová barva. Vyznačuje se tóny švestek a povidel s decentním nádechem dubového dřeva."
-    },
-    {
-      id: "veltlinske-zelene",
-      name: "Veltlínské zelené",
-      description: "Suché, 0,75l, ročník 2024",
-      image: "/images/vina/veltlin_2024.png",
-      detail: "Typický znojemský Veltlín. Začátek lehce bylinný doplněný minerálnímy tóny. Dochuť je dlouhá a dominuje zde bílý pepř."
-    }
-  ]
+  const vina = vinaData
 
   return (
     <div className="min-h-screen bg-white">

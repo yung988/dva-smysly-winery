@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mail, Phone, MapPin, Instagram, ShoppingBag, ArrowRight, Facebook, Loader2 } from "lucide-react"
 import Link from "next/link"
+import vina from "@/data/vina.json"
 import {
   Carousel,
   CarouselContent,
@@ -17,44 +18,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { useState } from 'react'
 
-const vina = [
-  {
-    id: "sauvignon",
-    name: "Sauvignon",
-    description: "Suché, 0,75l, ročník 2024",
-    image: "/images/vina/sauvignon_2024.png"
-  },
-  {
-    id: "ryzlink-rynsky",
-    name: "Ryzlink rýnský",
-    description: "Suché, 0,75l, ročník 2024",
-    image: "/images/vina/ryzlink_2024.png"
-  },
-  {
-    id: "tramin-cerveny",
-    name: "Tramín červený",
-    description: "Polosladké, 0,75l, ročník 2024",
-    image: "/images/vina/tramin_2024.png"
-  },
-  {
-    id: "svatovavrinecke-rose",
-    name: "Svatovavřinecké rosé",
-    description: "Polosuché, 0,75l, ročník 2024",
-    image: "/images/vina/svatovavrinecke_rose_2024.png"
-  },
-  {
-    id: "svatovavrinecke",
-    name: "Svatovavřinecké",
-    description: "Suché, 0,75l, ročník 2023",
-    image: "/images/vina/svatovavrinecke_2023.png"
-  },
-  {
-    id: "veltlinske-zelene",
-    name: "Veltlínské zelené",
-    description: "Suché, 0,75l, ročník 2024",
-    image: "/images/vina/veltlin_2024.png"
-  }
-]
+// Vína pro carousel bereme z centrálního JSON
 
 export default function Home() {
   // State for the contact form
@@ -414,6 +378,7 @@ export default function Home() {
                   <div>
                     <p className="font-medium text-sm md:text-base">Lokalita</p>
                     <p className="text-xs md:text-sm text-muted-foreground">Suchohrdly u Znojma</p>
+                    <p className="text-xs md:text-sm text-muted-foreground">Nový Šaldorf - Sedlešovice</p>
                   </div>
                 </div>
               </div>

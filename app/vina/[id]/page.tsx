@@ -3,125 +3,9 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 import { notFound } from "next/navigation"
+import vina from "@/data/vina.json"
 
-// Data o vínech
-const vina = [
-  {
-    id: "sauvignon",
-    name: "Sauvignon",
-    description: "Suché, 0,75l, ročník 2024",
-    image: "/images/vina/sauvignon_2024.png",
-    detail: "Na vůni i chuti silný citrusový projev. Výrazný je červený grepfruit a pomelo. Výrazná a dlouhá dochuť.",
-    longDescription: [
-      "Sauvignon z našeho vinařství je výrazným reprezentantem této oblíbené odrůdy. Hrozny dozrávaly na nejlepších polohách, což jim dodalo nezaměnitelný charakter a intenzitu.",
-      "Víno se vyznačuje světle žlutou barvou se zelenkavými odlesky. V aromatickém profilu dominují tóny citrusů, především červeného grepfruitu a pomela. Chuť je svěží, s výraznou a dlouhou dochutí.",
-      "Tento Sauvignon skvěle doplní pokrmy z čerstvých bylin, kozí sýry nebo lehké saláty. Doporučujeme podávat při teplotě 9-11°C."
-    ],
-    info: {
-      oblast: "Znojemská",
-      alkohol: "11,5 % obj.",
-      zbytkovy_cukr: "8,9 g/l",
-      kyseliny: "6,5 g/l",
-      doporucena_teplota: "9-11 °C"
-    }
-  },
-  {
-    id: "ryzlink-rynsky",
-    name: "Ryzlink rýnský",
-    description: "Suché, 0,75l, ročník 2024",
-    image: "/images/vina/ryzlink_2024.png",
-    detail: "Intezivní aroma čerstvé meruňky s limetkovou šťávou. Křupavá kyselina.",
-    longDescription: [
-      "Ryzlink rýnský je ztělesněním terroir Znojemské vinařské podoblasti. Hrozny byly ručně sbírány v optimální zralosti a zpracovány s maximální péčí a respektem k tradičním postupům.",
-      "Víno zaujme svou zlatavou barvou s lehkými zelenkavými odlesky. V nose objevíte intenzivní aroma čerstvé meruňky s limetkovou šťávou. Na patře oceníte křupavou kyselinku, která je v dokonalé harmonii s ovocnou složkou.",
-      "Tento Ryzlink rýnský je ideálním společníkem k rybím pokrmům, lehkým předkrmům nebo jako osvěžující aperitiv. Nejlépe vynikne při teplotě 8-10°C."
-    ],
-    info: {
-      oblast: "Znojemská",
-      alkohol: "12,5 % obj.",
-      zbytkovy_cukr: "7,7 g/l",
-      kyseliny: "6,8 g/l",
-      doporucena_teplota: "8-10 °C"
-    }
-  },
-  {
-    id: "tramin-cerveny",
-    name: "Tramín červený",
-    description: "Polosladké, 0,75l, ročník 2024",
-    image: "/images/vina/tramin_2024.png",
-    detail: "Na vůni jemné aroma květu růže, na chutí příjemně kořenité. Celý aromatický profil výborně podporuje lehce vyšší zbytkový cukr.",
-    longDescription: [
-      "Tramín červený je odrůda známá svým výrazným aromatickým profilem a my jsme se snažili tento charakter v našem víně maximálně podtrhnout.",
-      "Víno se vyznačuje zlatožlutou barvou. V aromatickém profilu dominuje jemné aroma květu růže a kořenité tóny. Chuť je plná, s příjemnou kořenitostí, kterou skvěle doplňuje vyšší zbytkový cukr.",
-      "Toto víno je skvělým společníkem k pikantním asijským pokrmům, sýrům s modrou plísní nebo jako aperitiv. Podávejte při teplotě 10-12°C."
-    ],
-    info: {
-      oblast: "Znojemská",
-      alkohol: "12,0 % obj.",
-      zbytkovy_cukr: "18 g/l",
-      kyseliny: "6,0 g/l",
-      doporucena_teplota: "10-12 °C"
-    }
-  },
-  {
-    id: "svatovavrinecke-rose",
-    name: "Svatovavřinecké Rosé",
-    description: "Polosuché, 0,75l, ročník 2024",
-    image: "/images/vina/svatovavrinecke_rose_2024.png",
-    detail: "Lehké víno snižším obsahem alkoholu. Na vůni i chuti nalezneme třešnový kompot s lístkem máty.",
-    longDescription: [
-      "Naše Svatovavřinecké rosé představuje svěží a ovocnou stránku této tradiční odrůdy. Krátká macerace hroznů dodala vínu krásnou růžovou barvu a extrahovala jemné ovocné tóny.",
-      "Víno zaujme svou lososovou barvou a intenzivním aromatem červeného ovoce, především třešní s nádechem máty. Chuť je šťavnatá, s příjemnou ovocnou sladkostí v harmonii s osvěžující kyselinkou.",
-      "Svatovavřinecké rosé je ideálním společníkem pro letní posezení, lehké saláty, či jako aperitiv. Podávejte vychlazené na 8-10°C."
-    ],
-    info: {
-      oblast: "Znojemská",
-      alkohol: "10,5 % obj.",
-      zbytkovy_cukr: "12,2 g/l",
-      kyseliny: "6,0 g/l",
-      doporucena_teplota: "8-10 °C"
-    }
-  },
-  {
-    id: "svatovavrinecke",
-    name: "Svatovavřinecké",
-    description: "Suché, 0,75l, ročník 2023",
-    image: "/images/vina/svatovavrinecke_2023.png",
-    detail: "Středně intezivní garnátová barva. Vyznačuje se tóny švestek a povidel s decentním nádechem dubového dřeva.",
-    longDescription: [
-      "Svatovavřinecké je tradiční moravská odrůda, která v našich podmínkách dosahuje vynikající kvality. Hrozny pro toto víno byly pečlivě vybírány a zpracovány s důrazem na zachování odrůdového charakteru.",
-      "Víno má středně intenzivní granátovou barvu. V aromatickém profilu dominují tóny švestek a povidel, které jsou decentně doplněny nádechem dubového dřeva. Chuť je plná, s příjemnou tříslovinou a dlouhou dochutí.",
-      "Toto víno skvěle doprovodí pečená masa, zvěřinu nebo zralé sýry. Doporučujeme podávat při teplotě 16-18°C."
-    ],
-    info: {
-      oblast: "Znojemská",
-      alkohol: "12,0 % obj.",
-      zbytkovy_cukr: "1 g/l",
-      kyseliny: "5,2 g/l",
-      doporucena_teplota: "16-18 °C"
-    }
-  },
-  {
-    id: "veltlinske-zelene",
-    name: "Veltlínské zelené",
-    description: "Suché, 0,75l, ročník 2024",
-    image: "/images/vina/veltlin_2024.png",
-    detail: "Typický znojemský Veltlín. Začátek lehce bylinný doplněný minerálnímy tóny. Dochuť je dlouhá a dominuje zde bílý pepř.",
-    longDescription: [
-      "Veltlínské zelené je tradiční odrůdou znojemské oblasti a my jsme hrdí na to, že ji můžeme nabídnout v té nejlepší kvalitě. Naše vinice poskytují ideální podmínky pro pěstování této odrůdy.",
-      "Víno se prezentuje světle žlutou barvou. V aromatickém profilu najdete lehce bylinné tóny doplněné o minerální podtón. Chuť je svěží, suchá, s charakteristickou dlouhou dochutí, kde dominuje bílý pepř.",
-      "Veltlínské zelené je univerzálním vínem, které doprovodí širokou škálu pokrmů od tradičních českých jídel po asijskou kuchyni. Nejlépe chutná při teplotě 9-11°C."
-    ],
-    info: {
-      oblast: "Znojemská",
-      alkohol: "12,5 % obj.",
-      zbytkovy_cukr: "1,8 g/l",
-      kyseliny: "6,2 g/l",
-      locality: "Nový Šaldorf - Sedlešovice",
-      doporucena_teplota: "9-11 °C"
-    }
-  }
-]
+// Data o vínech jsou centrálně v JSON
 
 async function getVinoData(id: string) {
   const vino = vina.find((v) => v.id === id);
@@ -197,10 +81,12 @@ export default async function DetailVinaPage({ params: paramsPromise }: { params
                       <dt className="font-medium text-left">Vinařská oblast</dt>
                       <dd className="text-muted-foreground text-left">{vino.info.oblast}</dd>
                     </div>
-                    <div>
-                      <dt className="font-medium text-left">Lokalita</dt>
-                      <dd className="text-muted-foreground text-left">{vino.info.locality}</dd>
-                    </div>
+                    {vino.info.locality && (
+                      <div>
+                        <dt className="font-medium text-left">Lokalita</dt>
+                        <dd className="text-muted-foreground text-left">{vino.info.locality}</dd>
+                      </div>
+                    )}
                     <div>
                       <dt className="font-medium text-left">Obsah alkoholu</dt>
                       <dd className="text-muted-foreground text-left">{vino.info.alkohol}</dd>
