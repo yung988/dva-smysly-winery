@@ -26,7 +26,7 @@ type ClientShellProps = {
 const COOKIE_KEY = "ageVerified"
 
 export default function ClientShell({ children, bodyClassName, initialIsVerified }: ClientShellProps) {
-  const [isVerified, setIsVerified] = useState<boolean>(!!initialIsVerified)
+  const [isVerified, setIsVerified] = useState<boolean>(true)
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
   const handleVerificationConfirm = () => {
