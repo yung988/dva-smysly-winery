@@ -305,11 +305,12 @@ export default function Home() {
                   >
                     <div className="relative h-[380px] sm:h-[450px] bg-white p-2">
                       <Image
-                        src={vino.image}
+                        src={vino.image.replace(/\.png$/i, ".webp").replace(/\.jpg$/i, ".webp")}
                         alt={vino.name}
                         fill
                         className="object-contain transition-transform duration-300 group-hover:scale-105"
                         sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 25vw"
+                        quality={60}
                       />
                     </div>
                     <div className="p-3 md:p-4 text-left">
