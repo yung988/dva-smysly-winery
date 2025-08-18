@@ -81,15 +81,15 @@ export default function DegustacePage() {
                   <Link href="/#kontakt">Rezervovat</Link>
                 </Button>
               </div>
-              <div className="md:col-span-2 relative h-[400px] rounded-lg overflow-hidden">
-                <Image src="/images/Sklep/sklep1.webp" alt="Řízená degustace" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 100vw, 40vw" quality={60} />
+              <div className="md:col-span-2 relative rounded-lg overflow-hidden" style={{height: 400}}>
+                <Image src="/images/Sklep/sklep1.webp" alt="Řízená degustace" width={800} height={400} className="object-cover rounded-lg w-full h-full" quality={60} />
               </div>
             </div>
             
             {/* Firemní degustace */}
             <div className="grid md:grid-cols-5 gap-10 items-start">
-              <div className="order-2 md:order-1 md:col-span-2 relative h-[400px] rounded-lg overflow-hidden">
-                <Image src="/images/Sklep/sklep2.webp" alt="Firemní degustace" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 100vw, 40vw" quality={60} />
+              <div className="order-2 md:order-1 md:col-span-2 relative rounded-lg overflow-hidden" style={{height: 400}}>
+                <Image src="/images/Sklep/sklep2.webp" alt="Firemní degustace" width={800} height={400} className="object-cover rounded-lg w-full h-full" quality={60} />
               </div>
               <div className="order-1 md:order-2 md:col-span-3 space-y-6">
                 <h3 className="text-2xl font-bold text-left">Firemní degustace</h3>
@@ -157,8 +157,8 @@ export default function DegustacePage() {
                   <Link href="/#kontakt">Požádat o nabídku</Link>
                 </Button>
               </div>
-              <div className="md:col-span-2 relative h-[400px] rounded-lg overflow-hidden">
-                <Image src="/images/Sklep/sklep3.webp" alt="Firemní víno" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 100vw, 40vw" quality={60} />
+              <div className="md:col-span-2 relative rounded-lg overflow-hidden" style={{height: 400}}>
+                <Image src="/images/Sklep/sklep3.webp" alt="Firemní víno" width={800} height={400} className="object-cover rounded-lg w-full h-full" quality={60} />
               </div>
             </div>
           </div>

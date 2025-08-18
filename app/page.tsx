@@ -87,6 +87,8 @@ export default function Home() {
             priority
             sizes="100vw"
             quality={60}
+            fetchPriority="high"
+            loading="eager"
           />
         </div>
         <div className="relative container h-full flex flex-col justify-center items-start text-left">
@@ -251,14 +253,14 @@ export default function Home() {
               </p>
               {/* Mini gallery - Adjusted size */}
               <div className="grid grid-cols-3 gap-2 md:gap-4 pt-2 md:pt-4">
-              <div className="relative h-[100px] sm:h-[120px] md:h-[150px] rounded-lg overflow-hidden">
-                <Image src="/images/Sklep/sklep1.webp" alt="Vinný sklep detail 1" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 33vw, 200px" quality={60} />
+                <div className="relative rounded-lg overflow-hidden w-full" style={{height: 100}}>
+                  <Image src="/images/Sklep/sklep1.webp" alt="Vinný sklep detail 1" width={200} height={133} className="rounded-lg w-full h-full object-cover" quality={50} />
                 </div>
-                <div className="relative h-[100px] sm:h-[120px] md:h-[150px] rounded-lg overflow-hidden">
-                <Image src="/images/Sklep/sklep2.webp" alt="Vinný sklep detail 2" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 33vw, 200px" quality={60} />
+                <div className="relative rounded-lg overflow-hidden w-full" style={{height: 100}}>
+                  <Image src="/images/Sklep/sklep2.webp" alt="Vinný sklep detail 2" width={200} height={133} className="rounded-lg w-full h-full object-cover" quality={50} />
                 </div>
-                <div className="relative h-[100px] sm:h-[120px] md:h-[150px] rounded-lg overflow-hidden">
-                <Image src="/images/Sklep/sklep3.webp" alt="Vinný sklep detail 3" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 33vw, 200px" quality={60} />
+                <div className="relative rounded-lg overflow-hidden w-full" style={{height: 100}}>
+                  <Image src="/images/Sklep/sklep3.webp" alt="Vinný sklep detail 3" width={200} height={133} className="rounded-lg w-full h-full object-cover" quality={50} />
                 </div>
               </div>
               <div className="text-left">
