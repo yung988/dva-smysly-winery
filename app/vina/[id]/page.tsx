@@ -53,8 +53,9 @@ export default async function DetailVinaPage({ params: paramsPromise }: { params
                   src={vino.image} 
                   alt={vino.name} 
                   fill 
-                  className="object-contain rounded-lg" 
-                  priority 
+                  className="object-contain rounded-lg"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
             </div>
@@ -132,7 +133,8 @@ export default async function DetailVinaPage({ params: paramsPromise }: { params
                   src={nextVino.image} 
                   alt={nextVino.name} 
                   fill 
-                  className="object-contain transition-all duration-300 rounded-lg" 
+                  className="object-contain transition-all duration-300 rounded-lg"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               <div className="space-y-3 md:space-y-4 text-left">
