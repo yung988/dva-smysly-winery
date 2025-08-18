@@ -20,24 +20,20 @@ import { cn } from "@/lib/utils"
 type ClientShellProps = {
   children: React.ReactNode
   bodyClassName?: string
+  initialIsVerified?: boolean
 }
 
-const LOCAL_STORAGE_KEY = "ageVerified"
+const COOKIE_KEY = "ageVerified"
 
-export default function ClientShell({ children, bodyClassName }: ClientShellProps) {
-  const [isVerified, setIsVerified] = useState<boolean>(false)
-  const [isLoading, setIsLoading] = useState<boolean>(true)
-
-  useEffect(() => {
-    const alreadyVerified = typeof window !== "undefined" && localStorage.getItem(LOCAL_STORAGE_KEY)
-    if (alreadyVerified) {
-      setIsVerified(true)
-    }
-    setIsLoading(false)
-  }, [])
+export default function ClientShell({ children, bodyClassName, initialIsVerified }: ClientShellProps) {
+  const [isVerified, setIsVerified] = useState<boolean>(!!initialIsVerified)
+  const [isLoading, setIsLoading] = useState<boolean>(false)
 
   const handleVerificationConfirm = () => {
-    localStorage.setItem(LOCAL_STORAGE_KEY, "true")
+    try {
+      // Persist as cookie so SSR can pick it up next request
+      document.cookie = `${COOKIE_KEY}=true; path=/; max-age=${60 * 60 * 24 * 365}`
+    } catch {}
     setIsVerified(true)
   }
 
