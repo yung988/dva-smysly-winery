@@ -55,7 +55,8 @@ export default async function DetailVinaPage({ params: paramsPromise }: { params
                   fill 
                   className="object-contain rounded-lg"
                   priority
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 640px) 90vw, 50vw"
+                  quality={60}
                 />
               </div>
             </div>
@@ -134,7 +135,8 @@ export default async function DetailVinaPage({ params: paramsPromise }: { params
                   alt={nextVino.name} 
                   fill 
                   className="object-contain transition-all duration-300 rounded-lg"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 640px) 90vw, 50vw"
+                  quality={60}
                 />
               </div>
               <div className="space-y-3 md:space-y-4 text-left">

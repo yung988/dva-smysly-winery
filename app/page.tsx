@@ -1,7 +1,6 @@
 'use client';
 
 import Image from "next/image"
-import heroImage from "@/public/vineyard2.JPG"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mail, Phone, MapPin, Instagram, ShoppingBag, ArrowRight, Facebook, Loader2 } from "lucide-react"
@@ -81,13 +80,13 @@ export default function Home() {
       <section className="relative h-[70vh] md:h-[80vh] overflow-hidden -mt-16 pt-16">
         <div className="absolute inset-0">
           <Image
-            src={heroImage}
+            src="/vineyard2.webp"
             alt="Vinice"
             fill
             className="object-cover"
             priority
             sizes="100vw"
-            placeholder="blur"
+            quality={60}
           />
         </div>
         <div className="relative container h-full flex flex-col justify-center items-start text-left">
@@ -128,6 +127,7 @@ export default function Home() {
                 fill 
                 className="object-contain rounded-lg"
                 sizes="(max-width: 768px) 100vw, 50vw"
+                quality={60}
               />
             </div>
             
@@ -252,13 +252,13 @@ export default function Home() {
               {/* Mini gallery - Adjusted size */}
               <div className="grid grid-cols-3 gap-2 md:gap-4 pt-2 md:pt-4">
               <div className="relative h-[100px] sm:h-[120px] md:h-[150px] rounded-lg overflow-hidden">
-                <Image src="/images/Sklep/sklep1.webp" alt="Vinný sklep detail 1" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 33vw, 200px" />
+                <Image src="/images/Sklep/sklep1.webp" alt="Vinný sklep detail 1" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 33vw, 200px" quality={60} />
                 </div>
                 <div className="relative h-[100px] sm:h-[120px] md:h-[150px] rounded-lg overflow-hidden">
-                <Image src="/images/Sklep/sklep2.webp" alt="Vinný sklep detail 2" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 33vw, 200px" />
+                <Image src="/images/Sklep/sklep2.webp" alt="Vinný sklep detail 2" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 33vw, 200px" quality={60} />
                 </div>
                 <div className="relative h-[100px] sm:h-[120px] md:h-[150px] rounded-lg overflow-hidden">
-                <Image src="/images/Sklep/sklep3.webp" alt="Vinný sklep detail 3" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 33vw, 200px" />
+                <Image src="/images/Sklep/sklep3.webp" alt="Vinný sklep detail 3" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 33vw, 200px" quality={60} />
                 </div>
               </div>
               <div className="text-left">
@@ -270,7 +270,7 @@ export default function Home() {
             
             {/* Image Column - Second on mobile, first on desktop */}
             <div className="order-2 md:order-1 relative h-[300px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden">
-              <Image src="/images/Sklep/sklep1.webp" alt="Vinný sklep" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 100vw, 50vw" />
+              <Image src="/images/Sklep/sklep1.webp" alt="Vinný sklep" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 100vw, 50vw" quality={60} />
             </div>
           </div>
         </div>
