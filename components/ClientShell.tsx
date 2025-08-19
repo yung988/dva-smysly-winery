@@ -32,7 +32,15 @@ export default function ClientShell({ children, bodyClassName, initialIsVerified
   const handleVerificationConfirm = () => {
     try {
       // Persist as cookie so SSR can pick it up next request
-      document.cookie = `${COOKIE_KEY}=true; path=/; max-age=${60 * 60 * 24 * 365}`
+      const attributes = [
+        "path=/",
+        `max-age=${60 * 60 * 24 * 365}`,
+        "samesite=lax",
+      ]
+      if (typeof window !== "undefined" && window.location.protocol === "https:") {
+        attributes.push("secure")
+      }
+      document.cookie = `${COOKIE_KEY}=true; ${attributes.join("; ")}`
     } catch {}
     setIsVerified(true)
   }
