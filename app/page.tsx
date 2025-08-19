@@ -7,11 +7,13 @@ import { Mail, Phone, MapPin, Instagram, ShoppingBag, ArrowRight, Facebook, Load
 import Link from "next/link"
 import vina from "@/data/vina.json"
 import dynamic from "next/dynamic"
-const Carousel = dynamic(() => import("@/components/ui/carousel").then(m => m.Carousel), { ssr: false })
-const CarouselContent = dynamic(() => import("@/components/ui/carousel").then(m => m.CarouselContent), { ssr: false })
-const CarouselItem = dynamic(() => import("@/components/ui/carousel").then(m => m.CarouselItem), { ssr: false })
-const CarouselNext = dynamic(() => import("@/components/ui/carousel").then(m => m.CarouselNext), { ssr: false })
-const CarouselPrevious = dynamic(() => import("@/components/ui/carousel").then(m => m.CarouselPrevious), { ssr: false })
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
