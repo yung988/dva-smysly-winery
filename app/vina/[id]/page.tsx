@@ -57,6 +57,7 @@ export default async function DetailVinaPage({ params: paramsPromise }: { params
                   priority
                   sizes="(max-width: 640px) 90vw, 50vw"
                   quality={60}
+                  loading="eager"
                 />
               </div>
             </div>

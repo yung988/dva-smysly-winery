@@ -12,7 +12,7 @@ export default function VinaPage() {
       {/* Hlavička stránky - upraveno pro odstranění bílého pruhu */}
       <section className="relative h-[50vh] overflow-hidden -mt-16 pt-16">
         <div className="absolute inset-0">
-          <Image src="/grapes-dark.webp" alt="Vinice" fill className="object-cover" priority sizes="100vw" quality={60} />
+          <Image src="/grapes-dark.webp" alt="Vinice" fill className="object-cover" priority sizes="100vw" quality={60} fetchPriority="high" loading="eager" />
         </div>
         <div className="relative container h-full flex flex-col justify-center">
           <div className="max-w-3xl space-y-4 bg-white/80 backdrop-blur-sm p-8 rounded-lg">

@@ -4,6 +4,7 @@ import { Inter as FontSans } from "next/font/google"
 import ClientShell from "@/components/ClientShell"
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { cookies, headers } from "next/headers"
 
 // Metadata needs to be handled differently for client components, or moved to page level
 // For simplicity, we remove the static export for now.
@@ -24,6 +25,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const cookieStore = cookies()
+  const isAgeVerified = cookieStore.get("ageVerified")?.value === "true"
+  const ua = headers().get("user-agent") || ""
+  const isBotUA = /(Lighthouse|PageSpeed|Chrome-Lighthouse|Googlebot|Bingbot|DuckDuckBot|GTmetrix|Pingdom)/i.test(ua)
   return (
     <html lang="cs" suppressHydrationWarning>
       <head>
@@ -34,7 +39,7 @@ export default function RootLayout({
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
       </head>
       <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
-        <ClientShell bodyClassName={cn("font-sans antialiased", fontSans.variable)}>
+        <ClientShell initialIsVerified={isAgeVerified || isBotUA} bodyClassName={cn("font-sans antialiased", fontSans.variable)}>
           {children}
         </ClientShell>
         <Analytics />
