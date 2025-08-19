@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Instagram, ShoppingBag, Facebook, Menu } from "lucide-react"
-import AgeVerificationModal from "@/components/AgeVerificationModal"
+import dynamic from "next/dynamic"
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
@@ -49,10 +49,11 @@ export default function ClientShell({ children, bodyClassName, initialIsVerified
     { href: "/#kontakt", label: "Kontakt" },
   ]
 
+  const AgeVerificationModal = dynamic(() => import("@/components/AgeVerificationModal"))
+
   return (
     <div className={cn("min-h-screen bg-background", bodyClassName)}>
-      {isVerified ? (
-        <>
+      <>
           <header className="sticky top-0 z-50 w-full bg-[#1a472a]/90 backdrop-blur-sm">
             <div className="container flex h-16 items-center justify-between">
               <div className="flex items-center gap-2">
@@ -214,9 +215,7 @@ export default function ClientShell({ children, bodyClassName, initialIsVerified
             </div>
           </footer>
         </>
-      ) : (
-        <AgeVerificationModal onConfirm={handleVerificationConfirm} />
-      )}
+      {!isVerified && <AgeVerificationModal onConfirm={handleVerificationConfirm} />}
     </div>
   )
 }
