@@ -30,6 +30,7 @@ export default function ClientShell({ children, bodyClassName, initialIsVerified
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
   const handleVerificationConfirm = () => {
+    try { console.log("[AgeGate] Confirm clicked"); } catch {}
     try {
       // Persist as cookie so SSR can pick it up next request
       const attributes = [
@@ -75,7 +76,7 @@ export default function ClientShell({ children, bodyClassName, initialIsVerified
     { href: "/#kontakt", label: "Kontakt" },
   ]
 
-  const AgeVerificationModal = dynamic(() => import("@/components/AgeVerificationModal"))
+  const AgeVerificationModal = dynamic(() => import("@/components/AgeVerificationModal"), { ssr: false })
 
   return (
     <div className={cn("min-h-screen bg-background", bodyClassName)}>

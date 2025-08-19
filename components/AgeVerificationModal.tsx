@@ -42,14 +42,16 @@ const AgeVerificationModal: React.FC<AgeVerificationModalProps> = ({ onConfirm }
             </p>
             <div className="flex justify-center gap-4">
               <Button 
-                onClick={onConfirm}
+                type="button"
+                onClick={(e) => { e.preventDefault(); onConfirm(); }}
                 className="bg-[#1a472a] hover:bg-[#2a573a] text-white"
                 size="lg"
               >
                 Ano, je mi 18+ let
               </Button>
               <Button 
-                onClick={handleDecline}
+                type="button"
+                onClick={(e) => { e.preventDefault(); handleDecline(); }}
                 variant="outline"
                 size="lg"
                 className="border-destructive text-destructive hover:bg-destructive hover:text-white"
