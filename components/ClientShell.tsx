@@ -41,9 +41,27 @@ export default function ClientShell({ children, bodyClassName, initialIsVerified
         attributes.push("secure")
       }
       document.cookie = `${COOKIE_KEY}=true; ${attributes.join("; ")}`
+      // Also persist to localStorage as a client-side fallback for SPA navigations
+      try {
+        window.localStorage.setItem(COOKIE_KEY, "true")
+      } catch {}
     } catch {}
     setIsVerified(true)
   }
+
+  // On mount, re-check cookie/localStorage to sync client state in case SSR value was stale
+  useEffect(() => {
+    if (isVerified) return
+    try {
+      const hasCookie = typeof document !== "undefined" && document.cookie.split(";")
+        .map((c) => c.trim())
+        .some((c) => c.startsWith(`${COOKIE_KEY}=`) && c.split("=")[1] === "true")
+      const ls = typeof window !== "undefined" ? window.localStorage.getItem(COOKIE_KEY) === "true" : false
+      if (hasCookie || ls) {
+        setIsVerified(true)
+      }
+    } catch {}
+  }, [isVerified])
 
   if (isLoading) {
     return <div className={cn("min-h-screen bg-background", bodyClassName)} />
