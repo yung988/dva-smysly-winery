@@ -131,8 +131,6 @@ export default function Home() {
                 className="object-contain rounded-lg"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 quality={60}
-                loading="lazy"
-                decoding="async"
               />
             </div>
             
@@ -257,13 +255,13 @@ export default function Home() {
               {/* Mini gallery - Adjusted size */}
               <div className="grid grid-cols-3 gap-2 md:gap-4 pt-2 md:pt-4">
                 <div className="relative rounded-lg overflow-hidden w-full" style={{height: 100}}>
-                  <Image src="/images/Sklep/sklep1.webp" alt="Vinný sklep detail 1" width={200} height={133} className="rounded-lg w-full h-full object-cover" quality={50} loading="lazy" decoding="async" />
+                  <Image src="/images/Sklep/sklep1.webp" alt="Vinný sklep detail 1" width={200} height={133} className="rounded-lg w-full h-full object-cover" quality={50} />
                 </div>
                 <div className="relative rounded-lg overflow-hidden w-full" style={{height: 100}}>
-                  <Image src="/images/Sklep/sklep2.webp" alt="Vinný sklep detail 2" width={200} height={133} className="rounded-lg w-full h-full object-cover" quality={50} loading="lazy" decoding="async" />
+                  <Image src="/images/Sklep/sklep2.webp" alt="Vinný sklep detail 2" width={200} height={133} className="rounded-lg w-full h-full object-cover" quality={50} />
                 </div>
                 <div className="relative rounded-lg overflow-hidden w-full" style={{height: 100}}>
-                  <Image src="/images/Sklep/sklep3.webp" alt="Vinný sklep detail 3" width={200} height={133} className="rounded-lg w-full h-full object-cover" quality={50} loading="lazy" decoding="async" />
+                  <Image src="/images/Sklep/sklep3.webp" alt="Vinný sklep detail 3" width={200} height={133} className="rounded-lg w-full h-full object-cover" quality={50} />
                 </div>
               </div>
               <div className="text-left">
@@ -275,7 +273,7 @@ export default function Home() {
             
             {/* Image Column - Second on mobile, first on desktop */}
             <div className="order-2 md:order-1 relative h-[300px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden">
-              <Image src="/images/Sklep/sklep1.webp" alt="Vinný sklep" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 100vw, 50vw" quality={60} loading="lazy" decoding="async" />
+              <Image src="/images/Sklep/sklep1.webp" alt="Vinný sklep" fill className="object-cover rounded-lg" sizes="(max-width: 768px) 100vw, 50vw" quality={60} />
             </div>
           </div>
         </div>
@@ -315,9 +313,7 @@ export default function Home() {
                         fill
                         className="object-contain transition-transform duration-300 group-hover:scale-105"
                         sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 25vw"
-                        quality={60}
-                        loading="lazy"
-                        decoding="async"
+                         quality={60}
                       />
                     </div>
                     <div className="p-3 md:p-4 text-left">
